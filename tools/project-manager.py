@@ -8,13 +8,10 @@
 import os
 import re
 import json
-import yaml
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 from dataclasses import dataclass
 from datetime import datetime
-import markdown
-from bs4 import BeautifulSoup
 
 @dataclass
 class DocumentMetrics:
@@ -61,9 +58,9 @@ class KnowledgeGraphProjectManager:
         word_count = len(content.split())
         
         # 双语比例
-        chinese_lines = len(re.findall(r'[\u4e00-\u9fff]', content))
-        english_lines = len(re.findall(r'[a-zA-Z]', content))
-        bilingual_ratio = min(chinese_lines, english_lines) / max(chinese_lines, english_lines) if max(chinese_lines, english_lines) > 0 else 0
+        chinese_chars = len(re.findall(r'[\u4e00-\u9fff]', content))
+        english_chars = len(re.findall(r'[a-zA-Z]', content))
+        bilingual_ratio = min(chinese_chars, english_chars) / max(chinese_chars, english_chars) if max(chinese_chars, english_chars) > 0 else 0
         
         # 检查各种要素
         has_formal_proofs = bool(re.search(r'定理|Theorem|证明|Proof', content))
