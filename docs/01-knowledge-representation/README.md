@@ -13,6 +13,7 @@ Knowledge representation is a core concept in knowledge graphs, referring to the
 ### 1.2 历史发展 / Historical Development
 
 **发展历程** / Development Timeline:
+
 - **阶段1** / Phase 1: 符号主义时期 (1950s-1970s) - 基于逻辑和规则的知识表示
 - **阶段2** / Phase 2: 连接主义时期 (1980s-2000s) - 基于神经网络的知识表示
 - **阶段3** / Phase 3: 混合主义时期 (2000s-至今) - 符号与统计相结合的知识表示
@@ -33,10 +34,13 @@ Knowledge representation is a core concept in knowledge graphs, referring to the
 #### 2.1.1 形式化定义 / Formal Definition
 
 **数学符号** / Mathematical Notation:
-```
+
+```text
 K = (C, R, A, I)
 ```
+
 其中：
+
 - C: 概念集合 (Concept Set)
 - R: 关系集合 (Relation Set)
 - A: 属性集合 (Attribute Set)
@@ -51,7 +55,8 @@ K = (C, R, A, I)
 如果知识表示系统K是完备的，且概念集合C是正确表达的，则对于任何知识实体E，如果E在C的范围内，则K能够表示E，满足E ⊆ K。
 
 **证明** / Proof:
-```
+
+```text
 设知识表示系统K是完备的
 对于任意知识实体E，如果概念集合C是正确表达的
 且E在C的范围内，即E ∈ C
@@ -63,7 +68,8 @@ K = (C, R, A, I)
 如果知识表示系统K是一致的，且关系集合R是逻辑正确的，则对于任何概念对(C₁, C₂)，如果存在关系R(C₁, C₂)，则R(C₂, C₁)⁻¹也成立。
 
 **证明** / Proof:
-```
+
+```text
 设知识表示系统K是一致的
 对于概念对(C₁, C₂)，如果存在关系R(C₁, C₂)
 根据一致性定义：关系必须满足逻辑一致性
@@ -73,6 +79,7 @@ K = (C, R, A, I)
 ### 2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
+
 ```mermaid
 graph TD
     A[知识实体] --> B[概念抽象]
@@ -98,26 +105,31 @@ graph TD
 ### 3.1 优势分析 / Strengths Analysis
 
 **优势1** / Strength 1: 形式化严格性
+
 - **中文** / Chinese: 知识表示基于严格的数学定义，确保逻辑的一致性和完备性
 - **English**: Knowledge representation is based on strict mathematical definitions, ensuring logical consistency and completeness
 
 **优势2** / Strength 2: 可计算性
+
 - **中文** / Chinese: 通过形式化表示，知识可以被计算机自动处理和推理
 - **English**: Through formal representation, knowledge can be automatically processed and reasoned by computers
 
 ### 3.2 局限性分析 / Limitations Analysis
 
 **局限性1** / Limitation 1: 表达能力
+
 - **中文** / Chinese: 形式化表示可能无法完全捕捉人类知识的复杂性和模糊性
 - **English**: Formal representation may not fully capture the complexity and ambiguity of human knowledge
 
 **局限性2** / Limitation 2: 可扩展性
+
 - **中文** / Chinese: 大规模知识表示面临计算复杂度和存储效率的挑战
 - **English**: Large-scale knowledge representation faces challenges in computational complexity and storage efficiency
 
 ### 3.3 争议与讨论 / Controversies and Discussions
 
 **争议点1** / Controversy 1: 符号主义 vs 连接主义
+
 - **支持观点** / Supporting Views: 符号主义提供清晰的逻辑推理和可解释性
 - **反对观点** / Opposing Views: 连接主义能够处理复杂的非线性关系
 - **中立分析** / Neutral Analysis: 混合方法结合了两种范式的优势，可能是最佳选择
@@ -129,6 +141,7 @@ graph TD
 #### 4.1.1 算法设计 / Algorithm Design
 
 **知识抽取算法** / Knowledge Extraction Algorithm:
+
 ```rust
 // Rust实现示例
 use std::collections::{HashMap, HashSet};
@@ -562,6 +575,7 @@ data ConsistencyResult = ConsistencyResult
 #### 4.1.2 数据结构 / Data Structures
 
 **核心数据结构** / Core Data Structure:
+
 ```rust
 #[derive(Debug, Clone)]
 pub struct KnowledgeGraph {
@@ -668,12 +682,14 @@ impl KnowledgeGraph {
 ### 4.2 性能分析 / Performance Analysis
 
 **时间复杂度** / Time Complexity:
+
 - 概念查询 / Concept Query: O(1)
 - 关系查询 / Relation Query: O(n)
 - 实例查询 / Instance Query: O(n)
 - 一致性检查 / Consistency Check: O(n²)
 
 **空间复杂度** / Space Complexity:
+
 - 知识表示 / Knowledge Representation: O(n²)
 - 推理引擎 / Inference Engine: O(n)
 - 查询处理器 / Query Processor: O(n)
@@ -687,12 +703,14 @@ impl KnowledgeGraph {
 构建一个医疗领域的知识图谱，包含疾病、症状、药物、治疗方法等概念，支持医疗诊断和药物推荐。
 
 **解决方案** / Solution:
+
 - 定义医疗概念层次结构
 - 建立疾病-症状关系网络
 - 构建药物-适应症映射
 - 实现诊断推理算法
 
 **结果评估** / Results Evaluation:
+
 - 概念覆盖率: 95%
 - 关系准确性: 90%
 - 推理准确率: 85%
@@ -712,6 +730,7 @@ impl KnowledgeGraph {
 ### 5.2 实际案例 / Real-world Cases
 
 **案例1** / Case 1: Google Knowledge Graph
+
 - **项目名称** / Project Name: Google Knowledge Graph
 - **应用场景** / Application Scenario: 大规模通用知识图谱
 - **技术实现** / Technical Implementation: 实体-关系-属性三元组模型
@@ -722,6 +741,7 @@ impl KnowledgeGraph {
 ### 6.1 最新研究 / Latest Research
 
 **研究方向1** / Research Direction 1: 神经符号知识表示
+
 - **研究内容** / Research Content: 结合神经网络和符号逻辑的知识表示方法
 - **技术突破** / Technical Breakthrough: 实现了可解释的神经符号推理
 - **应用前景** / Application Prospects: 在多个领域有重要应用
@@ -729,6 +749,7 @@ impl KnowledgeGraph {
 ### 6.2 发展趋势 / Development Trends
 
 **趋势1** / Trend 1: 多模态知识表示
+
 - **中文** / Chinese: 知识表示正在向多模态方向发展，支持文本、图像、音频等多种形式
 - **English**: Knowledge representation is moving towards multimodal direction, supporting text, image, audio and other forms
 
@@ -743,6 +764,7 @@ impl KnowledgeGraph {
 ### 7.2 未来展望 / Future Prospects
 
 **发展方向** / Development Directions:
+
 - **短期目标** / Short-term Goals: 提高知识表示的自动化和标准化程度
 - **中期目标** / Medium-term Goals: 实现多模态知识表示
 - **长期目标** / Long-term Goals: 构建自适应的知识表示生态系统
@@ -757,15 +779,15 @@ impl KnowledgeGraph {
 
 ### 8.2 技术文档 / Technical Documentation
 
-1. RDF Specification. https://www.w3.org/RDF/. Accessed 2024.
-2. OWL Documentation. https://www.w3.org/OWL/. Accessed 2024.
-3. SPARQL Query Language. https://www.w3.org/TR/sparql11-query/. Accessed 2024.
+1. RDF Specification. <https://www.w3.org/RDF/>. Accessed 2024.
+2. OWL Documentation. <https://www.w3.org/OWL/>. Accessed 2024.
+3. SPARQL Query Language. <https://www.w3.org/TR/sparql11-query/>. Accessed 2024.
 
 ### 8.3 在线资源 / Online Resources
 
-1. Stanford Knowledge Graph. https://kg.stanford.edu/. Accessed 2024.
-2. DBpedia. https://dbpedia.org/. Accessed 2024.
-3. Wikidata. https://www.wikidata.org/. Accessed 2024.
+1. Stanford Knowledge Graph. <https://kg.stanford.edu/>. Accessed 2024.
+2. DBpedia. <https://dbpedia.org/>. Accessed 2024.
+3. Wikidata. <https://www.wikidata.org/>. Accessed 2024.
 
 ## 9. 相关链接 / Related Links
 
