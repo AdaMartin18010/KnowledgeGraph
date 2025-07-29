@@ -13,6 +13,7 @@ Graph theory is a mathematical branch that studies graph structures, providing t
 ### 1.2 历史发展 / Historical Development
 
 **发展历程** / Development Timeline:
+
 - **阶段1** / Phase 1: 古典图论时期 (1736-1930s) - 欧拉路径和哈密顿回路
 - **阶段2** / Phase 2: 现代图论时期 (1930s-1980s) - 图论算法和复杂性理论
 - **阶段3** / Phase 3: 应用图论时期 (1980s-至今) - 网络科学和知识图谱
@@ -33,10 +34,13 @@ Graph theory is a mathematical branch that studies graph structures, providing t
 #### 2.1.1 形式化定义 / Formal Definition
 
 **数学符号** / Mathematical Notation:
-```
+
+```text
 G = (V, E)
 ```
+
 其中：
+
 - V: 顶点集合 (Vertex Set)
 - E: 边集合 (Edge Set)
 
@@ -49,7 +53,8 @@ G = (V, E)
 对于任何图G = (V, E)，所有顶点的度数之和等于边数的两倍，即∑(deg(v)) = 2|E|。
 
 **证明** / Proof:
-```
+
+```text
 设图G = (V, E)
 对于每条边e = (u, v) ∈ E
 该边对顶点u和v的度数各贡献1
@@ -62,7 +67,8 @@ G = (V, E)
 连通图G存在欧拉路径当且仅当G中恰好有0个或2个奇数度数的顶点。
 
 **证明** / Proof:
-```
+
+```text
 必要性：如果存在欧拉路径，则除了起点和终点外，每个顶点进入和离开的次数相等
 因此只有起点和终点可能有奇数度数
 
@@ -73,6 +79,7 @@ G = (V, E)
 ### 2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
+
 ```mermaid
 graph TD
     A[图结构] --> B[顶点分析]
@@ -98,26 +105,31 @@ graph TD
 ### 3.1 优势分析 / Strengths Analysis
 
 **优势1** / Strength 1: 数学严谨性
+
 - **中文** / Chinese: 图论基于严格的数学定义，提供可靠的理论基础
 - **English**: Graph theory is based on strict mathematical definitions, providing reliable theoretical foundations
 
 **优势2** / Strength 2: 算法高效性
+
 - **中文** / Chinese: 图论算法具有多项式时间复杂度，适合大规模应用
 - **English**: Graph theory algorithms have polynomial time complexity, suitable for large-scale applications
 
 ### 3.2 局限性分析 / Limitations Analysis
 
 **局限性1** / Limitation 1: 表达能力
+
 - **中文** / Chinese: 传统图论难以表达复杂的语义关系和动态变化
 - **English**: Traditional graph theory has difficulty expressing complex semantic relationships and dynamic changes
 
 **局限性2** / Limitation 2: 可扩展性
+
 - **中文** / Chinese: 大规模图的存储和计算面临内存和性能挑战
 - **English**: Large-scale graph storage and computation face memory and performance challenges
 
 ### 3.3 争议与讨论 / Controversies and Discussions
 
 **争议点1** / Controversy 1: 静态 vs 动态图
+
 - **支持观点** / Supporting Views: 静态图提供稳定的理论基础
 - **反对观点** / Opposing Views: 动态图更符合现实世界的复杂性
 - **中立分析** / Neutral Analysis: 需要结合静态和动态图论的优势
@@ -129,6 +141,7 @@ graph TD
 #### 4.1.1 算法设计 / Algorithm Design
 
 **图表示算法** / Graph Representation Algorithm:
+
 ```rust
 // Rust实现示例 - Graph Representation Algorithm
 // 图表示算法：实现图的邻接表表示和基本操作
@@ -470,6 +483,7 @@ hasEulerPath graph =
 #### 4.1.2 数据结构 / Data Structures
 
 **核心数据结构** / Core Data Structure:
+
 ```rust
 #[derive(Debug, Clone)]
 pub struct WeightedGraph {
@@ -543,6 +557,7 @@ impl WeightedGraph {
 ### 4.2 性能分析 / Performance Analysis
 
 **时间复杂度** / Time Complexity:
+
 - 顶点添加 / Vertex Addition: O(1)
 - 边添加 / Edge Addition: O(1)
 - 广度优先搜索 / BFS: O(V + E)
@@ -550,6 +565,7 @@ impl WeightedGraph {
 - 连通分量计算 / Connected Components: O(V + E)
 
 **空间复杂度** / Space Complexity:
+
 - 邻接表存储 / Adjacency List Storage: O(V + E)
 - 邻接矩阵存储 / Adjacency Matrix Storage: O(V²)
 - 图度量计算 / Graph Metrics Calculation: O(V + E)
@@ -562,12 +578,14 @@ impl WeightedGraph {
 分析社交网络中的用户关系，识别关键用户和社区结构。
 
 **解决方案** / Solution:
+
 - 构建用户关系图
 - 计算中心性指标
 - 识别社区结构
 - 分析网络传播
 
 **结果评估** / Results Evaluation:
+
 - 用户覆盖率: 95%
 - 关系准确率: 90%
 - 社区识别准确率: 85%
@@ -587,6 +605,7 @@ impl WeightedGraph {
 ### 5.2 实际案例 / Real-world Cases
 
 **案例1** / Case 1: Google PageRank算法
+
 - **项目名称** / Project Name: Google PageRank Algorithm
 - **应用场景** / Application Scenario: 网页重要性排序
 - **技术实现** / Technical Implementation: 基于图论的随机游走算法
@@ -597,6 +616,7 @@ impl WeightedGraph {
 ### 6.1 最新研究 / Latest Research
 
 **研究方向1** / Research Direction 1: 动态图论
+
 - **研究内容** / Research Content: 处理随时间变化的图结构
 - **技术突破** / Technical Breakthrough: 实现了高效的动态图算法
 - **应用前景** / Application Prospects: 在实时系统中广泛应用
@@ -604,6 +624,7 @@ impl WeightedGraph {
 ### 6.2 发展趋势 / Development Trends
 
 **趋势1** / Trend 1: 大规模图处理
+
 - **中文** / Chinese: 图论正在向处理超大规模图结构发展
 - **English**: Graph theory is developing towards processing ultra-large-scale graph structures
 
@@ -618,6 +639,7 @@ impl WeightedGraph {
 ### 7.2 未来展望 / Future Prospects
 
 **发展方向** / Development Directions:
+
 - **短期目标** / Short-term Goals: 提升图算法的效率和准确性
 - **中期目标** / Medium-term Goals: 实现动态图论算法
 - **长期目标** / Long-term Goals: 构建超大规模图处理系统
@@ -632,15 +654,15 @@ impl WeightedGraph {
 
 ### 8.2 技术文档 / Technical Documentation
 
-1. NetworkX Documentation. https://networkx.org/. Accessed 2024.
-2. Graph Theory Algorithms. https://en.wikipedia.org/wiki/Graph_theory. Accessed 2024.
-3. Graph Database Standards. https://www.w3.org/TR/rdf11-concepts/. Accessed 2024.
+1. NetworkX Documentation. <https://networkx.org/>. Accessed 2024.
+2. Graph Theory Algorithms. <https://en.wikipedia.org/wiki/Graph_theory>. Accessed 2024.
+3. Graph Database Standards. <https://www.w3.org/TR/rdf11-concepts/>. Accessed 2024.
 
 ### 8.3 在线资源 / Online Resources
 
-1. Stanford Graph Theory Course. https://web.stanford.edu/class/cs224w/. Accessed 2024.
-2. Graph Theory Online. https://www.graph-theory.com/. Accessed 2024.
-3. Network Science Book. http://networksciencebook.com/. Accessed 2024.
+1. Stanford Graph Theory Course. <https://web.stanford.edu/class/cs224w/>. Accessed 2024.
+2. Graph Theory Online. <https://www.graph-theory.com/>. Accessed 2024.
+3. Network Science Book. <http://networksciencebook.com/>. Accessed 2024.
 
 ## 9. 相关链接 / Related Links
 
