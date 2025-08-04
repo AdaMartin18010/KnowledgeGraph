@@ -5,27 +5,27 @@
 ### 1.1 定义与概念 / Definition and Concepts
 
 **中文定义** / Chinese Definition:
-应用实践是知识图谱技术的实际应用领域，涵盖智能问答、推荐系统、决策支持、知识发现等多个应用场景。它通过将知识图谱的理论和技术转化为实际可用的系统和服务，为各行各业提供智能化的解决方案，实现知识的价值最大化。
+应用实践是知识图谱技术在实际场景中的具体应用和实现。它涵盖了智能问答、推荐系统、搜索引擎、决策支持等多个领域，通过将知识图谱技术与具体业务需求相结合，实现智能化的应用解决方案。
 
 **English Definition:**
-Applications are the practical application domains of knowledge graph technology, covering multiple application scenarios such as intelligent question answering, recommendation systems, decision support, and knowledge discovery. It transforms knowledge graph theories and technologies into practical systems and services, providing intelligent solutions for various industries and maximizing the value of knowledge.
+Application practice refers to the concrete application and implementation of knowledge graph technology in real-world scenarios. It covers multiple domains including intelligent question answering, recommendation systems, search engines, and decision support, achieving intelligent application solutions by combining knowledge graph technology with specific business requirements.
 
 ### 1.2 历史发展 / Historical Development
 
 **发展历程** / Development Timeline:
 
-- **阶段1** / Phase 1: 基础应用时期 (1990s-2000s) - 搜索引擎和基础问答系统
-- **阶段2** / Phase 2: 智能应用时期 (2000s-2010s) - 智能问答和推荐系统
-- **阶段3** / Phase 3: 深度应用时期 (2010s-至今) - 多模态应用和跨领域融合
+- **阶段1** / Phase 1: 基础应用时期 (1990s-2000s) - 搜索引擎和问答系统
+- **阶段2** / Phase 2: 智能应用时期 (2000s-2010s) - 推荐系统和决策支持
+- **阶段3** / Phase 3: 深度应用时期 (2010s-至今) - 多模态和跨领域应用
 
 ### 1.3 核心特征 / Core Characteristics
 
 | 特征 / Feature | 中文描述 / Chinese Description | English Description |
 |---------------|------------------------------|-------------------|
-| 实用性 / Practicality | 解决实际业务问题 | Solve real business problems |
-| 智能化 / Intelligence | 提供智能化的服务 | Provide intelligent services |
-| 可扩展性 / Scalability | 支持大规模应用 | Support large-scale applications |
-| 跨领域性 / Cross-domain | 适用于多个领域 | Applicable to multiple domains |
+| 实用性 / Practical | 解决实际业务问题 | Solve real business problems |
+| 可扩展性 / Scalable | 支持大规模应用部署 | Support large-scale application deployment |
+| 智能化 / Intelligent | 提供智能化的服务 | Provide intelligent services |
+| 用户友好性 / User-friendly | 提供良好的用户体验 | Provide good user experience |
 
 ## 2. 理论基础 / Theoretical Foundation
 
@@ -35,46 +35,44 @@ Applications are the practical application domains of knowledge graph technology
 
 **数学符号** / Mathematical Notation:
 
-```text
-AP = (KG, A, I, E, M)
+```
+AP = (D, A, U, P, M)
 ```
 
 其中：
 
-- KG: 知识图谱 (Knowledge Graph)
-- A: 应用算法集合 (Application Algorithms Set)
-- I: 接口系统 (Interface System)
-- E: 评估指标 (Evaluation Metrics)
-- M: 监控系统 (Monitoring System)
+- D: 应用领域集合 (Application Domain Set)
+- A: 应用算法集合 (Application Algorithm Set)
+- U: 用户需求集合 (User Requirement Set)
+- P: 性能指标集合 (Performance Metric Set)
+- M: 评估模型集合 (Evaluation Model Set)
 
 **形式化描述** / Formal Description:
-应用实践系统AP是一个五元组，其中知识图谱KG提供知识基础，应用算法集合A实现具体的应用功能，接口系统I提供用户交互，评估指标E用于衡量应用效果，监控系统M用于系统运维。
+应用实践系统AP是一个五元组，其中应用领域集合D定义具体的应用场景，应用算法集合A实现具体的应用算法，用户需求集合U描述用户的具体需求，性能指标集合P定义评估标准，评估模型集合M实现性能评估。
 
 #### 2.1.2 定理与证明 / Theorems and Proofs
 
 **定理1** / Theorem 1: 应用完备性定理
-如果应用系统AP是完备的，且知识图谱KG包含所有必要知识，则对于任何用户查询q，系统都能提供相应的答案a。
+如果应用实践系统AP是完备的，则对于任何用户需求u ∈ U，存在应用算法a ∈ A能够满足该需求。
 
 **证明** / Proof:
 
-```text
-设应用系统AP是完备的
-对于任意用户查询q，如果知识图谱KG包含相关信息
-则存在算法能够处理q并生成答案a
-根据完备性定义：如果存在相关信息，则系统能够找到
-因此，系统能够提供答案a
+```
+设应用实践系统AP是完备的
+对于用户需求u ∈ U
+根据完备性定义：完备的系统能够满足所有用户需求
+因此，存在应用算法a ∈ A能够满足u
 ```
 
-**定理2** / Theorem 2: 应用一致性定理
-如果应用系统AP是一致的，则对于相同的查询q，系统总是返回相同的答案a。
+**定理2** / Theorem 2: 应用性能定理
+如果应用实践系统AP的性能指标p ∈ P满足阈值要求，则系统能够提供满足用户期望的服务质量。
 
 **证明** / Proof:
 
-```text
-设应用系统AP是一致的
-对于查询q，如果系统返回答案a₁和a₂
-根据一致性定义：如果系统是一致的，则a₁ = a₂
-因此，系统总是返回相同的答案
+```
+设应用实践系统AP的性能指标p ∈ P满足阈值要求
+根据性能定义：满足阈值的系统能够提供期望的服务质量
+因此，系统能够提供满足用户期望的服务质量
 ```
 
 ### 2.2 逻辑框架 / Logical Framework
@@ -83,23 +81,22 @@ AP = (KG, A, I, E, M)
 
 ```mermaid
 graph TD
-    A[用户输入] --> B[查询理解]
-    B --> C[知识检索]
-    C --> D[推理计算]
-    D --> E[结果生成]
-    E --> F[用户输出]
+    A[用户需求] --> B[需求分析]
+    B --> C[方案设计]
+    C --> D[系统实现]
+    D --> E[性能评估]
     
-    B --> B1[自然语言处理]
-    B --> B2[意图识别]
-    B --> B3[实体链接]
+    B --> B1[需求收集]
+    B --> B2[需求分析]
+    B --> B3[需求验证]
     
-    C --> C1[图遍历]
-    C --> C2[路径搜索]
-    C --> C3[相似度计算]
+    C --> C1[架构设计]
+    C --> C2[算法选择]
+    C --> C3[技术选型]
     
-    D --> D1[逻辑推理]
-    D --> D2[统计推理]
-    D --> D3[混合推理]
+    D --> D1[系统开发]
+    D --> D2[系统测试]
+    D --> D3[系统部署]
 ```
 
 ## 3. 批判性分析 / Critical Analysis
@@ -108,33 +105,33 @@ graph TD
 
 **优势1** / Strength 1: 实用性强
 
-- **中文** / Chinese: 知识图谱应用直接解决实际业务问题，具有明确的价值和效果
-- **English**: Knowledge graph applications directly solve real business problems with clear value and effectiveness
+- **中文** / Chinese: 应用实践直接解决实际业务问题，具有明确的实用价值
+- **English**: Application practice directly solves real business problems with clear practical value
 
-**优势2** / Strength 2: 智能化程度高
+**优势2** / Strength 2: 技术成熟
 
-- **中文** / Chinese: 应用系统能够提供智能化的服务，如自动问答、智能推荐等
-- **English**: Application systems can provide intelligent services such as automatic question answering and intelligent recommendations
+- **中文** / Chinese: 基于成熟的知识图谱技术，具有可靠的技术基础
+- **English**: Based on mature knowledge graph technology with reliable technical foundation
 
 ### 3.2 局限性分析 / Limitations Analysis
 
-**局限性1** / Limitation 1: 知识依赖性强
+**局限性1** / Limitation 1: 领域依赖性
 
-- **中文** / Chinese: 应用效果高度依赖于知识图谱的质量和完整性
-- **English**: Application effectiveness highly depends on the quality and completeness of the knowledge graph
+- **中文** / Chinese: 应用效果高度依赖特定领域的知识质量和完整性
+- **English**: Application effectiveness highly depends on knowledge quality and completeness of specific domains
 
-**局限性2** / Limitation 2: 计算复杂度高
+**局限性2** / Limitation 2: 实施复杂性
 
-- **中文** / Chinese: 复杂应用的计算开销很大，在大规模场景下面临性能挑战
-- **English**: Complex applications have high computational overhead and face performance challenges in large-scale scenarios
+- **中文** / Chinese: 大规模应用实施面临技术复杂性和成本挑战
+- **English**: Large-scale application implementation faces technical complexity and cost challenges
 
 ### 3.3 争议与讨论 / Controversies and Discussions
 
-**争议点1** / Controversy 1: 通用性 vs 专业性
+**争议点1** / Controversy 1: 通用性 vs 专用性
 
-- **支持观点** / Supporting Views: 通用应用能够覆盖更多场景，但可能缺乏深度
-- **反对观点** / Opposing Views: 专业应用在特定领域表现更好，但适用范围有限
-- **中立分析** / Neutral Analysis: 混合应用方法结合了两种优势，可能是最佳解决方案
+- **支持观点** / Supporting Views: 通用应用提供更广泛的适用性
+- **反对观点** / Opposing Views: 专用应用提供更好的性能
+- **中立分析** / Neutral Analysis: 混合方法结合了两种优势
 
 ## 4. 工程实践 / Engineering Practice
 
@@ -145,40 +142,217 @@ graph TD
 **智能问答算法** / Intelligent Q&A Algorithm:
 
 ```rust
-// Rust实现示例
-use std::collections::{HashMap, HashSet, VecDeque};
+// Rust实现示例 - Intelligent Q&A Algorithm
+// 智能问答算法：实现基于知识图谱的问答系统
+use std::collections::{HashMap, HashSet};
+use std::fmt;
 
 #[derive(Debug, Clone)]
 pub struct Question {
-    pub id: String,
-    pub text: String,
-    pub intent: String,
-    pub entities: Vec<String>,
-    pub confidence: f64,
+    pub id: String,           // 问题标识 / Question identifier
+    pub content: String,      // 问题内容 / Question content
+    pub question_type: QuestionType, // 问题类型 / Question type
+    pub entities: Vec<String>, // 实体列表 / Entity list
+    pub relations: Vec<String>, // 关系列表 / Relation list
+}
+
+#[derive(Debug, Clone)]
+pub enum QuestionType {
+    Factual,      // 事实性问题 / Factual question
+    Relational,   // 关系性问题 / Relational question
+    Comparative,  // 比较性问题 / Comparative question
+    Causal,       // 因果性问题 / Causal question
 }
 
 #[derive(Debug, Clone)]
 pub struct Answer {
-    pub id: String,
-    pub text: String,
-    pub source: String,
-    pub confidence: f64,
-    pub evidence: Vec<String>,
+    pub id: String,           // 答案标识 / Answer identifier
+    pub content: String,      // 答案内容 / Answer content
+    pub confidence: f64,      // 置信度 / Confidence
+    pub source: String,       // 来源 / Source
+    pub reasoning_path: Vec<String>, // 推理路径 / Reasoning path
 }
 
 #[derive(Debug, Clone)]
 pub struct QASystem {
-    pub knowledge_graph: KnowledgeGraph,
-    pub question_parser: QuestionParser,
-    pub answer_generator: AnswerGenerator,
-    pub confidence_calculator: ConfidenceCalculator,
+    pub knowledge_graph: KnowledgeGraph, // 知识图谱 / Knowledge graph
+    pub question_analyzer: QuestionAnalyzer, // 问题分析器 / Question analyzer
+    pub answer_generator: AnswerGenerator, // 答案生成器 / Answer generator
+    pub answer_ranker: AnswerRanker,     // 答案排序器 / Answer ranker
+}
+
+#[derive(Debug, Clone)]
+pub struct QuestionAnalyzer {
+    pub entity_extractor: EntityExtractor, // 实体抽取器 / Entity extractor
+    pub relation_extractor: RelationExtractor, // 关系抽取器 / Relation extractor
+    pub question_classifier: QuestionClassifier, // 问题分类器 / Question classifier
+}
+
+#[derive(Debug, Clone)]
+pub struct AnswerGenerator {
+    pub query_planner: QueryPlanner,     // 查询规划器 / Query planner
+    pub graph_traverser: GraphTraverser, // 图遍历器 / Graph traverser
+    pub answer_formatter: AnswerFormatter, // 答案格式化器 / Answer formatter
+}
+
+impl QASystem {
+    pub fn new() -> Self {
+        QASystem {
+            knowledge_graph: KnowledgeGraph::new(),
+            question_analyzer: QuestionAnalyzer::new(),
+            answer_generator: AnswerGenerator::new(),
+            answer_ranker: AnswerRanker::new(),
+        }
+    }
+    
+    // 回答问题 / Answer question
+    pub fn answer_question(&self, question: &str) -> Vec<Answer> {
+        // 问题分析 / Question analysis
+        let analyzed_question = self.question_analyzer.analyze(question);
+        
+        // 答案生成 / Answer generation
+        let candidate_answers = self.answer_generator.generate_answers(&analyzed_question);
+        
+        // 答案排序 / Answer ranking
+        let ranked_answers = self.answer_ranker.rank_answers(candidate_answers);
+        
+        ranked_answers
+    }
+    
+    // 批量问答 / Batch Q&A
+    pub fn batch_qa(&self, questions: Vec<String>) -> HashMap<String, Vec<Answer>> {
+        let mut results = HashMap::new();
+        
+        for question in questions {
+            let answers = self.answer_question(&question);
+            results.insert(question, answers);
+        }
+        
+        results
+    }
+    
+    // 获取系统统计 / Get system statistics
+    pub fn get_statistics(&self) -> QAStatistics {
+        QAStatistics {
+            question_count: self.get_question_count(),
+            answer_count: self.get_answer_count(),
+            accuracy_score: self.calculate_accuracy(),
+            response_time: self.calculate_response_time(),
+        }
+    }
+    
+    // 获取问题数量 / Get question count
+    fn get_question_count(&self) -> usize {
+        // 简化的统计实现 / Simplified statistics implementation
+        1000
+    }
+    
+    // 获取答案数量 / Get answer count
+    fn get_answer_count(&self) -> usize {
+        // 简化的统计实现 / Simplified statistics implementation
+        5000
+    }
+    
+    // 计算准确率 / Calculate accuracy
+    fn calculate_accuracy(&self) -> f64 {
+        // 简化的准确率计算 / Simplified accuracy calculation
+        0.85
+    }
+    
+    // 计算响应时间 / Calculate response time
+    fn calculate_response_time(&self) -> f64 {
+        // 简化的响应时间计算 / Simplified response time calculation
+        0.2 // 假设响应时间为0.2秒 / Assume response time is 0.2 seconds
+    }
+}
+
+impl QuestionAnalyzer {
+    pub fn new() -> Self {
+        QuestionAnalyzer {
+            entity_extractor: EntityExtractor::new(),
+            relation_extractor: RelationExtractor::new(),
+            question_classifier: QuestionClassifier::new(),
+        }
+    }
+    
+    // 分析问题 / Analyze question
+    pub fn analyze(&self, question: &str) -> Question {
+        // 实体抽取 / Entity extraction
+        let entities = self.entity_extractor.extract_entities(question);
+        
+        // 关系抽取 / Relation extraction
+        let relations = self.relation_extractor.extract_relations(question);
+        
+        // 问题分类 / Question classification
+        let question_type = self.question_classifier.classify(question);
+        
+        Question {
+            id: format!("question_{}", entities.len()),
+            content: question.to_string(),
+            question_type,
+            entities,
+            relations,
+        }
+    }
+}
+
+impl AnswerGenerator {
+    pub fn new() -> Self {
+        AnswerGenerator {
+            query_planner: QueryPlanner::new(),
+            graph_traverser: GraphTraverser::new(),
+            answer_formatter: AnswerFormatter::new(),
+        }
+    }
+    
+    // 生成答案 / Generate answers
+    pub fn generate_answers(&self, question: &Question) -> Vec<Answer> {
+        let mut answers = Vec::new();
+        
+        // 查询规划 / Query planning
+        let queries = self.query_planner.plan_queries(question);
+        
+        for query in queries {
+            // 图遍历 / Graph traversal
+            let graph_results = self.graph_traverser.traverse(&query);
+            
+            // 答案格式化 / Answer formatting
+            let formatted_answers = self.answer_formatter.format_answers(graph_results, question);
+            
+            answers.extend(formatted_answers);
+        }
+        
+        answers
+    }
+}
+
+impl AnswerRanker {
+    pub fn new() -> Self {
+        AnswerRanker {
+            ranking_models: HashMap::new(),
+            ranking_features: Vec::new(),
+        }
+    }
+    
+    // 排序答案 / Rank answers
+    pub fn rank_answers(&self, answers: Vec<Answer>) -> Vec<Answer> {
+        let mut ranked_answers = answers;
+        
+        // 按置信度排序 / Sort by confidence
+        ranked_answers.sort_by(|a, b| b.confidence.partial_cmp(&a.confidence).unwrap());
+        
+        // 去重 / Deduplicate
+        ranked_answers.dedup_by(|a, b| a.content == b.content);
+        
+        ranked_answers
+    }
 }
 
 #[derive(Debug, Clone)]
 pub struct KnowledgeGraph {
     pub entities: HashMap<String, Entity>,
-    pub relations: HashMap<String, Vec<Relation>>,
-    pub facts: HashSet<String>,
+    pub relations: HashMap<String, Relation>,
+    pub triples: Vec<Triple>,
 }
 
 #[derive(Debug, Clone)]
@@ -191,234 +365,312 @@ pub struct Entity {
 
 #[derive(Debug, Clone)]
 pub struct Relation {
-    pub source: String,
-    pub target: String,
-    pub relation_type: String,
+    pub id: String,
+    pub name: String,
+    pub source_type: String,
+    pub target_type: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct Triple {
+    pub subject: String,
+    pub predicate: String,
+    pub object: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct QAStatistics {
+    pub question_count: usize,
+    pub answer_count: usize,
+    pub accuracy_score: f64,
+    pub response_time: f64,
+}
+
+// 特征对象定义 / Trait object definitions
+pub trait EntityExtractor {
+    fn extract_entities(&self, text: &str) -> Vec<String>;
+}
+
+pub trait RelationExtractor {
+    fn extract_relations(&self, text: &str) -> Vec<String>;
+}
+
+pub trait QuestionClassifier {
+    fn classify(&self, question: &str) -> QuestionType;
+}
+
+pub trait QueryPlanner {
+    fn plan_queries(&self, question: &Question) -> Vec<String>;
+}
+
+pub trait GraphTraverser {
+    fn traverse(&self, query: &str) -> Vec<GraphResult>;
+}
+
+pub trait AnswerFormatter {
+    fn format_answers(&self, results: Vec<GraphResult>, question: &Question) -> Vec<Answer>;
+}
+
+#[derive(Debug, Clone)]
+pub struct GraphResult {
+    pub entity: String,
+    pub relation: String,
+    pub value: String,
     pub confidence: f64,
 }
 
-impl QASystem {
-    pub fn new() -> Self {
-        QASystem {
-            knowledge_graph: KnowledgeGraph {
-                entities: HashMap::new(),
-                relations: HashMap::new(),
-                facts: HashSet::new(),
-            },
-            question_parser: QuestionParser::new(),
-            answer_generator: AnswerGenerator::new(),
-            confidence_calculator: ConfidenceCalculator::new(),
-        }
+impl fmt::Display for Question {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "Question(id={}, content={}, type={:?})", 
+               self.id, self.content, self.question_type)
     }
-    
-    pub fn answer_question(&self, question_text: &str) -> Vec<Answer> {
-        // 1. 问题解析
-        let question = self.question_parser.parse(question_text);
-        
-        // 2. 知识检索
-        let relevant_facts = self.retrieve_relevant_facts(&question);
-        
-        // 3. 推理计算
-        let candidate_answers = self.reason_and_compute(&question, &relevant_facts);
-        
-        // 4. 答案生成
-        let answers = self.answer_generator.generate(&question, &candidate_answers);
-        
-        // 5. 置信度计算
-        let ranked_answers = self.confidence_calculator.rank(answers);
-        
-        ranked_answers
-    }
-    
-    fn retrieve_relevant_facts(&self, question: &Question) -> Vec<String> {
-        let mut relevant_facts = Vec::new();
-        
-        for entity in &question.entities {
-            if let Some(relations) = self.knowledge_graph.relations.get(entity) {
-                for relation in relations {
-                    let fact = format!("{} {} {}", relation.source, relation.relation_type, relation.target);
-                    relevant_facts.push(fact);
-                }
-            }
-        }
-        
-        relevant_facts
-    }
-    
-    fn reason_and_compute(&self, question: &Question, facts: &[String]) -> Vec<String> {
-        let mut candidate_answers = Vec::new();
-        
-        // 基于规则的推理
-        for fact in facts {
-            if self.matches_question_pattern(question, fact) {
-                candidate_answers.push(fact.clone());
-            }
-        }
-        
-        // 基于路径的推理
-        let path_answers = self.find_path_answers(question, facts);
-        candidate_answers.extend(path_answers);
-        
-        candidate_answers
-    }
-    
-    fn matches_question_pattern(&self, question: &Question, fact: &str) -> bool {
-        // 简化的模式匹配
-        question.text.contains(&fact[..fact.len().min(10)])
-    }
-    
-    fn find_path_answers(&self, question: &Question, facts: &[String]) -> Vec<String> {
-        let mut path_answers = Vec::new();
-        
-        // 使用图搜索算法找到相关路径
-        for entity in &question.entities {
-            if let Some(paths) = self.find_entity_paths(entity) {
-                for path in paths {
-                    path_answers.push(path);
-                }
-            }
-        }
-        
-        path_answers
-    }
-    
-    fn find_entity_paths(&self, entity: &str) -> Option<Vec<String>> {
-        // 简化的路径查找
-        Some(vec![format!("Path to {}", entity)])
+}
+
+impl fmt::Display for Answer {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "Answer(id={}, content={}, confidence={})", 
+               self.id, self.content, self.confidence)
     }
 }
 ```
 
 ```haskell
--- Haskell实现示例
+-- Haskell实现示例 - Intelligent Q&A Algorithm
+-- 智能问答算法：实现基于知识图谱的问答系统
 module Applications where
 
 import Data.Map (Map)
 import qualified Data.Map as Map
-import Data.Set (Set)
-import qualified Data.Set as Set
 import Data.Text (Text)
 import qualified Data.Text as T
 
+-- 问题数据结构 / Question data structure
 data Question = Question
-    { questionId :: Text
-    , questionText :: Text
-    , questionIntent :: Text
-    , questionEntities :: [Text]
-    , questionConfidence :: Double
+    { questionId :: Text        -- 问题标识 / Question identifier
+    , questionContent :: Text   -- 问题内容 / Question content
+    , questionType :: QuestionType -- 问题类型 / Question type
+    , questionEntities :: [Text] -- 实体列表 / Entity list
+    , questionRelations :: [Text] -- 关系列表 / Relation list
     } deriving (Show, Eq)
 
+-- 问题类型枚举 / Question type enumeration
+data QuestionType = Factual | Relational | Comparative | Causal
+    deriving (Show, Eq)
+
+-- 答案数据结构 / Answer data structure
 data Answer = Answer
-    { answerId :: Text
-    , answerText :: Text
-    , answerSource :: Text
-    , answerConfidence :: Double
-    , answerEvidence :: [Text]
+    { answerId :: Text         -- 答案标识 / Answer identifier
+    , answerContent :: Text    -- 答案内容 / Answer content
+    , answerConfidence :: Double -- 置信度 / Confidence
+    , answerSource :: Text     -- 来源 / Source
+    , answerReasoningPath :: [Text] -- 推理路径 / Reasoning path
     } deriving (Show, Eq)
 
-data Entity = Entity
-    { entityId :: Text
-    , entityName :: Text
-    , entityType :: Text
-    , entityProperties :: Map Text Text
-    } deriving (Show, Eq)
-
-data Relation = Relation
-    { source :: Text
-    , target :: Text
-    , relationType :: Text
-    , relationConfidence :: Double
-    } deriving (Show, Eq)
-
-data KnowledgeGraph = KnowledgeGraph
-    { entities :: Map Text Entity
-    , relations :: Map Text [Relation]
-    , facts :: Set Text
-    } deriving (Show, Eq)
-
+-- 问答系统数据结构 / Q&A system data structure
 data QASystem = QASystem
-    { knowledgeGraph :: KnowledgeGraph
-    , questionParser :: QuestionParser
-    , answerGenerator :: AnswerGenerator
+    { qaKnowledgeGraph :: KnowledgeGraph -- 知识图谱 / Knowledge graph
+    , qaQuestionAnalyzer :: QuestionAnalyzer -- 问题分析器 / Question analyzer
+    , qaAnswerGenerator :: AnswerGenerator -- 答案生成器 / Answer generator
+    , qaAnswerRanker :: AnswerRanker     -- 答案排序器 / Answer ranker
     } deriving (Show, Eq)
 
-data QuestionParser = QuestionParser deriving (Show, Eq)
-data AnswerGenerator = AnswerGenerator deriving (Show, Eq)
+-- 问题分析器数据结构 / Question analyzer data structure
+data QuestionAnalyzer = QuestionAnalyzer
+    { qaEntityExtractor :: EntityExtractor -- 实体抽取器 / Entity extractor
+    , qaRelationExtractor :: RelationExtractor -- 关系抽取器 / Relation extractor
+    , qaQuestionClassifier :: QuestionClassifier -- 问题分类器 / Question classifier
+    } deriving (Show, Eq)
 
-emptyKnowledgeGraph :: KnowledgeGraph
-emptyKnowledgeGraph = KnowledgeGraph Map.empty Map.empty Set.empty
+-- 答案生成器数据结构 / Answer generator data structure
+data AnswerGenerator = AnswerGenerator
+    { agQueryPlanner :: QueryPlanner     -- 查询规划器 / Query planner
+    , agGraphTraverser :: GraphTraverser -- 图遍历器 / Graph traverser
+    , agAnswerFormatter :: AnswerFormatter -- 答案格式化器 / Answer formatter
+    } deriving (Show, Eq)
 
+-- 空问答系统 / Empty Q&A system
 emptyQASystem :: QASystem
-emptyQASystem = QASystem emptyKnowledgeGraph QuestionParser AnswerGenerator
+emptyQASystem = QASystem 
+    (emptyKnowledgeGraph) 
+    (emptyQuestionAnalyzer) 
+    (emptyAnswerGenerator) 
+    (emptyAnswerRanker)
 
-answerQuestion :: QASystem -> Text -> [Answer]
-answerQuestion system questionText = 
-    let question = parseQuestion questionText
-        relevantFacts = retrieveRelevantFacts (knowledgeGraph system) question
-        candidateAnswers = reasonAndCompute question relevantFacts
-        answers = generateAnswers question candidateAnswers
-    in rankAnswers answers
+-- 空知识图谱 / Empty knowledge graph
+emptyKnowledgeGraph :: KnowledgeGraph
+emptyKnowledgeGraph = KnowledgeGraph Map.empty Map.empty []
 
-parseQuestion :: Text -> Question
-parseQuestion text = Question
-    { questionId = "q_1"
-    , questionText = text
-    , questionIntent = "unknown"
-    , questionEntities = extractEntities text
-    , questionConfidence = 0.8
-    }
+-- 空问题分析器 / Empty question analyzer
+emptyQuestionAnalyzer :: QuestionAnalyzer
+emptyQuestionAnalyzer = QuestionAnalyzer 
+    (emptyEntityExtractor) 
+    (emptyRelationExtractor) 
+    (emptyQuestionClassifier)
 
-extractEntities :: Text -> [Text]
-extractEntities text = 
-    -- 简化的实体提取
-    ["entity1", "entity2"]
+-- 空答案生成器 / Empty answer generator
+emptyAnswerGenerator :: AnswerGenerator
+emptyAnswerGenerator = AnswerGenerator 
+    (emptyQueryPlanner) 
+    (emptyGraphTraverser) 
+    (emptyAnswerFormatter)
 
-retrieveRelevantFacts :: KnowledgeGraph -> Question -> [Text]
-retrieveRelevantFacts kg question = 
-    let entities = questionEntities question
-        facts = concatMap (\entity -> 
-            case Map.lookup entity (relations kg) of
-                Just relations -> map (\rel -> 
-                    T.concat [source rel, " ", relationType rel, " ", target rel]) relations
-                Nothing -> []
-        ) entities
-    in facts
+-- 空答案排序器 / Empty answer ranker
+emptyAnswerRanker :: AnswerRanker
+emptyAnswerRanker = AnswerRanker Map.empty []
 
-reasonAndCompute :: Question -> [Text] -> [Text]
-reasonAndCompute question facts = 
-    let patternMatches = filter (\fact -> matchesQuestionPattern question fact) facts
-        pathAnswers = findPathAnswers question facts
-    in patternMatches ++ pathAnswers
+-- 回答问题 / Answer question
+answerQuestion :: Text -> QASystem -> [Answer]
+answerQuestion question system = 
+    let analyzedQuestion = analyzeQuestion question (qaQuestionAnalyzer system)
+        candidateAnswers = generateAnswers analyzedQuestion (qaAnswerGenerator system)
+        rankedAnswers = rankAnswers candidateAnswers (qaAnswerRanker system)
+    in rankedAnswers
 
-matchesQuestionPattern :: Question -> Text -> Bool
-matchesQuestionPattern question fact = 
-    T.isInfixOf (T.take 10 fact) (questionText question)
+-- 批量问答 / Batch Q&A
+batchQA :: [Text] -> QASystem -> Map Text [Answer]
+batchQA questions system = 
+    Map.fromList $ map (\question -> (question, answerQuestion question system)) questions
 
-findPathAnswers :: Question -> [Text] -> [Text]
-findPathAnswers question facts = 
-    let entities = questionEntities question
-        paths = concatMap (\entity -> findEntityPaths entity) entities
-    in map (\path -> T.concat ["Path: ", path]) paths
+-- 获取系统统计 / Get system statistics
+getQAStatistics :: QASystem -> QAStatistics
+getQAStatistics system = 
+    QAStatistics 
+        (getQuestionCount system)
+        (getAnswerCount system)
+        (calculateAccuracy system)
+        (calculateResponseTime system)
 
-findEntityPaths :: Text -> [Text]
-findEntityPaths entity = 
-    -- 简化的路径查找
-    [T.concat ["Path to ", entity]]
+-- 分析问题 / Analyze question
+analyzeQuestion :: Text -> QuestionAnalyzer -> Question
+analyzeQuestion question analyzer = 
+    let entities = extractEntities question (qaEntityExtractor analyzer)
+        relations = extractRelations question (qaRelationExtractor analyzer)
+        questionType = classifyQuestion question (qaQuestionClassifier analyzer)
+    in Question 
+        (T.concat ["question_", T.pack $ show $ length entities]) 
+        question 
+        questionType 
+        entities 
+        relations
 
-generateAnswers :: Question -> [Text] -> [Answer]
-generateAnswers question candidates = 
-    map (\candidate -> Answer
-        { answerId = "a_1"
-        , answerText = candidate
-        , answerSource = "knowledge_graph"
-        , answerConfidence = 0.7
-        , answerEvidence = [candidate]
-        }) candidates
+-- 生成答案 / Generate answers
+generateAnswers :: Question -> AnswerGenerator -> [Answer]
+generateAnswers question generator = 
+    let queries = planQueries question (agQueryPlanner generator)
+        allAnswers = concatMap (\query -> 
+            let graphResults = traverseGraph query (agGraphTraverser generator)
+            in formatAnswers graphResults question (agAnswerFormatter generator)) queries
+    in allAnswers
 
-rankAnswers :: [Answer] -> [Answer]
-rankAnswers answers = 
-    -- 按置信度排序
-    sortBy (\a b -> compare (answerConfidence b) (answerConfidence a)) answers
+-- 排序答案 / Rank answers
+rankAnswers :: [Answer] -> AnswerRanker -> [Answer]
+rankAnswers answers ranker = 
+    let sortedAnswers = sortBy (\a b -> compare (answerConfidence b) (answerConfidence a)) answers
+        uniqueAnswers = nubBy (\a b -> answerContent a == answerContent b) sortedAnswers
+    in uniqueAnswers
+
+-- 获取问题数量 / Get question count
+getQuestionCount :: QASystem -> Int
+getQuestionCount _ = 1000 -- 简化的统计实现 / Simplified statistics implementation
+
+-- 获取答案数量 / Get answer count
+getAnswerCount :: QASystem -> Int
+getAnswerCount _ = 5000 -- 简化的统计实现 / Simplified statistics implementation
+
+-- 计算准确率 / Calculate accuracy
+calculateAccuracy :: QASystem -> Double
+calculateAccuracy _ = 0.85 -- 简化的准确率计算 / Simplified accuracy calculation
+
+-- 计算响应时间 / Calculate response time
+calculateResponseTime :: QASystem -> Double
+calculateResponseTime _ = 0.2 -- 简化的响应时间计算 / Simplified response time calculation
+
+-- 知识图谱数据结构 / Knowledge graph data structure
+data KnowledgeGraph = KnowledgeGraph
+    { kgEntities :: Map Text Entity -- 实体 / Entities
+    , kgRelations :: Map Text Relation -- 关系 / Relations
+    , kgTriples :: [Triple] -- 三元组 / Triples
+    } deriving (Show, Eq)
+
+-- 实体数据结构 / Entity data structure
+data Entity = Entity
+    { entityId :: Text        -- 实体标识 / Entity identifier
+    , entityName :: Text      -- 实体名称 / Entity name
+    , entityType :: Text      -- 实体类型 / Entity type
+    , entityProperties :: Map Text Text -- 实体属性 / Entity properties
+    } deriving (Show, Eq)
+
+-- 关系数据结构 / Relation data structure
+data Relation = Relation
+    { relationId :: Text      -- 关系标识 / Relation identifier
+    , relationName :: Text    -- 关系名称 / Relation name
+    , relationSourceType :: Text -- 源类型 / Source type
+    , relationTargetType :: Text -- 目标类型 / Target type
+    } deriving (Show, Eq)
+
+-- 三元组数据结构 / Triple data structure
+data Triple = Triple
+    { tripleSubject :: Text   -- 主语 / Subject
+    , triplePredicate :: Text -- 谓语 / Predicate
+    , tripleObject :: Text    -- 宾语 / Object
+    } deriving (Show, Eq)
+
+-- 问答统计数据结构 / Q&A statistics data structure
+data QAStatistics = QAStatistics
+    { qasQuestionCount :: Int    -- 问题数量 / Question count
+    , qasAnswerCount :: Int      -- 答案数量 / Answer count
+    , qasAccuracyScore :: Double -- 准确率分数 / Accuracy score
+    , qasResponseTime :: Double  -- 响应时间 / Response time
+    } deriving (Show, Eq)
+
+-- 特征类定义 / Type class definitions
+class EntityExtractor a where
+    extractEntities :: a -> Text -> [Text]
+
+class RelationExtractor a where
+    extractRelations :: a -> Text -> [Text]
+
+class QuestionClassifier a where
+    classifyQuestion :: a -> Text -> QuestionType
+
+class QueryPlanner a where
+    planQueries :: a -> Question -> [Text]
+
+class GraphTraverser a where
+    traverseGraph :: a -> Text -> [GraphResult]
+
+class AnswerFormatter a where
+    formatAnswers :: a -> [GraphResult] -> Question -> [Answer]
+
+-- 图结果数据结构 / Graph result data structure
+data GraphResult = GraphResult
+    { grEntity :: Text       -- 实体 / Entity
+    , grRelation :: Text     -- 关系 / Relation
+    , grValue :: Text        -- 值 / Value
+    , grConfidence :: Double -- 置信度 / Confidence
+    } deriving (Show, Eq)
+
+-- 答案排序器数据结构 / Answer ranker data structure
+data AnswerRanker = AnswerRanker
+    { arRankingModels :: Map Text RankingModel -- 排序模型 / Ranking models
+    , arRankingFeatures :: [Text] -- 排序特征 / Ranking features
+    } deriving (Show, Eq)
+
+-- 排序模型特征类 / Ranking model type class
+class RankingModel a where
+    rank :: a -> [Answer] -> [Answer]
+
+-- 辅助函数 / Helper functions
+sortBy :: (a -> a -> Ordering) -> [a] -> [a]
+sortBy _ [] = []
+sortBy cmp (x:xs) = 
+    let smaller = sortBy cmp [a | a <- xs, cmp a x == LT]
+        bigger = sortBy cmp [a | a <- xs, cmp a x /= LT]
+    in smaller ++ [x] ++ bigger
+
+nubBy :: (a -> a -> Bool) -> [a] -> [a]
+nubBy _ [] = []
+nubBy eq (x:xs) = x : nubBy eq (filter (\y -> not $ eq x y) xs)
 ```
 
 #### 4.1.2 数据结构 / Data Structures
@@ -428,67 +680,86 @@ rankAnswers answers =
 ```rust
 #[derive(Debug, Clone)]
 pub struct ApplicationSystem {
-    pub knowledge_graph: KnowledgeGraph,
     pub qa_system: QASystem,
     pub recommendation_system: RecommendationSystem,
-    pub decision_support_system: DecisionSupportSystem,
-    pub knowledge_discovery_system: KnowledgeDiscoverySystem,
-}
-
-#[derive(Debug, Clone)]
-pub struct QASystem {
-    pub question_parser: QuestionParser,
-    pub answer_generator: AnswerGenerator,
-    pub confidence_calculator: ConfidenceCalculator,
+    pub search_system: SearchSystem,
+    pub decision_support: DecisionSupport,
 }
 
 #[derive(Debug, Clone)]
 pub struct RecommendationSystem {
-    pub user_model: UserModel,
-    pub item_model: ItemModel,
+    pub user_profiles: HashMap<String, UserProfile>,
+    pub item_features: HashMap<String, ItemFeatures>,
     pub recommendation_engine: RecommendationEngine,
 }
 
 #[derive(Debug, Clone)]
-pub struct DecisionSupportSystem {
-    pub rule_engine: RuleEngine,
-    pub decision_tree: DecisionTree,
-    pub risk_assessor: RiskAssessor,
+pub struct SearchSystem {
+    pub index: SearchIndex,
+    pub query_processor: QueryProcessor,
+    pub result_ranker: ResultRanker,
+}
+
+#[derive(Debug, Clone)]
+pub struct DecisionSupport {
+    pub knowledge_base: KnowledgeBase,
+    pub reasoning_engine: ReasoningEngine,
+    pub decision_models: HashMap<String, DecisionModel>,
 }
 
 impl ApplicationSystem {
     pub fn new() -> Self {
         ApplicationSystem {
-            knowledge_graph: KnowledgeGraph::new(),
             qa_system: QASystem::new(),
             recommendation_system: RecommendationSystem::new(),
-            decision_support_system: DecisionSupportSystem::new(),
-            knowledge_discovery_system: KnowledgeDiscoverySystem::new(),
+            search_system: SearchSystem::new(),
+            decision_support: DecisionSupport::new(),
         }
     }
     
-    pub fn process_query(&self, query: &str) -> ApplicationResult {
-        // 根据查询类型分发到不同的子系统
-        match self.classify_query(query) {
-            QueryType::Question => self.qa_system.answer(query),
-            QueryType::Recommendation => self.recommendation_system.recommend(query),
-            QueryType::Decision => self.decision_support_system.support(query),
-            QueryType::Discovery => self.knowledge_discovery_system.discover(query),
+    // 执行应用 / Execute application
+    pub fn execute_application(&self, app_type: ApplicationType, input: &str) -> ApplicationResult {
+        match app_type {
+            ApplicationType::QA => self.execute_qa(input),
+            ApplicationType::Recommendation => self.execute_recommendation(input),
+            ApplicationType::Search => self.execute_search(input),
+            ApplicationType::DecisionSupport => self.execute_decision_support(input),
         }
     }
     
-    fn classify_query(&self, query: &str) -> QueryType {
-        // 简化的查询分类
-        if query.contains("?") {
-            QueryType::Question
-        } else if query.contains("recommend") {
-            QueryType::Recommendation
-        } else if query.contains("decision") {
-            QueryType::Decision
-        } else {
-            QueryType::Discovery
+    // 获取应用统计 / Get application statistics
+    pub fn get_application_statistics(&self) -> ApplicationStatistics {
+        ApplicationStatistics {
+            qa_statistics: self.qa_system.get_statistics(),
+            recommendation_statistics: self.recommendation_system.get_statistics(),
+            search_statistics: self.search_system.get_statistics(),
+            decision_support_statistics: self.decision_support.get_statistics(),
         }
     }
+}
+
+#[derive(Debug, Clone)]
+pub enum ApplicationType {
+    QA,
+    Recommendation,
+    Search,
+    DecisionSupport,
+}
+
+#[derive(Debug, Clone)]
+pub struct ApplicationResult {
+    pub result_type: String,
+    pub content: String,
+    pub confidence: f64,
+    pub performance_metrics: HashMap<String, f64>,
+}
+
+#[derive(Debug, Clone)]
+pub struct ApplicationStatistics {
+    pub qa_statistics: QAStatistics,
+    pub recommendation_statistics: RecommendationStatistics,
+    pub search_statistics: SearchStatistics,
+    pub decision_support_statistics: DecisionSupportStatistics,
 }
 ```
 
@@ -496,30 +767,31 @@ impl ApplicationSystem {
 
 **时间复杂度** / Time Complexity:
 
-- 查询解析 / Query Parsing: O(n)
-- 知识检索 / Knowledge Retrieval: O(log n)
-- 推理计算 / Reasoning Computation: O(n²)
-- 结果生成 / Result Generation: O(n)
+- 问答查询 / Q&A Query: O(q × e)
+- 推荐计算 / Recommendation Calculation: O(u × i)
+- 搜索索引 / Search Indexing: O(n log n)
+- 决策支持 / Decision Support: O(r × d)
 
 **空间复杂度** / Space Complexity:
 
-- 知识图谱存储 / Knowledge Graph Storage: O(V + E)
-- 缓存系统 / Cache System: O(n)
-- 结果存储 / Result Storage: O(k)
+- 知识图谱存储 / Knowledge Graph Storage: O(n + e)
+- 用户画像存储 / User Profile Storage: O(u × f)
+- 搜索索引存储 / Search Index Storage: O(n × t)
+- 决策模型存储 / Decision Model Storage: O(m × p)
 
 ### 4.3 工程案例 / Engineering Cases
 
 #### 4.3.1 案例1 / Case 1: 智能客服系统
 
 **背景** / Background:
-构建基于知识图谱的智能客服系统，能够自动回答用户问题，提供24/7的客户服务支持。
+构建一个基于知识图谱的智能客服系统，支持自动问答和问题解决。
 
 **解决方案** / Solution:
 
-- 构建客服知识图谱，包含产品信息、常见问题、解决方案等
-- 实现自然语言理解和问题分类
-- 集成多轮对话和上下文理解
-- 提供人工客服转接机制
+- 实现多轮对话管理
+- 构建知识图谱问答
+- 开发意图识别算法
+- 集成情感分析模块
 
 **结果评估** / Results Evaluation:
 
@@ -534,19 +806,19 @@ impl ApplicationSystem {
 
 | 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
 |------------------|------------------------------|-------------------|
-| 智能问答 / Intelligent Q&A | 自动回答用户问题 | Automatically answer user questions |
+| 智能问答 / Intelligent Q&A | 基于知识图谱的问答系统 | Knowledge graph-based question answering systems |
 | 推荐系统 / Recommendation Systems | 个性化内容推荐 | Personalized content recommendation |
-| 决策支持 / Decision Support | 辅助决策制定 | Assist decision making |
-| 知识发现 / Knowledge Discovery | 发现新知识和模式 | Discover new knowledge and patterns |
+| 搜索引擎 / Search Engines | 语义搜索和知识搜索 | Semantic search and knowledge search |
+| 决策支持 / Decision Support | 智能决策辅助系统 | Intelligent decision support systems |
 
 ### 5.2 实际案例 / Real-world Cases
 
 **案例1** / Case 1: Google Knowledge Graph
 
-- **项目名称** / Project Name: Google Knowledge Graph
+- **项目名称** / Project Name: Google Knowledge Graph Project
 - **应用场景** / Application Scenario: 搜索引擎增强
-- **技术实现** / Technical Implementation: 大规模知识图谱和智能问答
-- **效果评估** / Effect Evaluation: 显著提升搜索质量和用户体验
+- **技术实现** / Technical Implementation: 大规模知识图谱应用
+- **效果评估** / Effect Evaluation: 显著提升搜索质量
 
 ## 6. 前沿发展 / Frontier Development
 
@@ -554,51 +826,52 @@ impl ApplicationSystem {
 
 **研究方向1** / Research Direction 1: 多模态应用
 
-- **研究内容** / Research Content: 结合文本、图像、音频的多模态知识图谱应用
-- **技术突破** / Technical Breakthrough: 实现了跨模态的知识理解和推理
-- **应用前景** / Application Prospects: 在智能助手和虚拟现实中有广泛应用
+- **研究内容** / Research Content: 结合文本、图像、音频的多模态应用
+- **技术突破** / Technical Breakthrough: 实现了跨模态的知识图谱应用
+- **应用前景** / Application Prospects: 在多媒体场景中广泛应用
 
 ### 6.2 发展趋势 / Development Trends
 
-**趋势1** / Trend 1: 边缘计算应用
+**趋势1** / Trend 1: 实时应用
 
-- **中文** / Chinese: 将知识图谱应用部署到边缘设备，实现本地化智能服务
-- **English**: Deploy knowledge graph applications to edge devices for localized intelligent services
+- **中文** / Chinese: 应用实践正在向实时处理方向发展，支持流式数据处理
+- **English**: Application practice is moving towards real-time processing, supporting streaming data processing
 
 ## 7. 总结与展望 / Summary and Prospects
 
 ### 7.1 核心要点 / Key Points
 
-1. **要点1** / Point 1: 应用实践是知识图谱价值的最终体现，将理论转化为实际价值
-2. **要点2** / Point 2: 现代应用系统结合了多种技术，提供智能化的服务体验
-3. **要点3** / Point 3: 应用实践正在向多模态和边缘计算方向发展
+1. **要点1** / Point 1: 应用实践是知识图谱技术的价值体现
+2. **要点2** / Point 2: 现代应用实践结合了多种智能技术
+3. **要点3** / Point 3: 应用实践正在向多模态和实时处理方向发展
 
 ### 7.2 未来展望 / Future Prospects
 
 **发展方向** / Development Directions:
 
-- **短期目标** / Short-term Goals: 提高应用的准确性和用户体验
-- **中期目标** / Medium-term Goals: 实现多模态和跨领域应用
-- **长期目标** / Long-term Goals: 构建无处不在的智能应用生态系统
+- **短期目标** / Short-term Goals: 提升应用系统的准确性和效率
+- **中期目标** / Medium-term Goals: 实现多模态应用
+- **长期目标** / Long-term Goals: 构建通用应用平台
 
 ## 8. 参考文献 / References
 
 ### 8.1 学术文献 / Academic Literature
 
-1. Berant, J., et al. (2013). Semantic parsing on freebase from question-answer pairs. In Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing.
+1. Berant, J., et al. (2013). Semantic parsing on freebase from question-answer pairs. In Proceedings of the 2013 conference on empirical methods in natural language processing.
 2. Bordes, A., et al. (2013). Translating embeddings for modeling multi-relational data. In Advances in neural information processing systems.
-3. Wang, Z., et al. (2014). Knowledge graph embedding by translating on hyperplanes. In Twenty-eighth AAAI conference on artificial intelligence.
+3. Nickel, M., et al. (2016). A review of relational machine learning for knowledge graphs. Proceedings of the IEEE, 104(1), 11-33.
 
 ### 8.2 技术文档 / Technical Documentation
 
-1. Google Knowledge Graph API. <https://developers.google.com/knowledge-graph>. Accessed 2024.
+1. Google Knowledge Graph. <https://developers.google.com/knowledge-graph>. Accessed 2024.
 2. Amazon Neptune. <https://aws.amazon.com/neptune/>. Accessed 2024.
-3. Neo4j Graph Database. <https://neo4j.com/>. Accessed 2024.
+3. Neo4j Documentation. <https://neo4j.com/docs/>. Accessed 2024.
 
 ### 8.3 在线资源 / Online Resources
 
-1. Stanford CS224N: Natural Language Processing with Deep Learning. <https://web.stanford.edu/class/cs224n/>. Accessed 2024.
-2. Knowledge Graph Conference. <https://www.knowledgegraph.tech/>. Accessed 2024.
+1. Knowledge Graph Applications. <https://github.com/awesome-knowledge-graph-applications>. Accessed 2024.
+2. Semantic Web Applications. <https://www.w3.org/2001/sw/sweo/public/UseCases/>. Accessed 2024.
+3. Graph Database Applications. <https://neo4j.com/use-cases/>. Accessed 2024.
 
 ## 9. 相关链接 / Related Links
 
@@ -606,7 +879,7 @@ impl ApplicationSystem {
 
 - [知识表示](../01-knowledge-representation/README.md)
 - [推理系统](../06-reasoning-systems/README.md)
-- [知识抽取](../05-knowledge-extraction/README.md)
+- [本体工程](../04-ontology-engineering/README.md)
 
 ### 9.2 外部链接 / External Links
 
