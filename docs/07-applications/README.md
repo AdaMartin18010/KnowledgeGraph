@@ -35,7 +35,7 @@ Application practice refers to the concrete application and implementation of kn
 
 **数学符号** / Mathematical Notation:
 
-```
+```text
 AP = (D, A, U, P, M)
 ```
 
@@ -57,7 +57,7 @@ AP = (D, A, U, P, M)
 
 **证明** / Proof:
 
-```
+```text
 设应用实践系统AP是完备的
 对于用户需求u ∈ U
 根据完备性定义：完备的系统能够满足所有用户需求
@@ -69,7 +69,7 @@ AP = (D, A, U, P, M)
 
 **证明** / Proof:
 
-```
+```text
 设应用实践系统AP的性能指标p ∈ P满足阈值要求
 根据性能定义：满足阈值的系统能够提供期望的服务质量
 因此，系统能够提供满足用户期望的服务质量

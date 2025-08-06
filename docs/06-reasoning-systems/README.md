@@ -35,7 +35,7 @@ Reasoning systems are core technologies in knowledge graphs for logical reasonin
 
 **数学符号** / Mathematical Notation:
 
-```
+```text
 RS = (K, R, A, I, C)
 ```
 
@@ -57,7 +57,7 @@ RS = (K, R, A, I, C)
 
 **证明** / Proof:
 
-```
+```text
 设推理系统RS是完备的
 对于知识库K中的事实f，如果f可以通过推理规则R推导得出
 根据完备性定义：完备的系统能够推导出所有可推导的事实
@@ -69,7 +69,7 @@ RS = (K, R, A, I, C)
 
 **证明** / Proof:
 
-```
+```text
 设推理系统RS是一致的
 对于推理结果r₁, r₂ ∈ RS(K)
 根据一致性定义：一致的系统中不存在矛盾
