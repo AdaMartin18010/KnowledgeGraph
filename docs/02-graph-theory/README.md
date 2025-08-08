@@ -1,8 +1,8 @@
-# 图论基础 / Graph Theory Fundamentals
+# 2. 图论基础 / Graph Theory Fundamentals
 
-## 1. 概述 / Overview
+## 2.1 概述 / Overview
 
-### 1.1 定义与概念 / Definition and Concepts
+### 2.1.1 定义与概念 / Definition and Concepts
 
 **中文定义** / Chinese Definition:
 图论是研究图结构的数学分支，为知识图谱提供理论基础。图由顶点集合和边集合组成，通过数学符号和逻辑关系描述复杂网络结构，支持路径分析、连通性检测和网络优化等算法。
@@ -10,7 +10,7 @@
 **English Definition:**
 Graph theory is a mathematical branch that studies graph structures, providing theoretical foundations for knowledge graphs. A graph consists of a vertex set and an edge set, describing complex network structures through mathematical symbols and logical relationships, supporting algorithms for path analysis, connectivity detection, and network optimization.
 
-### 1.2 历史发展 / Historical Development
+### 2.1.2 历史发展 / Historical Development
 
 **发展历程** / Development Timeline:
 
@@ -18,7 +18,7 @@ Graph theory is a mathematical branch that studies graph structures, providing t
 - **阶段2** / Phase 2: 现代图论时期 (1930s-1980s) - 图论算法和复杂性理论
 - **阶段3** / Phase 3: 应用图论时期 (1980s-至今) - 网络科学和知识图谱
 
-### 1.3 核心特征 / Core Characteristics
+### 2.1.3 核心特征 / Core Characteristics
 
 | 特征 / Feature | 中文描述 / Chinese Description | English Description |
 |---------------|------------------------------|-------------------|
@@ -27,11 +27,11 @@ Graph theory is a mathematical branch that studies graph structures, providing t
 | 可扩展性 / Scalable | 处理大规模图结构 | Handle large-scale graph structures |
 | 应用广泛性 / Universal | 适用于多种领域问题 | Applicable to various domain problems |
 
-## 2. 理论基础 / Theoretical Foundation
+## 2.2 理论基础 / Theoretical Foundation
 
-### 2.1 数学基础 / Mathematical Foundation
+### 2.2.1 数学基础 / Mathematical Foundation
 
-#### 2.1.1 形式化定义 / Formal Definition
+#### 2.2.1.1 形式化定义 / Formal Definition
 
 **数学符号** / Mathematical Notation:
 
@@ -47,9 +47,9 @@ G = (V, E)
 **形式化描述** / Formal Description:
 图G是一个二元组，其中顶点集合V包含图中的所有节点，边集合E定义顶点间的连接关系。每条边e ∈ E可以表示为e = (u, v)，其中u, v ∈ V。
 
-#### 2.1.2 定理与证明 / Theorems and Proofs
+#### 2.2.1.2 定理与证明 / Theorems and Proofs
 
-**定理1** / Theorem 1: 握手定理 (Handshake Theorem)
+**定理2.1** / Theorem 2.1: 握手定理 (Handshake Theorem)
 对于任何图G = (V, E)，所有顶点的度数之和等于边数的两倍，即∑(deg(v)) = 2|E|。
 
 **证明** / Proof:
@@ -63,7 +63,7 @@ G = (V, E)
 即 ∑(deg(v)) = 2|E|
 ```
 
-**定理2** / Theorem 2: 欧拉路径定理 (Euler Path Theorem)
+**定理2.2** / Theorem 2.2: 欧拉路径定理 (Euler Path Theorem)
 连通图G存在欧拉路径当且仅当G中恰好有0个或2个奇数度数的顶点。
 
 **证明** / Proof:
@@ -76,7 +76,7 @@ G = (V, E)
 如果有2个奇数度数顶点，可以构造欧拉路径
 ```
 
-### 2.2 逻辑框架 / Logical Framework
+### 2.2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
 
@@ -100,45 +100,45 @@ graph TD
     D --> D3[路径数量]
 ```
 
-## 3. 批判性分析 / Critical Analysis
+## 2.3 批判性分析 / Critical Analysis
 
-### 3.1 优势分析 / Strengths Analysis
+### 2.3.1 优势分析 / Strengths Analysis
 
-**优势1** / Strength 1: 数学严谨性
+**优势2.1** / Strength 2.1: 数学严谨性
 
 - **中文** / Chinese: 图论基于严格的数学定义，提供可靠的理论基础
 - **English**: Graph theory is based on strict mathematical definitions, providing reliable theoretical foundations
 
-**优势2** / Strength 2: 算法高效性
+**优势2.2** / Strength 2.2: 算法高效性
 
 - **中文** / Chinese: 图论算法具有多项式时间复杂度，适合大规模应用
 - **English**: Graph theory algorithms have polynomial time complexity, suitable for large-scale applications
 
-### 3.2 局限性分析 / Limitations Analysis
+### 2.3.2 局限性分析 / Limitations Analysis
 
-**局限性1** / Limitation 1: 表达能力
+**局限性2.1** / Limitation 2.1: 表达能力
 
 - **中文** / Chinese: 传统图论难以表达复杂的语义关系和动态变化
 - **English**: Traditional graph theory has difficulty expressing complex semantic relationships and dynamic changes
 
-**局限性2** / Limitation 2: 可扩展性
+**局限性2.2** / Limitation 2.2: 可扩展性
 
 - **中文** / Chinese: 大规模图的存储和计算面临内存和性能挑战
 - **English**: Large-scale graph storage and computation face memory and performance challenges
 
-### 3.3 争议与讨论 / Controversies and Discussions
+### 2.3.3 争议与讨论 / Controversies and Discussions
 
-**争议点1** / Controversy 1: 静态 vs 动态图
+**争议点2.1** / Controversy 2.1: 静态 vs 动态图
 
 - **支持观点** / Supporting Views: 静态图提供稳定的理论基础
 - **反对观点** / Opposing Views: 动态图更符合现实世界的复杂性
 - **中立分析** / Neutral Analysis: 需要结合静态和动态图论的优势
 
-## 4. 工程实践 / Engineering Practice
+## 2.4 工程实践 / Engineering Practice
 
-### 4.1 实现方法 / Implementation Methods
+### 2.4.1 实现方法 / Implementation Methods
 
-#### 4.1.1 算法设计 / Algorithm Design
+#### 2.4.1.1 算法设计 / Algorithm Design
 
 **图表示算法** / Graph Representation Algorithm:
 
@@ -480,7 +480,7 @@ hasEulerPath graph =
     in oddDegreeCount == 0 || oddDegreeCount == 2
 ```
 
-#### 4.1.2 数据结构 / Data Structures
+#### 2.4.1.2 数据结构 / Data Structures
 
 **核心数据结构** / Core Data Structure:
 
@@ -554,7 +554,7 @@ impl WeightedGraph {
 }
 ```
 
-### 4.2 性能分析 / Performance Analysis
+### 2.4.2 性能分析 / Performance Analysis
 
 **时间复杂度** / Time Complexity:
 
@@ -570,9 +570,9 @@ impl WeightedGraph {
 - 邻接矩阵存储 / Adjacency Matrix Storage: O(V²)
 - 图度量计算 / Graph Metrics Calculation: O(V + E)
 
-### 4.3 工程案例 / Engineering Cases
+### 2.4.3 工程案例 / Engineering Cases
 
-#### 4.3.1 案例1 / Case 1: 社交网络分析
+#### 2.4.3.1 案例2.1 / Case 2.1: 社交网络分析
 
 **背景** / Background:
 分析社交网络中的用户关系，识别关键用户和社区结构。
@@ -591,9 +591,9 @@ impl WeightedGraph {
 - 社区识别准确率: 85%
 - 分析响应时间: <50ms
 
-## 5. 应用领域 / Application Domains
+## 2.5 应用领域 / Application Domains
 
-### 5.1 主要应用 / Primary Applications
+### 2.5.1 主要应用 / Primary Applications
 
 | 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
 |------------------|------------------------------|-------------------|
@@ -602,41 +602,41 @@ impl WeightedGraph {
 | 生物网络分析 / Biological Network Analysis | 分析蛋白质相互作用网络 | Analyze protein interaction networks |
 | 知识图谱构建 / Knowledge Graph Construction | 构建实体关系图结构 | Construct entity relationship graph structures |
 
-### 5.2 实际案例 / Real-world Cases
+### 2.5.2 实际案例 / Real-world Cases
 
-**案例1** / Case 1: Google PageRank算法
+**案例2.1** / Case 2.1: Google PageRank算法
 
 - **项目名称** / Project Name: Google PageRank Algorithm
 - **应用场景** / Application Scenario: 网页重要性排序
 - **技术实现** / Technical Implementation: 基于图论的随机游走算法
 - **效果评估** / Effect Evaluation: 显著提升搜索结果质量
 
-## 6. 前沿发展 / Frontier Development
+## 2.6 前沿发展 / Frontier Development
 
-### 6.1 最新研究 / Latest Research
+### 2.6.1 最新研究 / Latest Research
 
-**研究方向1** / Research Direction 1: 动态图论
+**研究方向2.1** / Research Direction 2.1: 动态图论
 
 - **研究内容** / Research Content: 处理随时间变化的图结构
 - **技术突破** / Technical Breakthrough: 实现了高效的动态图算法
 - **应用前景** / Application Prospects: 在实时系统中广泛应用
 
-### 6.2 发展趋势 / Development Trends
+### 2.6.2 发展趋势 / Development Trends
 
-**趋势1** / Trend 1: 大规模图处理
+**趋势2.1** / Trend 2.1: 大规模图处理
 
 - **中文** / Chinese: 图论正在向处理超大规模图结构发展
 - **English**: Graph theory is developing towards processing ultra-large-scale graph structures
 
-## 7. 总结与展望 / Summary and Prospects
+## 2.7 总结与展望 / Summary and Prospects
 
-### 7.1 核心要点 / Key Points
+### 2.7.1 核心要点 / Key Points
 
-1. **要点1** / Point 1: 图论为知识图谱提供坚实的数学基础
-2. **要点2** / Point 2: 图算法支持高效的网络分析和优化
-3. **要点3** / Point 3: 图论正在向动态和大规模方向发展
+1. **要点2.1** / Point 2.1: 图论为知识图谱提供坚实的数学基础
+2. **要点2.2** / Point 2.2: 图算法支持高效的网络分析和优化
+3. **要点2.3** / Point 2.3: 图论正在向动态和大规模方向发展
 
-### 7.2 未来展望 / Future Prospects
+### 2.7.2 未来展望 / Future Prospects
 
 **发展方向** / Development Directions:
 
@@ -644,35 +644,35 @@ impl WeightedGraph {
 - **中期目标** / Medium-term Goals: 实现动态图论算法
 - **长期目标** / Long-term Goals: 构建超大规模图处理系统
 
-## 8. 参考文献 / References
+## 2.8 参考文献 / References
 
-### 8.1 学术文献 / Academic Literature
+### 2.8.1 学术文献 / Academic Literature
 
 1. Bondy, J. A., & Murty, U. S. R. (2008). Graph theory. Springer Science & Business Media.
 2. West, D. B. (2001). Introduction to graph theory (Vol. 2). Upper Saddle River: Prentice hall.
 3. Diestel, R. (2017). Graph theory. Springer.
 
-### 8.2 技术文档 / Technical Documentation
+### 2.8.2 技术文档 / Technical Documentation
 
 1. NetworkX Documentation. <https://networkx.org/>. Accessed 2024.
 2. Graph Theory Algorithms. <https://en.wikipedia.org/wiki/Graph_theory>. Accessed 2024.
 3. Graph Database Standards. <https://www.w3.org/TR/rdf11-concepts/>. Accessed 2024.
 
-### 8.3 在线资源 / Online Resources
+### 2.8.3 在线资源 / Online Resources
 
 1. Stanford Graph Theory Course. <https://web.stanford.edu/class/cs224w/>. Accessed 2024.
 2. Graph Theory Online. <https://www.graph-theory.com/>. Accessed 2024.
 3. Network Science Book. <http://networksciencebook.com/>. Accessed 2024.
 
-## 9. 相关链接 / Related Links
+## 2.9 相关链接 / Related Links
 
-### 9.1 内部链接 / Internal Links
+### 2.9.1 内部链接 / Internal Links
 
 - [知识表示](../01-knowledge-representation/README.md)
 - [语义分析](../03-semantic-analysis/README.md)
 - [本体工程](../04-ontology-engineering/README.md)
 
-### 9.2 外部链接 / External Links
+### 2.9.2 外部链接 / External Links
 
 - [NetworkX](https://networkx.org/)
 - [Graph Theory](https://en.wikipedia.org/wiki/Graph_theory)

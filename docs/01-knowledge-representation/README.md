@@ -1,8 +1,8 @@
-# 知识表示 / Knowledge Representation
+# 1. 知识表示 / Knowledge Representation
 
-## 1. 概述 / Overview
+## 1.1 概述 / Overview
 
-### 1.1 定义与概念 / Definition and Concepts
+### 1.1.1 定义与概念 / Definition and Concepts
 
 **中文定义** / Chinese Definition:
 知识表示是知识图谱中的核心概念，指将人类知识转化为计算机可处理的形式化结构。它通过数学符号、逻辑关系和语义映射，将复杂的现实世界知识抽象为可计算、可推理的数学模型，为知识图谱的构建、存储、查询和推理提供理论基础。
@@ -10,7 +10,7 @@
 **English Definition:**
 Knowledge representation is a core concept in knowledge graphs, referring to the transformation of human knowledge into formal structures that computers can process. It uses mathematical symbols, logical relationships, and semantic mappings to abstract complex real-world knowledge into computable and inferable mathematical models, providing theoretical foundations for knowledge graph construction, storage, querying, and reasoning.
 
-### 1.2 历史发展 / Historical Development
+### 1.1.2 历史发展 / Historical Development
 
 **发展历程** / Development Timeline:
 
@@ -18,7 +18,7 @@ Knowledge representation is a core concept in knowledge graphs, referring to the
 - **阶段2** / Phase 2: 连接主义时期 (1980s-2000s) - 基于神经网络的知识表示
 - **阶段3** / Phase 3: 混合主义时期 (2000s-至今) - 符号与统计相结合的知识表示
 
-### 1.3 核心特征 / Core Characteristics
+### 1.1.3 核心特征 / Core Characteristics
 
 | 特征 / Feature | 中文描述 / Chinese Description | English Description |
 |---------------|------------------------------|-------------------|
@@ -27,11 +27,11 @@ Knowledge representation is a core concept in knowledge graphs, referring to the
 | 语义性 / Semantic | 保持知识的语义含义 | Maintain semantic meaning of knowledge |
 | 可扩展性 / Extensible | 支持知识的动态增长 | Support dynamic growth of knowledge |
 
-## 2. 理论基础 / Theoretical Foundation
+## 1.2 理论基础 / Theoretical Foundation
 
-### 2.1 数学基础 / Mathematical Foundation
+### 1.2.1 数学基础 / Mathematical Foundation
 
-#### 2.1.1 形式化定义 / Formal Definition
+#### 1.2.1.1 形式化定义 / Formal Definition
 
 **数学符号** / Mathematical Notation:
 
@@ -49,10 +49,15 @@ K = (C, R, A, I)
 **形式化描述** / Formal Description:
 知识表示系统K是一个四元组，其中概念集合C定义知识的基本单元，关系集合R描述概念间的逻辑关系，属性集合A定义概念的特征属性，实例集合I提供具体的知识实例。
 
-#### 2.1.2 定理与证明 / Theorems and Proofs
+**Formal Description:**
+The knowledge representation system K is a quadruple, where the concept set C defines the basic units of knowledge, the relation set R describes the logical relationships between concepts, the attribute set A defines the characteristic properties of concepts, and the instance set I provides concrete knowledge instances.
 
-**定理1** / Theorem 1: 知识表示完备性定理
+#### 1.2.1.2 定理与证明 / Theorems and Proofs
+
+**定理1.1** / Theorem 1.1: 知识表示完备性定理 / Knowledge Representation Completeness Theorem
 如果知识表示系统K是完备的，且概念集合C是正确表达的，则对于任何知识实体E，如果E在C的范围内，则K能够表示E，满足E ⊆ K。
+
+If a knowledge representation system K is complete and the concept set C is correctly expressed, then for any knowledge entity E, if E is within the scope of C, then K can represent E, satisfying E ⊆ K.
 
 **证明** / Proof:
 
@@ -64,8 +69,20 @@ K = (C, R, A, I)
 因此，K能够表示E，满足E ⊆ K
 ```
 
-**定理2** / Theorem 2: 知识表示一致性定理
+**Proof:**
+
+```text
+Let the knowledge representation system K be complete
+For any knowledge entity E, if the concept set C is correctly expressed
+And E is within the scope of C, i.e., E ∈ C
+According to the completeness definition: if an entity exists, then the system can represent it
+Therefore, K can represent E, satisfying E ⊆ K
+```
+
+**定理1.2** / Theorem 1.2: 知识表示一致性定理 / Knowledge Representation Consistency Theorem
 如果知识表示系统K是一致的，且关系集合R是逻辑正确的，则对于任何概念对(C₁, C₂)，如果存在关系R(C₁, C₂)，则R(C₂, C₁)⁻¹也成立。
+
+If a knowledge representation system K is consistent and the relation set R is logically correct, then for any concept pair (C₁, C₂), if there exists a relation R(C₁, C₂), then R(C₂, C₁)⁻¹ also holds.
 
 **证明** / Proof:
 
@@ -76,7 +93,16 @@ K = (C, R, A, I)
 因此，R(C₂, C₁)⁻¹也成立
 ```
 
-### 2.2 逻辑框架 / Logical Framework
+**Proof:**
+
+```text
+Let the knowledge representation system K be consistent
+For concept pair (C₁, C₂), if there exists a relation R(C₁, C₂)
+According to the consistency definition: relations must satisfy logical consistency
+Therefore, R(C₂, C₁)⁻¹ also holds
+```
+
+### 1.2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
 
@@ -100,52 +126,69 @@ graph TD
     D --> D3[属性继承]
 ```
 
-## 3. 批判性分析 / Critical Analysis
+## 1.3 批判性分析 / Critical Analysis
 
-### 3.1 优势分析 / Strengths Analysis
+### 1.3.1 优势分析 / Strengths Analysis
 
-**优势1** / Strength 1: 形式化严格性
+**优势1.1** / Strength 1.1: 形式化严格性 / Formal Rigor
 
-- **中文** / Chinese: 知识表示基于严格的数学定义，确保逻辑的一致性和完备性
-- **English**: Knowledge representation is based on strict mathematical definitions, ensuring logical consistency and completeness
+- **中文** / Chinese: 知识表示基于严格的数学定义，提供可靠的理论基础
+- **English**: Knowledge representation is based on strict mathematical definitions, providing reliable theoretical foundations
 
-**优势2** / Strength 2: 可计算性
+**优势1.2** / Strength 1.2: 语义表达能力 / Semantic Expressiveness
 
-- **中文** / Chinese: 通过形式化表示，知识可以被计算机自动处理和推理
-- **English**: Through formal representation, knowledge can be automatically processed and reasoned by computers
+- **中文** / Chinese: 能够表达复杂的语义关系和知识结构
+- **English**: Can express complex semantic relationships and knowledge structures
 
-### 3.2 局限性分析 / Limitations Analysis
+**优势1.3** / Strength 1.3: 可计算性 / Computability
 
-**局限性1** / Limitation 1: 表达能力
+- **中文** / Chinese: 知识表示支持算法处理和自动推理
+- **English**: Knowledge representation supports algorithmic processing and automated reasoning
 
-- **中文** / Chinese: 形式化表示可能无法完全捕捉人类知识的复杂性和模糊性
-- **English**: Formal representation may not fully capture the complexity and ambiguity of human knowledge
+### 1.3.2 局限性分析 / Limitations Analysis
 
-**局限性2** / Limitation 2: 可扩展性
+**局限性1.1** / Limitation 1.1: 表达能力限制 / Expressiveness Limitations
 
-- **中文** / Chinese: 大规模知识表示面临计算复杂度和存储效率的挑战
-- **English**: Large-scale knowledge representation faces challenges in computational complexity and storage efficiency
+- **中文** / Chinese: 传统知识表示难以表达模糊和不确定的知识
+- **English**: Traditional knowledge representation has difficulty expressing fuzzy and uncertain knowledge
 
-### 3.3 争议与讨论 / Controversies and Discussions
+**局限性1.2** / Limitation 1.2: 可扩展性挑战 / Scalability Challenges
 
-**争议点1** / Controversy 1: 符号主义 vs 连接主义
+- **中文** / Chinese: 大规模知识表示面临存储和计算效率挑战
+- **English**: Large-scale knowledge representation faces storage and computational efficiency challenges
 
-- **支持观点** / Supporting Views: 符号主义提供清晰的逻辑推理和可解释性
-- **反对观点** / Opposing Views: 连接主义能够处理复杂的非线性关系
-- **中立分析** / Neutral Analysis: 混合方法结合了两种范式的优势，可能是最佳选择
+**局限性1.3** / Limitation 1.3: 知识获取困难 / Knowledge Acquisition Difficulty
 
-## 4. 工程实践 / Engineering Practice
+- **中文** / Chinese: 手动构建知识表示需要大量专家知识和时间投入
+- **English**: Manual construction of knowledge representation requires extensive expert knowledge and time investment
 
-### 4.1 实现方法 / Implementation Methods
+### 1.3.3 争议与讨论 / Controversies and Discussions
 
-#### 4.1.1 算法设计 / Algorithm Design
+**争议点1.1** / Controversy 1.1: 符号主义 vs 连接主义 / Symbolism vs Connectionism
 
-**知识抽取算法** / Knowledge Extraction Algorithm:
+- **支持观点** / Supporting Views: 符号主义提供可解释的知识表示
+- **反对观点** / Opposing Views: 连接主义能够处理复杂的模式识别
+- **中立分析** / Neutral Analysis: 混合方法结合了两种范式的优势
+
+**争议点1.2** / Controversy 1.2: 手工构建 vs 自动学习 / Manual Construction vs Automatic Learning
+
+- **支持观点** / Supporting Views: 手工构建确保知识表示的质量和准确性
+- **反对观点** / Opposing Views: 自动学习能够处理大规模和动态变化的知识
+- **中立分析** / Neutral Analysis: 人机协作模式结合了两种方法的优势
+
+## 1.4 工程实践 / Engineering Practice
+
+### 1.4.1 实现方法 / Implementation Methods
+
+#### 1.4.1.1 算法设计 / Algorithm Design
+
+**知识表示算法** / Knowledge Representation Algorithm:
 
 ```rust
-// Rust实现示例
+// Rust实现示例 - Knowledge Representation Algorithm
+// 知识表示算法：实现知识的概念化、关系化和实例化
 use std::collections::{HashMap, HashSet};
-use std::sync::{Arc, Mutex};
+use std::fmt;
 
 #[derive(Debug, Clone)]
 pub struct Concept {
@@ -572,7 +615,7 @@ data ConsistencyResult = ConsistencyResult
     } deriving (Show, Eq)
 ```
 
-#### 4.1.2 数据结构 / Data Structures
+#### 1.4.1.2 数据结构 / Data Structures
 
 **核心数据结构** / Core Data Structure:
 
@@ -679,7 +722,7 @@ impl KnowledgeGraph {
 }
 ```
 
-### 4.2 性能分析 / Performance Analysis
+### 1.4.2 性能分析 / Performance Analysis
 
 **时间复杂度** / Time Complexity:
 
@@ -695,9 +738,9 @@ impl KnowledgeGraph {
 - 查询处理器 / Query Processor: O(n)
 - 一致性检查器 / Consistency Checker: O(n)
 
-### 4.3 工程案例 / Engineering Cases
+### 1.4.3 工程案例 / Engineering Cases
 
-#### 4.3.1 案例1 / Case 1: 医疗知识图谱构建
+#### 1.4.3.1 案例1.1 / Case 1.1: 医疗知识图谱构建
 
 **背景** / Background:
 构建一个医疗领域的知识图谱，包含疾病、症状、药物、治疗方法等概念，支持医疗诊断和药物推荐。
@@ -716,9 +759,9 @@ impl KnowledgeGraph {
 - 推理准确率: 85%
 - 查询响应时间: <100ms
 
-## 5. 应用领域 / Application Domains
+## 1.5 应用领域 / Application Domains
 
-### 5.1 主要应用 / Primary Applications
+### 1.5.1 主要应用 / Primary Applications
 
 | 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
 |------------------|------------------------------|-------------------|
@@ -727,41 +770,41 @@ impl KnowledgeGraph {
 | 智能问答 / Intelligent Q&A | 自动问答系统 | Automated question answering systems |
 | 推荐系统 / Recommendation Systems | 基于知识的推荐 | Knowledge-based recommendation |
 
-### 5.2 实际案例 / Real-world Cases
+### 1.5.2 实际案例 / Real-world Cases
 
-**案例1** / Case 1: Google Knowledge Graph
+**案例1.1** / Case 1.1: Google Knowledge Graph
 
 - **项目名称** / Project Name: Google Knowledge Graph
 - **应用场景** / Application Scenario: 大规模通用知识图谱
 - **技术实现** / Technical Implementation: 实体-关系-属性三元组模型
 - **效果评估** / Effect Evaluation: 支持全球用户的智能搜索服务
 
-## 6. 前沿发展 / Frontier Development
+## 1.6 前沿发展 / Frontier Development
 
-### 6.1 最新研究 / Latest Research
+### 1.6.1 最新研究 / Latest Research
 
-**研究方向1** / Research Direction 1: 神经符号知识表示
+**研究方向1.1** / Research Direction 1.1: 神经符号知识表示
 
 - **研究内容** / Research Content: 结合神经网络和符号逻辑的知识表示方法
 - **技术突破** / Technical Breakthrough: 实现了可解释的神经符号推理
 - **应用前景** / Application Prospects: 在多个领域有重要应用
 
-### 6.2 发展趋势 / Development Trends
+### 1.6.2 发展趋势 / Development Trends
 
-**趋势1** / Trend 1: 多模态知识表示
+**趋势1.1** / Trend 1.1: 多模态知识表示
 
 - **中文** / Chinese: 知识表示正在向多模态方向发展，支持文本、图像、音频等多种形式
 - **English**: Knowledge representation is moving towards multimodal direction, supporting text, image, audio and other forms
 
-## 7. 总结与展望 / Summary and Prospects
+## 1.7 总结与展望 / Summary and Prospects
 
-### 7.1 核心要点 / Key Points
+### 1.7.1 核心要点 / Key Points
 
-1. **要点1** / Point 1: 知识表示是知识图谱的基础，提供形式化的知识建模方法
-2. **要点2** / Point 2: 现代知识表示结合了符号逻辑和统计学习，提高了表达能力
-3. **要点3** / Point 3: 知识表示正在向多模态和神经符号方向发展
+1. **要点1.1** / Point 1.1: 知识表示是知识图谱的基础，提供形式化的知识建模方法
+2. **要点1.2** / Point 1.2: 现代知识表示结合了符号逻辑和统计学习，提高了表达能力
+3. **要点1.3** / Point 1.3: 知识表示正在向多模态和神经符号方向发展
 
-### 7.2 未来展望 / Future Prospects
+### 1.7.2 未来展望 / Future Prospects
 
 **发展方向** / Development Directions:
 
@@ -769,35 +812,35 @@ impl KnowledgeGraph {
 - **中期目标** / Medium-term Goals: 实现多模态知识表示
 - **长期目标** / Long-term Goals: 构建自适应的知识表示生态系统
 
-## 8. 参考文献 / References
+## 1.8 参考文献 / References
 
-### 8.1 学术文献 / Academic Literature
+### 1.8.1 学术文献 / Academic Literature
 
 1. Brachman, R. J., & Levesque, H. J. (2004). Knowledge representation and reasoning. Elsevier.
 2. Sowa, J. F. (2000). Knowledge representation: logical, philosophical, and computational foundations. Brooks/Cole.
 3. Davis, R., Shrobe, H., & Szolovits, P. (1993). What is a knowledge representation?. AI magazine, 14(1), 17-17.
 
-### 8.2 技术文档 / Technical Documentation
+### 1.8.2 技术文档 / Technical Documentation
 
 1. RDF Specification. <https://www.w3.org/RDF/>. Accessed 2024.
 2. OWL Documentation. <https://www.w3.org/OWL/>. Accessed 2024.
 3. SPARQL Query Language. <https://www.w3.org/TR/sparql11-query/>. Accessed 2024.
 
-### 8.3 在线资源 / Online Resources
+### 1.8.3 在线资源 / Online Resources
 
 1. Stanford Knowledge Graph. <https://kg.stanford.edu/>. Accessed 2024.
 2. DBpedia. <https://dbpedia.org/>. Accessed 2024.
 3. Wikidata. <https://www.wikidata.org/>. Accessed 2024.
 
-## 9. 相关链接 / Related Links
+## 1.9 相关链接 / Related Links
 
-### 9.1 内部链接 / Internal Links
+### 1.9.1 内部链接 / Internal Links
 
 - [图论基础](../02-graph-theory/README.md)
 - [语义分析](../03-semantic-analysis/README.md)
 - [本体工程](../04-ontology-engineering/README.md)
 
-### 9.2 外部链接 / External Links
+### 1.9.2 外部链接 / External Links
 
 - [RDF](https://www.w3.org/RDF/)
 - [OWL](https://www.w3.org/OWL/)
