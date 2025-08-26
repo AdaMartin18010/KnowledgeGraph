@@ -39,7 +39,7 @@
 
 ### 文档结构 / Documentation Structure
 
-```
+```text
 KnowledgeGraph/
 ├── README.md                           # 项目介绍 / Project Introduction
 ├── LICENSE                             # 许可证 / License
