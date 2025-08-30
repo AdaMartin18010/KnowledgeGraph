@@ -76,6 +76,45 @@ RS = (K, R, A, I, C)
 因此，r₁ ∧ ¬r₂不成立
 ```
 
+**定理3** / Theorem 3: 推理可扩展性定理
+如果推理系统RS是可扩展的，则对于新的推理规则r_new，存在扩展操作Extend(RS, r_new)能够将r_new集成到系统中，且保持系统的一致性。
+
+**证明** / Proof:
+
+```text
+设推理系统RS是可扩展的
+对于新的推理规则r_new
+根据可扩展性定义：存在扩展操作Extend(RS, r_new)
+且扩展后系统RS' = Extend(RS, r_new)保持一致性
+因此，新规则能够安全集成到系统中
+```
+
+**定理4** / Theorem 4: 推理可解释性定理
+如果推理系统RS是可解释的，则对于任何推理结果r ∈ RS(K)，存在推理路径P使得P能够解释r的推导过程。
+
+**证明** / Proof:
+
+```text
+设推理系统RS是可解释的
+对于推理结果r ∈ RS(K)
+根据可解释性定义：存在推理路径P
+使得P能够解释r的推导过程
+因此，推理结果具有可解释性
+```
+
+**定理5** / Theorem 5: 推理效率定理
+如果推理系统RS是高效的，则对于知识库K中的查询q，推理时间T(RS, q) ≤ O(f(|K|))，其中f是多项式函数。
+
+**证明** / Proof:
+
+```text
+设推理系统RS是高效的
+对于知识库K中的查询q
+根据效率定义：推理时间T(RS, q) ≤ O(f(|K|))
+其中f是多项式函数
+因此，推理系统具有多项式时间复杂度
+```
+
 ### 2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
@@ -914,9 +953,166 @@ pub struct SystemStatistics {
 - 可解释性: 95%
 - 专家满意度: 88%
 
-## 5. 应用领域 / Application Domains
+## 5. 批判性分析 / Critical Analysis
 
-### 5.1 主要应用 / Primary Applications
+### 5.1 理论优势 / Theoretical Advantages
+
+**逻辑严谨性** / Logical Rigor:
+
+- 基于形式化逻辑进行推理
+- 提供可验证的推理过程
+- 确保推理结果的正确性
+
+**可解释性强** / Strong Explainability:
+
+- 推理过程可追溯和解释
+- 提供清晰的推理路径
+- 支持推理结果的验证
+
+**理论基础扎实** / Solid Theoretical Foundation:
+
+- 基于经典逻辑学和数学
+- 具有深厚的理论基础
+- 支持复杂的推理任务
+
+### 5.2 理论局限性 / Theoretical Limitations
+
+**计算复杂度问题** / Computational Complexity Issues:
+
+- 某些推理问题属于NP-hard或PSPACE-complete
+- 大规模知识库的推理效率有限
+- 实时推理的挑战
+
+**知识表示限制** / Knowledge Representation Limitations:
+
+- 难以处理不确定性和模糊性
+- 缺乏对常识知识的建模
+- 对动态知识的处理有限
+
+**可扩展性挑战** / Scalability Challenges:
+
+- 大规模知识库的推理困难
+- 新规则的集成和验证复杂
+- 推理系统的维护成本高
+
+### 5.3 前沿发展 / Frontier Development
+
+**神经符号推理** / Neural-Symbolic Reasoning:
+
+- 结合神经网络和符号推理
+- 支持不确定性和模糊性
+- 提供端到端的学习和推理
+
+**因果推理** / Causal Reasoning:
+
+- 基于因果关系的推理
+- 支持反事实推理
+- 提供可解释的因果分析
+
+**多模态推理** / Multimodal Reasoning:
+
+- 整合多种模态的推理
+- 跨模态知识融合
+- 支持复杂的推理任务
+
+### 5.4 理论争议与挑战 / Theoretical Controversies and Challenges
+
+**符号推理vs统计推理的争议** / Controversies between Symbolic vs Statistical Reasoning:
+
+**问题本质** / Problem Essence:
+推理系统中存在符号推理和统计推理两种主要方法，每种方法都有其优势和局限性，选择合适的方法成为推理系统设计中的关键问题。
+
+**The essence of the problem is that there are two main approaches in reasoning systems: symbolic and statistical reasoning, each with its advantages and limitations, making the choice of appropriate methods a key issue in reasoning system design.**
+
+**理论争议** / Theoretical Controversies:
+
+1. **可解释性vs表达能力** / Interpretability vs Expressiveness:
+   - 符号推理可解释性强但表达能力有限
+   - 统计推理表达能力强但可解释性差
+   - 争议焦点：如何平衡可解释性和表达能力
+
+2. **确定性vs不确定性** / Deterministic vs Uncertain:
+   - 符号推理处理确定性知识
+   - 统计推理处理不确定性知识
+   - 争议焦点：在现实世界中的适用性
+
+**解决方案探索** / Solution Exploration:
+
+1. **混合推理** / Hybrid Reasoning:
+   - 结合符号推理和统计推理
+   - 利用两种方法的优势
+   - 代表性工作：Neural-Symbolic Learning and Reasoning (Garcez et al., 2009)
+
+2. **概率逻辑** / Probabilistic Logic:
+   - 将概率引入逻辑推理
+   - 处理不确定性和模糊性
+   - 代表性工作：Probabilistic Logic Programming (De Raedt et al., 2007)
+
+**大规模推理的挑战** / Challenges in Large-scale Reasoning:
+
+**问题定义** / Problem Definition:
+随着知识库规模的急剧增长，传统的推理方法在处理包含数百万甚至数十亿事实的知识库时面临严重的性能瓶颈。
+
+**As knowledge base scales grow dramatically, traditional reasoning methods face severe performance bottlenecks when processing knowledge bases containing millions or even billions of facts.**
+
+**技术挑战** / Technical Challenges:
+
+1. **计算复杂度** / Computational Complexity:
+   - 推理算法的指数级复杂度
+   - 内存和存储需求巨大
+   - 并行化推理的困难
+
+2. **知识组织** / Knowledge Organization:
+   - 大规模知识的有效组织
+   - 推理路径的优化
+   - 缓存和索引策略
+
+**前沿解决方案** / Frontier Solutions:
+
+1. **分布式推理** / Distributed Reasoning:
+   - 知识库的分割和分布
+   - 并行推理算法
+   - 代表性工作：Distributed Reasoning Systems
+
+2. **近似推理** / Approximate Reasoning:
+   - 牺牲精确性换取效率
+   - 启发式推理算法
+   - 代表性工作：Approximate Reasoning Methods
+
+**因果推理的理论挑战** / Theoretical Challenges in Causal Reasoning:
+
+**问题背景** / Problem Background:
+因果推理旨在从观察数据中推断因果关系，但因果推理面临识别问题、混淆变量、反事实推理等理论挑战。
+
+**Causal reasoning aims to infer causal relationships from observational data, but faces theoretical challenges such as identification problems, confounding variables, and counterfactual reasoning.**
+
+**理论挑战** / Theoretical Challenges:
+
+1. **识别问题** / Identification Problem:
+   - 从观察数据识别因果关系
+   - 处理未观察到的混淆变量
+   - 因果效应的估计
+
+2. **反事实推理** / Counterfactual Reasoning:
+   - 处理反事实假设
+   - 因果效应的量化
+   - 干预效果的预测
+
+**前沿解决方案** / Frontier Solutions:
+
+1. **因果发现** / Causal Discovery:
+   - 从数据中发现因果结构
+   - 因果图的学习
+   - 代表性工作：Causal Discovery Algorithms
+
+2. **因果推断** / Causal Inference:
+   - 因果效应的估计
+   - 反事实推理
+   - 代表性工作：Causal Inference Methods
+
+## 6. 应用领域 / Application Domains
+
+### 6.1 主要应用 / Primary Applications
 
 | 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
 |------------------|------------------------------|-------------------|

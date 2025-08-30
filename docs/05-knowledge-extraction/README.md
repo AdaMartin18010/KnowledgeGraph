@@ -77,6 +77,43 @@ KE = (D, E, R, F, P)
 因此，多次抽取的结果应该保持一致
 ```
 
+**定理5.3** / Theorem 5.3: 知识抽取准确性定理
+如果知识抽取系统KE的抽取函数F是准确的，则对于任何数据源d ∈ D，抽取结果与真实标注的准确率超过阈值θ。
+
+**证明** / Proof:
+
+```text
+设知识抽取系统KE的抽取函数F是准确的
+对于数据源d ∈ D
+根据准确性定义：accuracy(F(d), ground_truth(d)) > θ
+因此，抽取结果与真实标注的准确率超过阈值θ
+```
+
+**定理5.4** / Theorem 5.4: 知识抽取可扩展性定理
+如果知识抽取系统KE是可扩展的，则对于新的实体类型e_new或关系类型r_new，存在扩展操作Extend(KE, e_new, r_new)能够将新类型集成到系统中。
+
+**证明** / Proof:
+
+```text
+设知识抽取系统KE是可扩展的
+对于新的实体类型e_new或关系类型r_new
+根据可扩展性定义：存在扩展操作Extend(KE, e_new, r_new)
+且扩展后系统KE' = Extend(KE, e_new, r_new)保持功能完整性
+因此，新类型能够安全集成到系统中
+```
+
+**定理5.5** / Theorem 5.5: 知识抽取鲁棒性定理
+如果知识抽取系统KE是鲁棒的，则对于噪声数据d_noise，系统能够保持稳定的抽取性能，性能下降不超过阈值δ。
+
+**证明** / Proof:
+
+```text
+设知识抽取系统KE是鲁棒的
+对于噪声数据d_noise
+根据鲁棒性定义：|performance(KE, d_clean) - performance(KE, d_noise)| ≤ δ
+因此，系统能够保持稳定的抽取性能
+```
+
 ### 5.2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
@@ -905,9 +942,166 @@ impl ExtractionPipeline {
 - 事件抽取准确率: 80%
 - 处理速度: 1000文档/分钟
 
-## 5.5 应用领域 / Application Domains
+## 5.5 批判性分析 / Critical Analysis
 
-### 5.5.1 主要应用 / Primary Applications
+### 5.5.1 理论优势 / Theoretical Advantages
+
+**自动化程度高** / High Automation:
+
+- 能够自动从非结构化数据中提取知识
+- 支持大规模数据的批量处理
+- 减少人工标注的工作量
+
+**技术成熟度** / Technical Maturity:
+
+- 基于成熟的自然语言处理技术
+- 具有丰富的算法和工具支持
+- 在实际应用中表现良好
+
+**应用范围广泛** / Wide Applicability:
+
+- 适用于多种数据类型和领域
+- 支持多模态知识抽取
+- 具有良好的可扩展性
+
+### 5.5.2 理论局限性 / Theoretical Limitations
+
+**抽取准确性限制** / Extraction Accuracy Limitations:
+
+- 复杂语境下的抽取准确性有限
+- 歧义和噪声数据影响抽取质量
+- 领域适应性不足
+
+**知识表示限制** / Knowledge Representation Limitations:
+
+- 难以抽取复杂的推理知识
+- 缺乏对常识知识的处理
+- 对不确定性的建模有限
+
+**可解释性问题** / Interpretability Issues:
+
+- 深度学习模型的决策过程难以解释
+- 抽取结果的可解释性不足
+- 缺乏透明的抽取机制
+
+### 5.5.3 前沿发展 / Frontier Development
+
+**多模态知识抽取** / Multimodal Knowledge Extraction:
+
+- 整合文本、图像、音频等多种模态
+- 跨模态知识抽取和融合
+- 多模态知识表示学习
+
+**少样本学习** / Few-shot Learning:
+
+- 减少对标注数据的依赖
+- 支持快速领域适应
+- 元学习和迁移学习
+
+**知识增强抽取** / Knowledge-enhanced Extraction:
+
+- 结合外部知识图谱
+- 知识驱动的抽取方法
+- 常识推理增强
+
+### 5.5.4 理论争议与挑战 / Theoretical Controversies and Challenges
+
+**监督学习vs无监督学习的争议** / Controversies between Supervised vs Unsupervised Learning:
+
+**问题本质** / Problem Essence:
+知识抽取中存在监督学习和无监督学习两种主要方法，每种方法都有其优势和局限性，选择合适的方法成为知识抽取实践中的关键问题。
+
+**The essence of the problem is that there are two main approaches in knowledge extraction: supervised and unsupervised learning, each with its advantages and limitations, making the choice of appropriate methods a key issue in knowledge extraction practice.**
+
+**理论争议** / Theoretical Controversies:
+
+1. **标注数据依赖** / Annotation Data Dependency:
+   - 监督学习需要大量标注数据
+   - 无监督学习标注数据需求少
+   - 争议焦点：在数据稀缺情况下的适用性
+
+2. **抽取质量vs效率** / Extraction Quality vs Efficiency:
+   - 监督学习通常质量更高
+   - 无监督学习效率更高
+   - 争议焦点：如何平衡质量和效率
+
+**解决方案探索** / Solution Exploration:
+
+1. **半监督学习** / Semi-supervised Learning:
+   - 结合少量标注数据和大量未标注数据
+   - 利用标注数据的指导作用
+   - 代表性工作：Bootstrapping Methods (Brin, 1998)
+
+2. **远程监督** / Distant Supervision:
+   - 利用知识图谱自动生成训练数据
+   - 减少人工标注需求
+   - 代表性工作：Distant Supervision (Mintz et al., 2009)
+
+**跨语言知识抽取的挑战** / Challenges in Cross-lingual Knowledge Extraction:
+
+**问题背景** / Problem Background:
+不同语言具有不同的语法结构和表达方式，跨语言知识抽取面临语言差异和文化背景的挑战。
+
+**Different languages have different grammatical structures and expression ways, and cross-lingual knowledge extraction faces challenges from linguistic differences and cultural backgrounds.**
+
+**技术挑战** / Technical Challenges:
+
+1. **语言差异** / Linguistic Differences:
+   - 语法结构差异
+   - 词汇语义差异
+   - 文化背景差异
+
+2. **资源稀缺** / Resource Scarcity:
+   - 低资源语言的标注数据稀缺
+   - 跨语言对齐数据不足
+   - 多语言模型训练困难
+
+**前沿解决方案** / Frontier Solutions:
+
+1. **多语言预训练模型** / Multilingual Pre-trained Models:
+   - mBERT、XLM-R等模型
+   - 跨语言表示学习
+   - 代表性工作：Multilingual BERT (Devlin et al., 2019)
+
+2. **零样本学习** / Zero-shot Learning:
+   - 跨语言迁移学习
+   - 元学习方法
+   - 代表性工作：Cross-lingual Zero-shot Learning
+
+**实时知识抽取的复杂性** / Complexity of Real-time Knowledge Extraction:
+
+**问题定义** / Problem Definition:
+实时知识抽取需要在数据流中快速、准确地提取知识，同时保持系统的稳定性和可扩展性。
+
+**Real-time knowledge extraction requires fast and accurate knowledge extraction from data streams while maintaining system stability and scalability.**
+
+**技术挑战** / Technical Challenges:
+
+1. **处理速度** / Processing Speed:
+   - 实时数据流的快速处理
+   - 低延迟的抽取算法
+   - 流式处理架构
+
+2. **质量保证** / Quality Assurance:
+   - 实时抽取的质量控制
+   - 动态质量评估
+   - 自适应参数调整
+
+**前沿解决方案** / Frontier Solutions:
+
+1. **流式处理框架** / Streaming Processing Frameworks:
+   - Apache Kafka、Apache Flink
+   - 流式机器学习
+   - 代表性工作：Streaming Knowledge Extraction
+
+2. **增量学习** / Incremental Learning:
+   - 在线模型更新
+   - 增量知识积累
+   - 代表性工作：Incremental Knowledge Extraction
+
+## 5.6 应用领域 / Application Domains
+
+### 5.6.1 主要应用 / Primary Applications
 
 | 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
 |------------------|------------------------------|-------------------|

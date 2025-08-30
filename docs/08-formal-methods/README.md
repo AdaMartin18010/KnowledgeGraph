@@ -78,6 +78,43 @@ FM = (S, V, P, T, A)
 因此，MC(M, φ) = True当且仅当M ⊨ φ
 ```
 
+**定理3** / Theorem 3: 形式化规范一致性定理
+如果形式化规范S是一致的，则对于任何性质φ₁, φ₂ ∈ S，不存在矛盾，即φ₁ ∧ ¬φ₂不成立。
+
+**证明** / Proof:
+
+```text
+设形式化规范S是一致的
+对于性质φ₁, φ₂ ∈ S
+根据一致性定义：一致的规范中不存在矛盾
+因此，φ₁ ∧ ¬φ₂不成立
+```
+
+**定理4** / Theorem 4: 定理证明可终止性定理
+如果定理证明器T是可终止的，则对于任何证明目标G，T(G)在有限时间内终止。
+
+**证明** / Proof:
+
+```text
+设定理证明器T是可终止的
+对于证明目标G
+根据可终止性定义：T(G)在有限时间内终止
+因此，证明过程能够完成
+```
+
+**定理5** / Theorem 5: 形式化方法可扩展性定理
+如果形式化方法系统FM是可扩展的，则对于新的验证需求v_new，存在扩展操作Extend(FM, v_new)能够将新需求集成到系统中。
+
+**证明** / Proof:
+
+```text
+设形式化方法系统FM是可扩展的
+对于新的验证需求v_new
+根据可扩展性定义：存在扩展操作Extend(FM, v_new)
+且扩展后系统FM' = Extend(FM, v_new)保持功能完整性
+因此，新需求能够安全集成到系统中
+```
+
 ### 2.2 逻辑框架 / Logical Framework
 
 **逻辑结构** / Logical Structure:
@@ -533,9 +570,166 @@ impl FormalVerificationSystem {
 - 验证时间: <5分钟
 - 系统可靠性: 99.9%
 
-## 5. 应用领域 / Application Domains
+## 5. 批判性分析 / Critical Analysis
 
-### 5.1 主要应用 / Primary Applications
+### 5.1 理论优势 / Theoretical Advantages
+
+**严格性** / Rigor:
+
+- 基于严格的数学逻辑
+- 提供可验证的证明过程
+- 确保系统的正确性
+
+**完备性** / Completeness:
+
+- 覆盖所有可能的情况
+- 提供完整的验证覆盖
+- 确保无遗漏的检查
+
+**自动化** / Automation:
+
+- 支持自动化验证
+- 减少人工错误
+- 提高验证效率
+
+### 5.2 理论局限性 / Theoretical Limitations
+
+**计算复杂度** / Computational Complexity:
+
+- 某些验证问题属于NP-hard或PSPACE-complete
+- 大规模系统的验证困难
+- 状态空间爆炸问题
+
+**表达能力限制** / Expressiveness Limitations:
+
+- 难以表达复杂的系统行为
+- 对不确定性的处理有限
+- 缺乏对动态系统的建模
+
+**实用性挑战** / Practicality Challenges:
+
+- 形式化规范编写困难
+- 验证工具使用复杂
+- 专家知识要求高
+
+### 5.3 前沿发展 / Frontier Development
+
+**符号执行** / Symbolic Execution:
+
+- 结合符号和具体执行
+- 提高验证效率
+- 支持复杂程序分析
+
+**抽象解释** / Abstract Interpretation:
+
+- 通过抽象简化验证
+- 平衡精度和效率
+- 支持大规模系统
+
+**机器学习辅助** / Machine Learning Assisted:
+
+- 结合机器学习和形式化方法
+- 自动生成验证策略
+- 智能化的验证过程
+
+### 5.4 理论争议与挑战 / Theoretical Controversies and Challenges
+
+**完全验证vs部分验证的争议** / Controversies between Complete vs Partial Verification:
+
+**问题本质** / Problem Essence:
+形式化方法中存在完全验证和部分验证两种主要方法，每种方法都有其优势和局限性，选择合适的方法成为形式化验证实践中的关键问题。
+
+**The essence of the problem is that there are two main approaches in formal methods: complete verification and partial verification, each with its advantages and limitations, making the choice of appropriate methods a key issue in formal verification practice.**
+
+**理论争议** / Theoretical Controversies:
+
+1. **完备性vs效率** / Completeness vs Efficiency:
+   - 完全验证保证完备性但效率低
+   - 部分验证效率高但完备性有限
+   - 争议焦点：如何平衡完备性和效率
+
+2. **自动化vs可解释性** / Automation vs Interpretability:
+   - 自动化验证效率高但可解释性差
+   - 手动验证可解释性强但效率低
+   - 争议焦点：如何平衡自动化和可解释性
+
+**解决方案探索** / Solution Exploration:
+
+1. **分层验证** / Hierarchical Verification:
+   - 在不同抽象层次进行验证
+   - 结合完全验证和部分验证
+   - 代表性工作：Hierarchical Formal Verification
+
+2. **增量验证** / Incremental Verification:
+   - 通过增量方式逐步验证
+   - 重用验证结果
+   - 代表性工作：Incremental Formal Methods
+
+**大规模系统验证的挑战** / Challenges in Large-scale System Verification:
+
+**问题定义** / Problem Definition:
+随着系统规模的急剧增长，传统的形式化方法在处理大规模系统时面临严重的状态空间爆炸和计算复杂度挑战。
+
+**As system scales grow dramatically, traditional formal methods face severe state space explosion and computational complexity challenges when processing large-scale systems.**
+
+**技术挑战** / Technical Challenges:
+
+1. **状态空间爆炸** / State Space Explosion:
+   - 系统状态数量呈指数级增长
+   - 内存和存储需求巨大
+   - 验证算法效率低下
+
+2. **计算复杂度** / Computational Complexity:
+   - 验证问题的NP-hard性质
+   - 并行化验证的困难
+   - 启发式算法的设计
+
+**前沿解决方案** / Frontier Solutions:
+
+1. **抽象技术** / Abstraction Techniques:
+   - 状态抽象和变量抽象
+   - 模型简化和近似
+   - 代表性工作：Abstraction-based Verification
+
+2. **分解技术** / Decomposition Techniques:
+   - 系统分解和模块化验证
+   - 组合推理和接口验证
+   - 代表性工作：Compositional Verification
+
+**形式化方法与机器学习的融合** / Integration of Formal Methods and Machine Learning:
+
+**问题背景** / Problem Background:
+形式化方法和机器学习各有优势，如何将两者融合以提高验证效率和自动化程度成为形式化方法研究中的重要问题。
+
+**Formal methods and machine learning each have their advantages. How to integrate them to improve verification efficiency and automation has become an important issue in formal methods research.**
+
+**融合挑战** / Integration Challenges:
+
+1. **理论基础** / Theoretical Foundation:
+   - 形式化方法和机器学习的理论基础差异
+   - 融合方法的理论保证
+   - 可解释性和可靠性
+
+2. **技术实现** / Technical Implementation:
+   - 机器学习模型的验证
+   - 形式化方法的自动化
+   - 工具链的集成
+
+**前沿解决方案** / Frontier Solutions:
+
+1. **神经符号验证** / Neural-Symbolic Verification:
+   - 结合神经网络和符号推理
+   - 自动化的验证策略生成
+   - 代表性工作：Neural-Symbolic Verification
+
+2. **学习辅助验证** / Learning-assisted Verification:
+   - 机器学习辅助的形式化验证
+   - 智能化的验证过程
+   - 代表性工作：Learning-assisted Formal Methods
+
+## 6. 应用领域 / Application Domains
+
+### 6.1 主要应用 / Primary Applications
 
 | 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
 |------------------|------------------------------|-------------------|
