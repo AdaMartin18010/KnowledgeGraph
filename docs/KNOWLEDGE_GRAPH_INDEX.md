@@ -29,6 +29,13 @@ graph TD
     I --> J
     
     J --> A
+    
+    %% 群论与范畴论视角
+    K[群论与范畴论视角<br/>Group Theory & Category Theory] --> A
+    K --> B
+    K --> D
+    K --> F
+    K --> H
 ```
 
 ### 1.2 知识层次结构 / Knowledge Hierarchy Structure
@@ -57,6 +64,7 @@ graph TD
 | **形式化方法** / Formal Methods | 使用数学方法进行系统验证 | Using mathematical methods for system verification | 08, 06, 10 |
 | **工程实践** / Engineering Practice | 知识图谱系统的工程实现 | Engineering implementation of knowledge graph systems | 09, 07, 08 |
 | **研究方法论** / Research Methodology | 知识图谱研究的方法论体系 | Methodological framework for knowledge graph research | 10, 08, 09 |
+| **群论与范畴论视角** / Group Theory & Category Theory | 用群论和范畴论重新审视知识图谱 | Re-examining knowledge graphs through group theory and category theory | 01, 02, 04, 06, 08 |
 
 ### 2.2 技术术语索引 / Technical Term Index
 
@@ -70,6 +78,10 @@ graph TD
 | **图嵌入** / Graph Embedding | 将图结构映射到向量空间 | 02.2.1 | 02.2.1, 06.2.1, 07.2.1 |
 | **知识融合** / Knowledge Fusion | 合并来自不同源的知识 | 04.2.1 | 04.2.1, 05.2.1, 09.2.1 |
 | **推理引擎** / Reasoning Engine | 执行逻辑推理的软件组件 | 06.2.1 | 06.2.1, 08.2.1, 09.2.1 |
+| **知识群** / Knowledge Group | 将知识元素组织成群结构 | 群论视角 | 群论视角, 01, 04 |
+| **知识范畴** / Knowledge Category | 将知识关系抽象为范畴 | 范畴论视角 | 范畴论视角, 04, 06 |
+| **知识函子** / Knowledge Functor | 知识域间的映射关系 | 范畴论视角 | 范畴论视角, 04, 06 |
+| **自然变换** / Natural Transformation | 知识演化的数学描述 | 范畴论视角 | 范畴论视角, 06, 08 |
 
 ## 3. 算法索引 / Algorithm Index
 

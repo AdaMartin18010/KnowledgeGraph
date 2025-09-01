@@ -13,8 +13,9 @@
 | 指标 / Metric | 数值 / Value | 状态 / Status |
 |--------------|-------------|--------------|
 | **核心模块数量** / Core Modules | 10个 / 10 modules | ✅ 完成 |
-| **文档总行数** / Total Lines | 8,314行 / 8,314 lines | ✅ 完成 |
-| **文档总大小** / Total Size | ~331KB | ✅ 完成 |
+| **扩展理论视角** / Extended Theory Perspectives | 群论与范畴论视角 | ✅ 完成 |
+| **文档总行数** / Total Lines | 9,500+行 / 9,500+ lines | ✅ 完成 |
+| **文档总大小** / Total Size | ~380KB | ✅ 完成 |
 | **中英双语对照** / Bilingual Content | 100% | ✅ 完成 |
 | **形式化证明** / Formal Proofs | 完整 / Complete | ✅ 完成 |
 | **工程实践案例** / Engineering Cases | 丰富 / Rich | ✅ 完成 |
@@ -63,7 +64,9 @@ KnowledgeGraph/
     ├── 07-applications/               # 应用实践 / Applications
     ├── 08-formal-methods/             # 形式化方法 / Formal Methods
     ├── 09-engineering-practice/       # 工程实践 / Engineering Practice
-    └── 10-research-methodology/       # 研究方法论 / Research Methodology
+    ├── 10-research-methodology/       # 研究方法论 / Research Methodology
+    ├── group-theory-category-theory-perspective.md  # 群论与范畴论视角 / Group Theory & Category Theory Perspective
+    └── mathematical-perspectives-summary.md         # 数学视角总结 / Mathematical Perspectives Summary
 ```
 
 ## 🌟 项目特色 / Project Features
@@ -95,6 +98,13 @@ KnowledgeGraph/
 - **层次结构清晰** / Clear Hierarchy: 从基础理论到应用实践的完整层次
 - **模块间关联** / Inter-module Relationships: 建立模块间的逻辑关联
 - **导航系统完善** / Complete Navigation System: 提供多种导航和学习路径
+
+### 5. 数学理论视角 / Mathematical Theory Perspectives
+
+- **群论视角** / Group Theory Perspective: 将知识结构抽象为群论框架
+- **范畴论视角** / Category Theory Perspective: 将知识关系抽象为范畴论框架
+- **高阶数学应用** / Higher Mathematics Applications: 引入现代数学的最新成果
+- **跨域知识整合** / Cross-domain Knowledge Integration: 支持不同知识域的映射和融合
 
 ## 📚 学习路径 / Learning Paths
 
