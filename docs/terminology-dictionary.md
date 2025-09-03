@@ -314,6 +314,24 @@
 | 创新性 | Innovation | 研究在理论或方法上的创新程度 | 原创性、新颖性 |
 | Innovation | Innovation | Degree of innovation in theory or methodology | Originality, Novelty |
 
+## 11. 2025关键术语 / 2025 Key Terms
+
+| 中文术语 | English Term | 定义 / Definition | 相关概念 / Related Concepts |
+|---------|--------------|-------------------|-----------------------------|
+| 神经符号推理 | Neuro-Symbolic Reasoning | 结合神经网络表征与符号逻辑推理的范式 | 可微证明、规则蒸馏、混合推理 |
+| 可微证明 | Differentiable Proving | 将匹配/归结/约束等离散过程纳入可微优化 | 神经定理证明、可微SAT/SMT |
+| 检索增强生成 | Retrieval-Augmented Generation (RAG) | 通过外部检索增强模型的知识与事实一致性 | 检索器、知识库、证据链 |
+| 工具化大语言模型 | Tool-Augmented LLM | LLM作为控制器调用SPARQL/SQL/推理机等外部工具 | ReAct、代理、API调用 |
+| 程序合成 | Program Synthesis | 自动生成满足规约的程序或推理计划 | DSL、AST、形式化验证 |
+| 图神经网络 | Graph Neural Network (GNN) | 在图结构上进行消息传递与表示学习的神经模型 | GCN、GAT、GraphSAGE |
+| 动态图 | Dynamic Graph | 随时间演化的图结构与算法体系 | 流式图、时间图、演化图 |
+| 超图 | Hypergraph | 支持一次连接多个节点的广义图结构 | 超边、超图着色、超图匹配 |
+| 本体对齐 | Ontology Alignment | 跨本体概念/关系/实例的映射建立 | 本体映射、等价关系、同义对齐 |
+| 流式本体学习 | Streaming Ontology Learning | 面向流数据的本体增量学习与演化 | 本体演化、版本管理、一致性维护 |
+| 因果反事实推断 | Counterfactual Inference | 基于因果模型的反事实推断与解释 | 结构因果模型、干预、背门准则 |
+| 统一评测协议 | Unified Evaluation Protocol | 跨任务/跨域的一致评测流程与指标组合 | 正确性、效率、可解释性、一致性 |
+| 开放基准套件 | Open Benchmark Suite | 面向知识与推理的公开数据与指标集合 | OGB、KILT、LUBM、WatDiv、FB15k-237 |
+
 ---
 
 **最后更新** / Last Updated: 2024年12月19日 / December 19, 2024

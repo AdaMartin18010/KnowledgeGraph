@@ -246,3 +246,51 @@ pub struct CoreStructure {
 **最后更新** / Last Updated: [日期] / [Date]
 **版本** / Version: [版本号] / [Version Number]
 **维护者** / Maintainer: [维护者] / [Maintainer]
+
+## 0. 规范与约束 / Standards & Constraints
+
+### 0.1 双语节标题 / Bilingual Section Headings
+
+- 所有一级与二级节标题必须包含“中文 / English”双语形式，例如：`## 2. 理论基础 / Theoretical Foundation`。
+- 小节标题建议保持双语，但如过长可在首处给出双语与短别名。
+
+### 0.2 严格编号 / Strict Numbering
+
+- 章节、图、表、公式采用全局连续编号：
+  - 章节：`1.2.3`（三级以内），必要时扩展到四级 `1.2.3.4`；
+  - 图：`图 2-3 / Fig 2-3`（第2章第3幅图）；
+  - 表：`表 3-1 / Table 3-1`；
+  - 公式：`(4-2)`（第4章公式2）。
+- 标题与编号前后空格统一一个半角空格。
+
+### 0.3 术语与语言 / Terminology & Language
+
+- 专业术语需首次引入时给出中英文与简释，并在`terminology-dictionary.md`登记。
+- 保持风格一致：科技写作、可证伪与批判性分析并重。
+
+### 0.4 可复用片段 / Reusable Blocks
+
+- 公共定义、证明、评估协议应抽取为独立块，必要时在各章内以引用方式复用。
+
+## 0A. 交叉引用与学术引用规范 / Cross-refs & Citations
+
+### 0A.1 文内交叉引用 / Intra-Document Cross-References
+
+- 章节引用：使用相对锚点，例如：`参见 2.2.1` 或 `[见 §2.2.1](#221-形式化定义--formal-definition)`。
+- 图表公式：`见 图 2-3`、`见 表 3-1`、`由 (4-2) 推得`。
+
+### 0A.2 跨文件链接 / Cross-File Links
+
+- 同仓库跨文件使用相对路径，例如：`[本体工程 4.2](../04-ontology-engineering/README.md#42-理论基础--theoretical-foundation)`。
+- 链接文本需包含中英与编号，便于一致导航。
+
+### 0A.3 学术引用 / Academic Citations
+
+- 文末参考文献分为：经典/现代/前沿/应用/数据与基准。
+- 文内短引：作者-年份体或数字体均可，但项目内推荐作者-年份体：`(Kipf & Welling, 2017)`。
+- 所有外链使用Markdown链接，给出DOI或持久化URL；禁止裸链接。
+
+### 0A.4 图表规范 / Figures & Tables
+
+- 图表标题与注释双语，置于图表上方（表）或下方（图）。
+- 若含来源或改编，需在注释中给出：`改编自 (Author, Year)`。

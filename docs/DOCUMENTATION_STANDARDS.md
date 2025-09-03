@@ -126,6 +126,14 @@ fn example() -> Result<(), Error> {
 - [资源名称](https://example.com). Accessed 2024.
 ```
 
+### 3.3 链接与编号一致性检查清单 / Link & Numbering Consistency Checklist
+
+- [ ] 标题双语且编号连续（如“## 1. 概述 / Overview”）
+- [ ] 图/表/公式编号规范（图 2-3 / 表 3-1 / 公式 (4-2)）
+- [ ] 内部链接使用相对路径并含锚点（如 `../04-ontology-engineering/README.md#48-统一评测协议--unified-evaluation-protocol`）
+- [ ] 外链提供稳定URL或DOI，必要时附访问日期
+- [ ] 交叉引用章节与索引锚点一致可达
+
 ## 4. 质量保证规范 / Quality Assurance Standards
 
 ### 4.1 内容完整性检查 / Content Completeness Check
@@ -158,6 +166,14 @@ fn example() -> Result<(), Error> {
 - [ ] 证明严谨性
 - [ ] 逻辑一致性
 - [ ] 内容准确性
+
+### 4.4 评估与协议区块检查清单 / Benchmarks & Protocols Block Checklist
+
+- [ ] 各章包含“评估与基准 / Evaluation & Benchmarks”小节
+- [ ] 各章包含“统一评测协议 / Unified Evaluation Protocol”小节
+- [ ] 指标维度覆盖：正确性/一致性/完备性/效率/可解释性（按章定制）
+- [ ] 基准集合明确且链接可达（优先DOI或稳定URL）
+- [ ] 报告格式遵循模板双语编号规范
 
 ## 5. 更新维护规范 / Update and Maintenance Standards
 
@@ -198,6 +214,57 @@ done
 - **一致性得分** / Consistency Score: 0-100
 - **准确性得分** / Accuracy Score: 0-100
 - **可读性得分** / Readability Score: 0-100
+
+### 6.3 PowerShell 一键检查脚本 / PowerShell One-click Check Script
+
+```powershell
+# docs-check.ps1
+param(
+  [string]$Root = "../docs"
+)
+
+Write-Host "Running documentation checks under $Root" -ForegroundColor Cyan
+
+# 1) 标题双语与编号样式检查（粗略正则）
+Get-ChildItem -Recurse "$Root" -Filter README.md | ForEach-Object {
+  $p = $_.FullName
+  $content = Get-Content $p -Raw
+  if ($content -notmatch "##\s+\d+\.\s+.+\s+/\s+.+") {
+    Write-Host "[Title/Bilingual Warning] $p" -ForegroundColor Yellow
+  }
+}
+
+# 2) 内部相对链接与锚点基本检查
+Get-ChildItem -Recurse "$Root" -Filter README.md | ForEach-Object {
+  $p = $_.FullName
+  $lines = Get-Content $p
+  $i = 0
+  foreach ($line in $lines) {
+    $i++
+    if ($line -match "\]\(\.\./.+README.md#.+\)") {
+      # 基础存在性检查（不解析Markdown锚点，仅检查文件是否存在）
+      $m = [regex]::Match($line, "\]\((\S+README.md)#")
+      if ($m.Success) {
+        $target = Join-Path (Split-Path $p) $m.Groups[1].Value
+        if (-not (Test-Path $target)) {
+          Write-Host "[Broken Link] $p:$i -> $($m.Groups[1].Value)" -ForegroundColor Red
+        }
+      }
+    }
+  }
+}
+
+# 3) 外链包含DOI或稳定URL的提示（仅提示）
+Get-ChildItem -Recurse "$Root" -Filter README.md | ForEach-Object {
+  $p = $_.FullName
+  $content = Get-Content $p -Raw
+  if ($content -match "\]\(https?://" -and $content -notmatch "doi\.org") {
+    Write-Host "[External Link Notice] Consider adding DOI for: $p" -ForegroundColor Yellow
+  }
+}
+
+Write-Host "Checks finished." -ForegroundColor Green
+```
 
 ---
 

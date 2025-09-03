@@ -743,108 +743,70 @@ pub struct SemanticResult {
    - 元学习方法
    - 代表性工作：Cross-lingual Zero-shot Learning
 
-## 3.6 应用领域 / Application Domains
+## 3.6 前沿发展 / Frontier Development
 
-### 3.6.1 主要应用 / Primary Applications
+### 3.6.1 语义角色标注升级 / Advanced Semantic Role Labeling
 
-| 应用领域 / Domain | 中文描述 / Chinese Description | English Description |
-|------------------|------------------------------|-------------------|
-| 智能问答 / Intelligent Q&A | 基于语义理解的问答系统 | Q&A systems based on semantic understanding |
-| 信息抽取 / Information Extraction | 从文本中抽取结构化信息 | Extract structured information from text |
-| 文本分类 / Text Classification | 基于语义的文本分类 | Semantic-based text classification |
-| 机器翻译 / Machine Translation | 语义驱动的翻译系统 | Semantic-driven translation systems |
+- 从句法依赖 + 预训练模型到结构化解码
+- 跨句与跨文档事件链与论元填充
+- 多语言SRL与零样本迁移
 
-### 3.5.2 实际案例 / Real-world Cases
+### 3.6.2 跨语言与跨模态语义 / Cross-lingual & Multimodal Semantics
 
-**案例3.1** / Case 3.1: Google BERT模型
+- 语义对齐：平行/可比语料 + 共享子词/映射
+- 多模态对齐：文本-图像-音频跨模态概念锚定
+- 统一表示：共享语义空间与对比学习
 
-- **项目名称** / Project Name: Google BERT Model
-- **应用场景** / Application Scenario: 自然语言理解
-- **技术实现** / Technical Implementation: 双向Transformer编码器
-- **效果评估** / Effect Evaluation: 在多个NLP任务上取得突破性进展
+### 3.6.3 指代表征与指代消解 / Referential Representations & Coreference
 
-## 3.7 前沿发展 / Frontier Development
+- 指称链建模、实体级时序一致性
+- 跨段落/跨文档核心指代与别名合并
+- 与知识图谱实体链接联动
 
-### 3.7.1 最新研究 / Latest Research
+### 3.6.4 Prompt/Adapter范式 / Prompt & Adapter Paradigms
 
-**研究方向3.1** / Research Direction 3.1: 预训练语言模型
+- 提示工程：结构化提示、少样本模板、思维链（CoT）
+- 轻量适配：Adapter/LoRA/Prefix-Tuning 面向领域语义
+- 结构化输出：约束解码 + 语义验证器
 
-- **研究内容** / Research Content: 大规模预训练语言模型的语义理解能力
-- **技术突破** / Technical Breakthrough: 实现了强大的上下文语义理解
-- **应用前景** / Application Prospects: 在多个领域有广泛应用
+### 3.6.5 RAG与语义增强 / RAG-enhanced Semantics
 
-**研究方向3.2** / Research Direction 3.2: 多模态语义分析
+- 检索增强生成：术语/定义/上下文召回
+- 知识一致性：外部KG/本体对齐、证据可追溯
+- 反事实与多视角检索以降幻觉
 
-- **研究内容** / Research Content: 整合文本、图像、音频等多种模态的语义理解
-- **技术突破** / Technical Breakthrough: 实现了跨模态语义对齐和推理
-- **应用前景** / Application Prospects: 在视觉问答、多模态检索等领域应用
+### 3.6.6 结构化推理与可验证语义 / Structured Reasoning & Verifiable Semantics
 
-**研究方向3.3** / Research Direction 3.3: 知识增强语义分析
+- 语义到逻辑：从谓词模板到可验证规则
+- 程序化推理：语义到DSL/AST，再验证与执行
+- 可解释性：语义证据路径与冲突检测
 
-- **研究内容** / Research Content: 结合外部知识图谱的语义理解
-- **技术突破** / Technical Breakthrough: 实现了知识驱动的语义推理
-- **应用前景** / Application Prospects: 在常识推理、知识问答等领域应用
+## 3.7 评估与基准 / Evaluation & Benchmarks
 
-### 3.7.2 发展趋势 / Development Trends
+### 3.7.1 评价维度 / Evaluation Dimensions
 
-**趋势3.1** / Trend 3.1: 多模态语义分析
+- 正确性：F1/Exact Match/校对一致性
+- 覆盖性：概念、关系、事件三类覆盖
+- 鲁棒性：噪声/拼写/跨域迁移保持度
+- 可解释性：证据可追溯率、决策可读性
+- 一致性：跨句跨文档约束满足率、知识一致性
+- 效率：吞吐/延迟/内存/成本
 
-- **中文** / Chinese: 语义分析正在向多模态方向发展，支持文本、图像、音频等多种形式
-- **English**: Semantic analysis is moving towards multimodal direction, supporting text, image, audio and other forms
+### 3.7.2 公共基准 / Public Benchmarks
 
-**趋势3.2** / Trend 3.2: 知识增强语义分析
+- SRL：CoNLL-2005/2012、OntoNotes
+- 关系/事件：ACE05、TAC KBP、FewRel、DocRED
+- 核指代：OntoNotes Coref、WSC、Winogrande
+- 跨语言：XTREME、XNLI、MWiki、多语NER/SRL集合
+- QA与多跳：HotpotQA、MuSiQue、KILT套件
+- 语义网/本体：LUBM、WatDiv（与图谱连测）
 
-- **中文** / Chinese: 语义分析正在向知识增强方向发展，结合外部知识进行推理
-- **English**: Semantic analysis is moving towards knowledge-enhanced direction, combining external knowledge for reasoning
+### 3.7.3 统一评测协议 / Unified Protocol
 
-**趋势3.3** / Trend 3.3: 可解释语义分析
-
-- **中文** / Chinese: 语义分析正在向可解释方向发展，提供透明的决策过程
-- **English**: Semantic analysis is moving towards interpretable direction, providing transparent decision processes
-
-### 3.7.3 技术突破 / Technical Breakthroughs
-
-**突破3.1** / Breakthrough 3.1: 大规模预训练模型
-
-**核心技术** / Core Technology:
-
-- BERT、GPT、T5等预训练模型
-- 自监督学习技术
-- 多任务学习框架
-
-**技术特点** / Technical Features:
-
-- 强大的上下文理解能力
-- 良好的迁移学习性能
-- 支持多种下游任务
-
-**突破3.2** / Breakthrough 3.2: 多模态语义理解
-
-**核心技术** / Core Technology:
-
-- CLIP、ViLBERT、LXMERT等模型
-- 跨模态对齐技术
-- 多模态融合方法
-
-**技术特点** / Technical Features:
-
-- 支持跨模态语义理解
-- 良好的模态间对齐
-- 丰富的语义表示能力
-
-**突破3.3** / Breakthrough 3.3: 知识增强语义分析
-
-**核心技术** / Core Technology:
-
-- 知识图谱嵌入
-- 知识注入技术
-- 知识推理机制
-
-**技术特点** / Technical Features:
-
-- 结合外部知识进行推理
-- 提高语义理解的准确性
-- 支持常识推理任务
+- 数据分割：跨域/跨语言/时序留出
+- 组合指标：正确性×一致性×效率×可解释性
+- 可重复性：环境快照、随机种子与日志审计
+- 与`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`对齐
 
 ## 3.8 总结与展望 / Summary and Prospects
 
@@ -1015,3 +977,16 @@ pub struct SemanticResult {
 **最后更新** / Last Updated: 2024-12-19 / 2024-12-19
 **版本** / Version: 1.0.0 / 1.0.0
 **维护者** / Maintainer: Knowledge Graph Team / Knowledge Graph Team
+
+## 3.8 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/03-semantic-analysis-sample.md](../evaluation-reports/03-semantic-analysis-sample.md)
+
+## 3.9 交叉引用与导航 / Cross-references & Navigation
+
+- 知识表示 1.10 评估与基准：参见
+  [../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks](../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks)
+- 知识抽取 5.10 评估与基准：参见
+  [../05-knowledge-extraction/README.md#510-评估与基准--evaluation--benchmarks](../05-knowledge-extraction/README.md#510-评估与基准--evaluation--benchmarks)
+- 推理系统 6. 评估与基准：参见
+  [../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks](../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks)

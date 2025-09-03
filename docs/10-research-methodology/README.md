@@ -1237,6 +1237,47 @@ impl ResearchFramework {
 - **中文** / Chinese: 知识图谱学科的快速发展为研究方法论提供了广阔的应用空间
 - **English**: The rapid development of the knowledge graph discipline provides broad application space for research methodology
 
+## 10.7 评估与基准 / Evaluation & Benchmarks
+
+### 10.7.1 评价维度 / Evaluation Dimensions
+
+- 正确性：理论证明完备性、实验统计显著性（p值/置信区间）
+- 可重复性：复现实验成功率、环境差异敏感度
+- 外部有效性：跨数据集/跨领域/跨语言迁移效果
+- 效率：计算成本（时长/显存/能耗）、性价比（效果/成本）
+- 透明度：方法细节公开度、负面结果报告与失效案例
+
+### 10.7.2 常用公开基准 / Common Public Benchmarks
+
+- 知识与推理：OGB、KILT、LUBM、WatDiv、FB15k-237、WN18RR
+- 多跳推理与问答：HotpotQA、MuSiQue、ComplexWebQuestions
+- 语义与抽取：CoNLL、ACE05、DocRED、FewRel
+- 工程与系统：LDBC SNB、Graph500、Graphalytics（系统侧对齐引用）
+
+## 10.8 统一评测协议与复现实践 / Unified Evaluation Protocol & Reproducibility
+
+### 10.8.1 数据 / Data
+
+- 使用固定快照与校验和（SHA256），提供下载与生成脚本
+- 标注与预处理管线开源，包含随机种子与版本声明
+
+### 10.8.2 环境 / Environment
+
+- 记录与导出：OS、内核、驱动、CUDA、编译器、框架/库版本
+- 提供容器镜像/环境YAML与一键拉起脚本（Docker/Conda）
+
+### 10.8.3 过程 / Procedure
+
+- 实验脚本化（Make/Task/CI）；固定随机种子；明确并发与批大小
+- 训练/推理/评测分阶段日志，采集硬件计量（功耗/温度可选）
+- 失效复盘：保存错误与对抗样本，附定位步骤
+
+### 10.8.4 报告 / Reporting
+
+- 结果表格严格编号与双语标题；图/表/公式编号遵循`template.md`
+- 指标区分平均值/方差/置信区间；显著性检验方法注明
+- 链接`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`，附复现实验入口
+
 ## 9. 参考文献 / References
 
 ### 9.1 学术文献 / Academic Literature
@@ -1336,6 +1377,21 @@ impl ResearchFramework {
 - [Papers With Code](https://paperswithcode.com/)
 - [AI Benchmark](https://ai-benchmark.com/)
 - [MLPerf](https://mlperf.org/)
+
+## 10.9 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/10-research-methodology-sample.md](../evaluation-reports/10-research-methodology-sample.md)
+
+## 10.10 交叉引用与导航 / Cross-references & Navigation
+
+- 模板规范：参见
+  [../template.md](../template.md)
+- 知识表示 1.11 统一评测协议：参见
+  [../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol](../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol)
+- 工程实践 7. 统一评测协议：参见
+  [../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol](../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol)
+- 形式化方法 7. 统一评测协议：参见
+  [../08-formal-methods/README.md#7-统一评测协议--unified-evaluation-protocol](../08-formal-methods/README.md#7-统一评测协议--unified-evaluation-protocol)
 
 ---
 

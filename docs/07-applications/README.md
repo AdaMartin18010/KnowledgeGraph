@@ -470,7 +470,6 @@ impl fmt::Display for Answer {
                self.id, self.content, self.confidence)
     }
 }
-```
 
 ```haskell
 -- Haskell实现示例 - Intelligent Q&A Algorithm
@@ -709,6 +708,7 @@ sortBy cmp (x:xs) =
 nubBy :: (a -> a -> Bool) -> [a] -> [a]
 nubBy _ [] = []
 nubBy eq (x:xs) = x : nubBy eq (filter (\y -> not $ eq x y) xs)
+
 ```
 
 #### 4.1.2 数据结构 / Data Structures
@@ -995,6 +995,37 @@ pub struct ApplicationStatistics {
    - 语音交互
    - 代表性工作：Conversational Knowledge Graph Interfaces
 
+## 6. 评估与基准 / Evaluation & Benchmarks
+
+### 6.1 评价维度 / Evaluation Dimensions
+
+- 效果 / Effectiveness：任务准确率、召回率、F1、业务目标达成率
+- 效率 / Efficiency：P50/P95/P99时延、吞吐、资源利用率
+- 用户体验 / UX：满意度、可用性评分、留存/转化
+- 可靠性 / Reliability：可用性、故障率、降级与恢复时间
+- 成本 / Cost：单位QPS成本、TCO、维护工时
+- 可解释性 / Explainability：可解释推荐/问答比例、证据可追溯率
+
+### 6.2 公共基准 / Public Benchmarks
+
+- 问答与检索：KILT、HotpotQA、MS MARCO（对齐知识增强）
+- 推荐：RecBole框架数据集、MovieLens、Amazon Reviews
+- 语义搜索：BEIR集合
+- 图谱查询/联测：LUBM、WatDiv、BSBM
+
+### 6.3 指标与报告 / Metrics & Reporting
+
+- 统一报表：效果×效率×可靠性×成本×可解释性五维矩阵
+- 线上线下对齐：A/B与离线评测指标映射与偏差校准
+- 审计：数据/模型/日志留存与合规检查
+
+## 7. 统一评测协议 / Unified Evaluation Protocol
+
+- 数据：固定快照、采样与匿名化策略备案
+- 环境：镜像/配置快照与一键重放脚本
+- 过程：灰度/回滚策略、A/B实验注册、离线复现实验脚本
+- 报告：严格编号双语表格，链接`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`
+
 ## 6. 应用领域 / Application Domains
 
 ### 6.1 主要应用 / Primary Applications
@@ -1087,3 +1118,18 @@ pub struct ApplicationStatistics {
 **最后更新** / Last Updated: 2024-12-19 / 2024-12-19
 **版本** / Version: 1.0.0 / 1.0.0
 **维护者** / Maintainer: Knowledge Graph Team / Knowledge Graph Team
+
+## 8. 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/07-applications-sample.md](../evaluation-reports/07-applications-sample.md)
+
+## 9. 交叉引用与导航 / Cross-references & Navigation
+
+- 知识表示 1.10 评估与基准：参见
+  [../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks](../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks)
+- 本体工程 4.7 评估与基准：参见
+  [../04-ontology-engineering/README.md#47-评估与基准--evaluation--benchmarks](../04-ontology-engineering/README.md#47-评估与基准--evaluation--benchmarks)
+- 知识抽取 5.10 评估与基准：参见
+  [../05-knowledge-extraction/README.md#510-评估与基准--evaluation--benchmarks](../05-knowledge-extraction/README.md#510-评估与基准--evaluation--benchmarks)
+- 工程实践 7. 统一评测协议：参见
+  [../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol](../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol)

@@ -209,6 +209,99 @@ graph TD
 - **研究探索** / Research Exploration: 10, 08
 - **系统集成** / System Integration: 09, 10
 
+## 8. 评估与协议导航 / Benchmarks & Protocols Navigator
+
+### 8.1 评估与基准 / Evaluation & Benchmarks
+
+- 01 知识表示：
+  [01.10 评估与基准](../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks)
+- 02 图论基础：
+  [2.6 前沿发展（含工程应用与参考）](../02-graph-theory/README.md#26-前沿发展--frontier-development)
+- 03 语义分析：
+  [3.7 评估与基准](../03-semantic-analysis/README.md#37-评估与基准--evaluation--benchmarks)
+- 04 本体工程：
+  [4.7 评估与基准](../04-ontology-engineering/README.md#47-评估与基准--evaluation--benchmarks)
+- 05 知识抽取：
+  [5.10 评估与基准](../05-knowledge-extraction/README.md#510-评估与基准--evaluation--benchmarks)
+- 06 推理系统：
+  [6. 评估与基准](../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks)
+- 07 应用实践：
+  [6. 评估与基准](../07-applications/README.md#6-评估与基准--evaluation--benchmarks)
+- 08 形式化方法：
+  [6. 评估与基准](../08-formal-methods/README.md#6-评估与基准--evaluation--benchmarks)
+- 09 工程实践：
+  [6. 评估与基准](../09-engineering-practice/README.md#6-评估与基准--evaluation--benchmarks)
+- 10 研究方法论：
+  [10.7 评估与基准](../10-research-methodology/README.md#107-评估与基准--evaluation--benchmarks)
+
+### 8.2 统一评测协议 / Unified Evaluation Protocol
+
+- 01 知识表示：
+  [1.11 统一评测协议](../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol)
+- 04 本体工程：
+  [4.8 统一评测协议](../04-ontology-engineering/README.md#48-统一评测协议--unified-evaluation-protocol)
+- 05 知识抽取：
+  [5.11 统一评测协议](../05-knowledge-extraction/README.md#511-统一评测协议--unified-evaluation-protocol)
+- 07 应用实践：
+  [7. 统一评测协议](../07-applications/README.md#7-统一评测协议--unified-evaluation-protocol)
+- 08 形式化方法：
+  [7. 统一评测协议](../08-formal-methods/README.md#7-统一评测协议--unified-evaluation-protocol)
+- 09 工程实践：
+  [7. 统一评测协议](../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol)
+- 10 研究方法论：
+  [10.8 统一评测协议与复现实践](../10-research-methodology/README.md#108-统一评测协议与复现实践--unified-evaluation-protocol--reproducibility)
+
+### 8.3 交叉引用与导航 / Cross-references & Navigation
+
+- 01 知识表示：
+  [1.12 交叉引用与导航](../01-knowledge-representation/README.md#112-交叉引用与导航--cross-references--navigation)
+- 02 图论基础：
+  [2.11 交叉引用与导航](../02-graph-theory/README.md#211-交叉引用与导航--cross-references--navigation)
+- 03 语义分析：
+  [3.8 交叉引用与导航](../03-semantic-analysis/README.md#38-交叉引用与导航--cross-references--navigation)
+- 04 本体工程：
+  [4.11 交叉引用与导航](../04-ontology-engineering/README.md#411-交叉引用与导航--cross-references--navigation)
+- 05 知识抽取：
+  [5.12 交叉引用与导航](../05-knowledge-extraction/README.md#512-交叉引用与导航--cross-references--navigation)
+- 06 推理系统：
+  [7. 交叉引用与导航](../06-reasoning-systems/README.md#7-交叉引用与导航--cross-references--navigation)
+- 07 应用实践：
+  [8. 交叉引用与导航](../07-applications/README.md#8-交叉引用与导航--cross-references--navigation)
+- 08 形式化方法：
+  [8. 交叉引用与导航](../08-formal-methods/README.md#8-交叉引用与导航--cross-references--navigation)
+- 09 工程实践：
+  [8. 交叉引用与导航](../09-engineering-practice/README.md#8-交叉引用与导航--cross-references--navigation)
+- 10 研究方法论：
+  [10.9 交叉引用与导航](../10-research-methodology/README.md#109-交叉引用与导航--cross-references--navigation)
+
+### 8.4 模板 / Templates
+
+- 统一评测报告模板 / Unified Evaluation Report Template:
+  [../evaluation-report-template.md](../evaluation-report-template.md)
+
+### 8.5 示例评测报告 / Sample Evaluation Reports
+
+- 06 推理系统 / Reasoning Systems:
+  [evaluation-reports/06-reasoning-systems-sample.md](../docs/evaluation-reports/06-reasoning-systems-sample.md)
+- 05 知识抽取 / Knowledge Extraction:
+  [evaluation-reports/05-knowledge-extraction-sample.md](../docs/evaluation-reports/05-knowledge-extraction-sample.md)
+- 07 应用实践 / Applications:
+  [evaluation-reports/07-applications-sample.md](../docs/evaluation-reports/07-applications-sample.md)
+- 04 本体工程 / Ontology Engineering:
+  [evaluation-reports/04-ontology-engineering-sample.md](../docs/evaluation-reports/04-ontology-engineering-sample.md)
+- 08 形式化方法 / Formal Methods:
+  [evaluation-reports/08-formal-methods-sample.md](../docs/evaluation-reports/08-formal-methods-sample.md)
+- 01 知识表示 / Knowledge Representation:
+  [evaluation-reports/01-knowledge-representation-sample.md](../docs/evaluation-reports/01-knowledge-representation-sample.md)
+- 02 图论基础 / Graph Theory:
+  [evaluation-reports/02-graph-theory-sample.md](../docs/evaluation-reports/02-graph-theory-sample.md)
+- 03 语义分析 / Semantic Analysis:
+  [evaluation-reports/03-semantic-analysis-sample.md](../docs/evaluation-reports/03-semantic-analysis-sample.md)
+- 09 工程实践 / Engineering Practice:
+  [evaluation-reports/09-engineering-practice-sample.md](../docs/evaluation-reports/09-engineering-practice-sample.md)
+- 10 研究方法论 / Research Methodology:
+  [evaluation-reports/10-research-methodology-sample.md](../docs/evaluation-reports/10-research-methodology-sample.md)
+
 ---
 
 **最后更新** / Last Updated: 2024-12-19

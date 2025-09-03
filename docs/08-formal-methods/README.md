@@ -727,6 +727,34 @@ impl FormalVerificationSystem {
    - 智能化的验证过程
    - 代表性工作：Learning-assisted Formal Methods
 
+## 6. 评估与基准 / Evaluation & Benchmarks
+
+### 6.1 评价维度 / Evaluation Dimensions
+
+- 正确性 / Correctness：证明/反例与规范一致，误报/漏报率
+- 完备性 / Completeness：可证明性质覆盖率、抽象精度
+- 可终止性 / Termination：验证是否在给定资源内终止
+- 效率 / Efficiency：证明时间、状态空间大小、内存占用
+- 可扩展性 / Scalability：随模型规模/性质复杂度增长的性能曲线
+- 可复现性 / Reproducibility：同环境复现实验一致率
+
+### 6.2 工具与公共基准 / Tools & Public Benchmarks
+
+- 工具：Coq、Isabelle/HOL、Lean、Z3、CVC5、NuSMV、Spin、TLA+、Alloy
+- 基准：SV-COMP（软件验证）、SMT-COMP（SMT求解）、TPC（模型检查子集）、ACL2社区基准
+
+### 6.3 报告与对齐 / Reporting & Alignment
+
+- 报告：按性质类型（安全/活性/公平）与模型规模分层统计
+- 对齐：将实验脚本、工具版本与参数写入附录；链接`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`
+
+## 7. 统一评测协议 / Unified Evaluation Protocol
+
+- 数据与模型：提供规范文件、模型与性质集合的固定快照与校验和
+- 环境：形式化工具链版本锁定与容器镜像
+- 过程：脚本化运行，记录超时/内存上限策略；固定随机种子
+- 结果：输出证明证据/对抗反例/覆盖报告；严格编号双语表格
+
 ## 6. 应用领域 / Application Domains
 
 ### 6.1 主要应用 / Primary Applications
@@ -818,3 +846,18 @@ impl FormalVerificationSystem {
 **最后更新** / Last Updated: 2024-12-19 / 2024-12-19
 **版本** / Version: 1.0.0 / 1.0.0
 **维护者** / Maintainer: Knowledge Graph Team / Knowledge Graph Team
+
+## 8. 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/08-formal-methods-sample.md](../evaluation-reports/08-formal-methods-sample.md)
+
+## 9. 交叉引用与导航 / Cross-references & Navigation
+
+- 知识表示 1.11 统一评测协议：参见
+  [../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol](../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol)
+- 推理系统 6. 评估与基准：参见
+  [../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks](../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks)
+- 工程实践 7. 统一评测协议：参见
+  [../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol](../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol)
+- 研究方法论 10.8 统一评测协议与复现实践：参见
+  [../10-research-methodology/README.md#108-统一评测协议与复现实践--unified-evaluation-protocol--reproducibility](../10-research-methodology/README.md#108-统一评测协议与复现实践--unified-evaluation-protocol--reproducibility)

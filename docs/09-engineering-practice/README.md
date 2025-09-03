@@ -1174,8 +1174,54 @@ impl EngineeringSystem {
 - [CloudHarmony Benchmarks](https://cloudharmony.com/)
 - [Geekbench Cloud](https://www.geekbench.com/cloud/)
 
+## 6. 评估与基准 / Evaluation & Benchmarks
+
+### 6.1 评价维度 / Evaluation Dimensions
+
+- 正确性 / Correctness：功能正确率、数据一致性、Schema校验通过率
+- 性能 / Performance：P50/P95/P99 时延、吞吐、CPU/内存/IO/网络占用
+- 可靠性 / Reliability：可用性(%)、MTTR/MTBF、错误预算/Error Budget
+- 可扩展性 / Scalability：水平/垂直扩展效率、弹性伸缩收敛时间
+- 可维护性 / Maintainability：变更失败率、回滚次数、平均修复时间
+- 成本 / Cost：单位QPS成本、存储成本/GB、带宽成本
+- 可观察性 / Observability：监控覆盖率、告警准确率、追踪采样率
+
+### 6.2 公共与行业基准 / Public & Industry Benchmarks
+
+- 图数据库/查询：LDBC SNB、WatDiv、BSBM
+- 图计算与分析：Graph500、Graphalytics
+- 服务性能：TPCx-BB、SPEC系列（选择性参考）
+- 数据质量：开放数据质量工具与自定义一致性检查
+
+### 6.3 指标与报告 / Metrics & Reporting
+
+- 统一报表：正确性×性能×可靠性×成本四维矩阵
+- 变更基线：版本间回归对比、增量成本-收益分析
+- 合规与安全：审计事件、数据访问与脱敏合规检查
+
+## 7. 统一评测协议 / Unified Evaluation Protocol
+
+- 环境：容器镜像/内核/驱动/库版本固定并导出清单
+- 数据：固定数据快照，提供生成脚本与校验和
+- 过程：实验脚本化（Make/Task/CI），固定随机种子与并发模型
+- 复现：一键重放脚本、基准参数配置模板、结果签名与审计日志
+- 报告：链接`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`，严格编号与双语标题
+
 ---
 
 **最后更新** / Last Updated: 2024-12-19 / 2024-12-19
 **版本** / Version: 1.0.0 / 1.0.0
 **维护者** / Maintainer: Knowledge Graph Team / Knowledge Graph Team
+
+## 8. 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/09-engineering-practice-sample.md](../evaluation-reports/09-engineering-practice-sample.md)
+
+## 9. 交叉引用与导航 / Cross-references & Navigation
+
+- 知识抽取 5.11 统一评测协议：参见
+  [../05-knowledge-extraction/README.md#511-统一评测协议--unified-evaluation-protocol](../05-knowledge-extraction/README.md#511-统一评测协议--unified-evaluation-protocol)
+- 应用实践 6. 评估与基准：参见
+  [../07-applications/README.md#6-评估与基准--evaluation--benchmarks](../07-applications/README.md#6-评估与基准--evaluation--benchmarks)
+- 研究方法论 10.8 统一评测协议与复现实践：参见
+  [../10-research-methodology/README.md#108-统一评测协议与复现实践--unified-evaluation-protocol--reproducibility](../10-research-methodology/README.md#108-统一评测协议与复现实践--unified-evaluation-protocol--reproducibility)

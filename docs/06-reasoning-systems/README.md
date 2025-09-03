@@ -559,6 +559,7 @@ impl fmt::Display for Rule {
                self.id, self.antecedent, self.consequent)
     }
 }
+
 ```
 
 ```haskell
@@ -821,6 +822,7 @@ sortBy cmp (x:xs) =
 nubBy :: (a -> a -> Bool) -> [a] -> [a]
 nubBy _ [] = []
 nubBy eq (x:xs) = x : nubBy eq (filter (\y -> not $ eq x y) xs)
+
 ```
 
 #### 4.1.2 数据结构 / Data Structures
@@ -953,9 +955,74 @@ pub struct SystemStatistics {
 - 可解释性: 95%
 - 专家满意度: 88%
 
-## 5. 批判性分析 / Critical Analysis
+## 5. 前沿发展 / Frontier Development
 
-### 5.1 理论优势 / Theoretical Advantages
+### 5.1 神经符号推理 / Neuro-Symbolic Reasoning
+
+- **动机**: 结合神经网络的表征学习与符号逻辑的可解释推理。
+- **范式**: 语义约束的表示学习、规则蒸馏、可微约束求解器。
+- **代表方向**: Logic Tensor Networks、Neural Theorem Proving、DeepProbLog。
+
+### 5.2 可微证明与可满足性 / Differentiable Proving & SAT/SMT
+
+- **动机**: 将逻辑匹配、归结、约束求解等离散过程放入端到端优化。
+- **方法**: 可微统一、可微归结、神经引导的SAT/SMT启发式搜索。
+- **应用**: 代码验证、形式化规格一致性检查、对齐验证。
+
+### 5.3 大语言模型工具化推理 / Tool-Augmented LLM Reasoning
+
+- **动机**: 以LLM为策略控制器，调用外部工具（检索、数据库、符号求解器）。
+- **模式**: ReAct / CoT + 工具API、检索增强推理、程序化代理。
+- **对接**: SPARQL/SQL/RDF/OWL推理机、因果引擎、知识库召回。
+
+### 5.4 程序合成与验证驱动推理 / Program Synthesis & Verify
+
+- **动机**: 将推理问题转化为程序生成与验证闭环，提高正确性。
+- **路径**: DSL/AST级合成、规范约束、形式化验证（模型检查/证明器）。
+- **应用**: 规则生成、数据管道验证、问答计划生成。
+
+### 5.5 因果与概率推理融合 / Causal-Probabilistic Fusion
+
+- **动机**: 兼顾因果可解释性与概率不确定性刻画。
+- **方法**: 结构因果模型 + 概率图模型、潜变量因果发现、因果反事实推断。
+- **应用**: 可信问答、反事实推荐、鲁棒决策。
+
+### 5.6 实时流式推理 / Real-time Streaming Inference
+
+- **动机**: 动态知识与事件驱动的低延迟推理需求。
+- **方法**: 增量闭包、窗口化规则、近似推理、版本化一致性。
+- **对接**: 流图、事件本体、事务一致性层。
+
+## 6. 评估与基准 / Evaluation & Benchmarks
+
+### 6.1 评价维度 / Evaluation Dimensions
+
+- **正确性**: 逻辑可满足性、一致性、反例检出率。
+- **完备性**: 可推事实覆盖率、规则召回率。
+- **鲁棒性**: 噪声/缺失/对抗扰动下的性能保持度。
+- **效率**: 推理时延、吞吐、内存占用、扩展性（多节点/多GPU）。
+- **可解释性**: 推理路径可视化率、规则可读性评分、因果证据强度。
+- **可维护性**: 规则/本体变更影响范围、回归违例数。
+
+### 6.2 公共基准 / Public Benchmarks
+
+- 知识推理: FB15k-237、WN18RR、OpenGraphBenchmark-Reasoning（OGB）
+- 规则与归纳: RuLES、AMIE、ILP基准集合
+- 事实验证与检索增强: KILT、HoVer、FEVER
+- 因果推理: Tübingen cause-effect pairs、Synthetic SCM suites
+- 多跳问答: HotpotQA、ComplexWebQuestions、MetaQA
+- 语义网: LUBM、WatDiv、BSBM（SPARQL推理与查询）
+
+### 6.3 统一评测协议 / Unified Protocol
+
+- 数据分割: 时序留出/跨域迁移/零样本实体与关系。
+- 指标组合: 正确性×效率×可解释性三维报告。
+- 可重复性: 固定随机种子、环境快照、结果签名与审计日志。
+- 对齐校验: 与`DOCUMENTATION_STANDARDS.md`、`ACADEMIC_CITATION_STANDARDS.md`链接。
+
+## 7. 批判性分析 / Critical Analysis
+
+### 7.1 理论优势 / Theoretical Advantages
 
 **逻辑严谨性** / Logical Rigor:
 
@@ -975,7 +1042,7 @@ pub struct SystemStatistics {
 - 具有深厚的理论基础
 - 支持复杂的推理任务
 
-### 5.2 理论局限性 / Theoretical Limitations
+### 7.2 理论局限性 / Theoretical Limitations
 
 **计算复杂度问题** / Computational Complexity Issues:
 
@@ -995,7 +1062,7 @@ pub struct SystemStatistics {
 - 新规则的集成和验证复杂
 - 推理系统的维护成本高
 
-### 5.3 前沿发展 / Frontier Development
+### 7.3 前沿发展 / Frontier Development
 
 **神经符号推理** / Neural-Symbolic Reasoning:
 
@@ -1015,7 +1082,7 @@ pub struct SystemStatistics {
 - 跨模态知识融合
 - 支持复杂的推理任务
 
-### 5.4 理论争议与挑战 / Theoretical Controversies and Challenges
+### 7.4 理论争议与挑战 / Theoretical Controversies and Challenges
 
 **符号推理vs统计推理的争议** / Controversies between Symbolic vs Statistical Reasoning:
 
@@ -1202,3 +1269,16 @@ pub struct SystemStatistics {
 **最后更新** / Last Updated: 2024-12-19 / 2024-12-19
 **版本** / Version: 1.0.0 / 1.0.0
 **维护者** / Maintainer: Knowledge Graph Team / Knowledge Graph Team
+
+## 7. 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/06-reasoning-systems-sample.md](../evaluation-reports/06-reasoning-systems-sample.md)
+
+## 8. 交叉引用与导航 / Cross-references & Navigation
+
+- 知识表示 1.10 评估与基准：参见
+  [../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks](../01-knowledge-representation/README.md#110-评估与基准--evaluation--benchmarks)
+- 本体工程 4.8 统一评测协议：参见
+  [../04-ontology-engineering/README.md#48-统一评测协议--unified-evaluation-protocol](../04-ontology-engineering/README.md#48-统一评测协议--unified-evaluation-protocol)
+- 形式化方法 6. 评估与基准：参见
+  [../08-formal-methods/README.md#6-评估与基准--evaluation--benchmarks](../08-formal-methods/README.md#6-评估与基准--evaluation--benchmarks)

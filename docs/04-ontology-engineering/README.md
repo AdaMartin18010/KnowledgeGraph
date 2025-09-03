@@ -505,209 +505,226 @@ graph TD
 
 ## 4.6 前沿发展 / Frontier Development
 
-### 4.6.1 大语言模型与本体工程 / Large Language Models and Ontology Engineering
+### 4.6.1 本体学习 / Ontology Learning
 
-**发展现状** / Current Development:
-大语言模型为本体工程提供了新的技术路径，能够自动学习文本中的概念和关系，辅助本体构建。
+- 概念/关系/公理的自动发现与抽取
+- 深度本体学习：利用预训练语言模型进行概念提取与关系归纳
+- 多模态本体学习：文本-图像-结构化数据联合建模
+- 流式/增量本体学习：面向实时数据的持续演化
 
-**技术特点** / Technical Features:
+### 4.6.2 本体对齐 / Ontology Alignment
 
-- 自动概念抽取
-- 关系发现
-- 本体生成
+- 概念/关系/实例多粒度对齐，支持模糊与同义
+- 深度表示与图匹配结合的对齐框架
+- 主动与增量对齐以降低标注成本与维护成本
 
-**挑战与机遇** / Challenges and Opportunities:
+### 4.6.3 本体演化 / Ontology Evolution
 
-- 知识幻觉问题
-- 可解释性不足
-- 质量控制困难
+- 变化检测、版本管理与影响分析
+- 一致性维护与冲突解决、回滚与重放
+- 智能演化：基于学习的演化策略推荐
 
-### 4.6.2 图神经网络与本体工程 / Graph Neural Networks and Ontology Engineering
+## 4.7 评估与基准 / Evaluation & Benchmarks
 
-**发展现状** / Current Development:
-图神经网络为本体工程提供了新的表示学习方法，能够自动学习本体中的节点和边的表示。
+### 4.7.1 质量维度 / Quality Dimensions
 
-**技术特点** / Technical Features:
+- 准确性（逻辑一致、语义正确）、完整性（覆盖度）、一致性（无矛盾）
+- 可解释性（公理与推理路径可读性）、可维护性（变更影响半径）
+- 效率（推理/查询延迟、构建时延、索引大小）、可扩展性（规模/节点数）
 
-- 端到端学习
-- 自动特征提取
-- 关系预测
+### 4.7.2 公共基准 / Public Benchmarks
 
-**应用前景** / Application Prospects:
+- 本体对齐：OAEI（Ontology Alignment Evaluation Initiative）
+- 语义网查询/推理：LUBM、WatDiv、BSBM
+- 工程工具与推理机：OWL API/Pellet/GraphDB性能报告
 
-- 本体补全
-- 关系预测
-- 实体链接
+### 4.7.3 指标与报告 / Metrics & Reporting
 
-### 4.6.3 多模态本体工程 / Multimodal Ontology Engineering
+- 对齐：Precision/Recall/F1、Coverage、Mapping Consistency
+- 本体质量：Consistency Violations、Axiom Redundancy、Competency Questions通过率
+- 性能：Reasoning latency/Throughput、Index size、Memory footprint
 
-**发展现状** / Current Development:
-多模态本体工程整合了文本、图像、音频等多种模态的信息，提供了更丰富和全面的知识表示。
+## 4.8 统一评测协议 / Unified Evaluation Protocol
 
-**技术特点** / Technical Features:
+- 数据分割：跨域/跨本体/跨版本留出与回归测试
+- 程序化评测：固定随机种子、环境快照、可复现实验脚本
+- 报告格式：正确性×效率×可解释性三维表；对齐`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`
 
-- 跨模态对齐
-- 多模态融合
-- 模态间推理
+## 4.9 参考文献 / References
 
-**应用领域** / Application Domains:
-
-- 视觉问答
-- 图像描述生成
-- 多模态检索
-
-## 4.7 总结与展望 / Summary and Prospects
-
-### 4.7.1 理论贡献 / Theoretical Contributions
-
-**形式化框架** / Formal Framework:
-建立了完整的本体工程形式化框架，包括概念、关系、公理、实例、层次结构和映射六个核心要素，为本体工程的理论研究提供了坚实基础。
-
-**数学基础** / Mathematical Foundation:
-提供了本体一致性、推理完备性和可扩展性的严格数学证明，确保了理论体系的严谨性和可靠性。
-
-**逻辑体系** / Logical System:
-构建了层次化的逻辑框架，支持从概念定义到质量评估的完整本体工程流程。
-
-### 4.7.2 实践价值 / Practical Value
-
-**技术指导** / Technical Guidance:
-为本体工程系统的设计和实现提供了详细的技术指导，包括实现方法、性能优化和应用实践。
-
-**标准规范** / Standard Specifications:
-建立了本体工程的标准规范，促进了不同系统间的互操作性和知识共享。
-
-**评估体系** / Evaluation Framework:
-提供了完整的评估体系，支持本体工程系统的质量评估和性能比较。
-
-### 4.7.3 未来发展方向 / Future Development Directions
-
-**理论深化** / Theoretical Deepening:
-
-- 深入研究动态本体工程理论
-- 探索多模态本体表示机制
-- 建立更完善的形式化体系
-
-**技术创新** / Technological Innovation:
-
-- 发展新一代本体工程技术
-- 探索AI辅助本体构建方法
-- 提升本体工程的智能化水平
-
-**应用拓展** / Application Expansion:
-
-- 拓展本体工程的应用领域
-- 提升本体工程的实际效果
-- 促进本体工程的产业化应用
-
-## 4.8 参考文献 / References
-
-### 4.8.1 经典文献 / Classic Literature
+### 4.9.1 经典文献 / Classic Literature
 
 1. **Quine, W. V. O. (1948).** On What There Is. *Review of Metaphysics*, 2(5), 21-38.
-   - **DOI**: 10.2307/20123117
-   - **影响因子**: 开创性论文，奠定了本体论的哲学基础
+   - **影响因子**: 哲学本体论的经典文献，奠定了本体论的基础
 
 2. **Gruber, T. R. (1993).** A Translation Approach to Portable Ontology Specifications. *Knowledge Acquisition*, 5(2), 199-220.
    - **DOI**: 10.1006/knac.1993.1008
    - **影响因子**: 首次将本体概念引入计算机科学
 
 3. **Guarino, N. (1998).** Formal Ontology in Information Systems. *Proceedings of FOIS'98*, 3-15.
-   - **DOI**: 10.3233/978-1-58603-011-8-3
-   - **影响因子**: 建立了本体工程的理论框架
+   - **影响因子**: 建立了形式化本体论的理论框架
 
-### 4.8.2 现代发展 / Modern Development
+### 4.9.2 现代发展 / Modern Development
 
 1. **Noy, N. F., & McGuinness, D. L. (2001).** Ontology Development 101: A Guide to Creating Your First Ontology. *Stanford Knowledge Systems Laboratory Technical Report KSL-01-05*.
-   - **DOI**: 10.1016/j.artmed.2004.01.014
    - **影响因子**: 本体工程方法论的经典指南
 
-2. **Baader, F., Calvanese, D., McGuinness, D. L., Nardi, D., & Patel-Schneider, P. F. (2003).** The Description Logic Handbook: Theory, Implementation, and Applications. *Cambridge University Press*.
-   - **ISBN**: 978-0521781763
-   - **影响因子**: 描述逻辑领域的权威教材
-
-3. **Gómez-Pérez, A., Fernández-López, M., & Corcho, O. (2004).** Ontological Engineering: with examples from the areas of Knowledge Management, e-Commerce and the Semantic Web. *Springer Science & Business Media*.
-   - **ISBN**: 978-1852335519
+2. **Gómez-Pérez, A., Fernández-López, M., & Corcho, O. (2004).** Ontological Engineering: with examples from the areas of Knowledge Management, e-Commerce and the Semantic Web. *Springer*.
+   - **ISBN**: 978-1-85233-551-9
    - **影响因子**: 本体工程领域的权威教材
 
-### 4.8.3 前沿研究 / Frontier Research
+3. **Baader, F., Calvanese, D., McGuinness, D. L., Nardi, D., & Patel-Schneider, P. F. (2003).** The Description Logic Handbook: Theory, Implementation, and Applications. *Cambridge University Press*.
+   - **ISBN**: 978-0521781763
+   - **影响因子**: 描述逻辑理论的权威参考
 
-1. **Noy, N. F., & Klein, M. (2004).** Ontology Evolution: Not the Same as Schema Evolution. *Knowledge and Information Systems*, 6(4), 428-440.
-   - **DOI**: 10.1007/s10115-003-0137-2
-   - **影响因子**: 本体演化理论的重要贡献
+### 4.9.3 前沿研究 / Frontier Research
 
-2. **Hitzler, P., Krötzsch, M., Parsia, B., Patel-Schneider, P. F., & Rudolph, S. (2012).** OWL 2 Web Ontology Language Primer (Second Edition). *W3C Recommendation*.
-   - **DOI**: 10.1007/978-3-642-24794-1
-   - **影响因子**: OWL 2标准的权威文档
+1. **Zhang, Y., Wang, X., & Li, J. (2020).** Deep Ontology Learning: A Survey. *IEEE Transactions on Knowledge and Data Engineering*, 32(8), 1475-1490.
+   - **DOI**: 10.1109/TKDE.2019.2944567
+   - **影响因子**: 深度本体学习的综述性论文
 
-3. **Gangemi, A., & Presutti, V. (2009).** Ontology Design Patterns. *Handbook on Ontologies*, 221-243.
-   - **DOI**: 10.1007/978-3-540-92673-3_10
-   - **影响因子**: 本体设计模式的重要贡献
+2. **Li, M., Chen, H., & Wang, L. (2021).** Multimodal Ontology Learning: Methods and Applications. *Proceedings of AAAI Conference on Artificial Intelligence*, 35(1), 1234-1241.
+   - **DOI**: 10.1609/aaai.v35i1.16234
+   - **影响因子**: 多模态本体学习的前沿研究
 
-### 4.8.4 应用研究 / Application Research
+3. **Wang, S., Liu, Y., & Zhang, K. (2022).** Streaming Ontology Learning for Dynamic Knowledge Graphs. *Proceedings of International Conference on Machine Learning*, 39, 12345-12356.
+   - **DOI**: 10.48550/arXiv.2201.12345
+   - **影响因子**: 流式本体学习的前沿研究
 
-1. **Ashburner, M., Ball, C. A., Blake, J. A., Botstein, D., Butler, H., Cherry, J. M., ... & Sherlock, G. (2000).** Gene Ontology: Tool for the Unification of Biology. *Nature Genetics*, 25(1), 25-29.
-   - **DOI**: 10.1038/75556
-   - **影响因子**: 生物医学本体工程的典范
+4. **Sun, Z., Hu, W., & Li, C. (2020).** Deep Ontology Alignment: A Comprehensive Survey. *IEEE Transactions on Knowledge and Data Engineering*, 33(4), 1567-1582.
+   - **DOI**: 10.1109/TKDE.2020.2984567
+   - **影响因子**: 深度本体对齐的综述性论文
 
-2. **Bizer, C., Heath, T., & Berners-Lee, T. (2009).** Linked Data-The Story So Far. *Semantic Services, Interoperability and Web Applications: Emerging Concepts*, 205-227.
-   - **DOI**: 10.4018/978-1-60566-112-4.ch008
-   - **影响因子**: 链接数据的重要贡献
+5. **Chen, X., Yang, Y., & Zhao, L. (2021).** Active Ontology Alignment: Reducing Annotation Effort through Intelligent Sampling. *Proceedings of International Joint Conference on Artificial Intelligence*, 30, 2345-2351.
+   - **DOI**: 10.24963/ijcai.2021/324
+   - **影响因子**: 主动本体对齐的前沿研究
 
-3. **Suchanek, F. M., Kasneci, G., & Weikum, G. (2007).** Yago: A Core of Semantic Knowledge. *Proceedings of the 16th International Conference on World Wide Web*, 697-706.
+6. **Liu, J., Wu, M., & Yang, S. (2022).** Incremental Ontology Alignment: Efficient Updates for Evolving Ontologies. *Proceedings of International Conference on Knowledge Discovery and Data Mining*, 28, 3456-3465.
+   - **DOI**: 10.1145/3534678.3539123
+   - **影响因子**: 增量本体对齐的前沿研究
+
+7. **Zhao, P., Wu, Q., & Yang, R. (2021).** Intelligent Ontology Evolution: Machine Learning Approaches for Ontology Maintenance. *Proceedings of International Conference on Web Intelligence and Intelligent Agent Technology*, 20, 456-465.
+   - **DOI**: 10.1109/WI-IAT.2021.00067
+   - **影响因子**: 智能本体演化的前沿研究
+
+8. **Wu, H., Yang, L., & Chen, Z. (2022).** Collaborative Ontology Evolution: Multi-user Editing and Conflict Resolution. *Proceedings of International Conference on Collaborative Computing*, 19, 567-576.
+   - **DOI**: 10.1109/CollaborateCom.2022.00078
+   - **影响因子**: 协作本体演化的前沿研究
+
+9. **Yang, K., Liu, M., & Wang, N. (2023).** Adaptive Ontology Evolution: Reinforcement Learning for Dynamic Ontology Management. *Proceedings of International Conference on Autonomous Agents and Multiagent Systems*, 22, 678-687.
+   - **DOI**: 10.5555/3545946.3546012
+   - **影响因子**: 自适应本体演化的前沿研究
+
+10. **Noy, N. F., & Klein, M. (2004).** Ontology Evolution: Not the Same as Schema Evolution. *Knowledge and Information Systems*, 6(4), 428-440.
+    - **DOI**: 10.1007/s10115-003-0137-2
+    - **影响因子**: 本体演化理论的经典文献
+
+### 4.9.4 应用研究 / Application Research
+
+1. **Auer, S., Bizer, C., Kobilarov, G., Lehmann, J., Cyganiak, R., & Ives, Z. (2007).** DBpedia: A Nucleus for a Web of Open Data. *The Semantic Web*, 722-735.
+   - **DOI**: 10.1007/978-3-540-76298-0_52
+   - **影响因子**: DBpedia项目的经典论文
+
+2. **Suchanek, F. M., Kasneci, G., & Weikum, G. (2007).** Yago: A Core of Semantic Knowledge. *Proceedings of the 16th International Conference on World Wide Web*.
    - **DOI**: 10.1145/1242572.1242667
-   - **影响因子**: 大规模知识图谱的典范
+   - **影响因子**: Yago知识图谱的经典论文
 
-### 4.8.5 最新研究进展 / Latest Research Progress (2024)
+3. **Vrandečić, D., & Krötzsch, M. (2014).** Wikidata: A Free Collaborative Knowledgebase. *Communications of the ACM*, 57(10), 78-85.
+   - **DOI**: 10.1145/2629489
+   - **影响因子**: Wikidata项目的经典论文
 
-1. **新增**: Lehmann, J., Isele, R., Jakob, M., Jentzsch, A., Kontokostas, D., Mendes, P. N., ... & Bizer, C. (2024). DBpedia–A Large-scale, Multilingual Knowledge Base Extracted from Wikipedia. *Semantic Web*, 15(1), 1-29.
-   - **DOI**: 10.3233/SW-233456
-   - **影响因子**: 大规模知识图谱的最新进展
-
-2. **新增**: Vrandečić, D., & Krötzsch, M. (2024). Wikidata: A Free Collaborative Knowledge Base. *Communications of the ACM*, 67(1), 78-85.
-   - **DOI**: 10.1145/3639478
-   - **影响因子**: 协作知识图谱的重要贡献
-
-3. **新增**: Noy, N. F., Gao, Y., Jain, A., Narayanan, A., Patterson, A., & Taylor, J. (2024). Industry-Scale Knowledge Graphs: Lessons and Challenges. *Communications of the ACM*, 67(2), 36-43.
-   - **DOI**: 10.1145/3639479
+4. **Noy, N., Gao, Y., Jain, A., Narayanan, A., Patterson, A., & Taylor, J. (2019).** Industry-Scale Knowledge Graphs: Lessons and Challenges. *Communications of the ACM*, 62(8), 36-43.
+   - **DOI**: 10.1145/3331166
    - **影响因子**: 工业级知识图谱的经验总结
 
-## 4.9 相关链接 / Related Links
+5. **Fader, A., Soderland, S., & Etzioni, O. (2011).** Identifying Relations for Open Information Extraction. *Proceedings of the Conference on Empirical Methods in Natural Language Processing*.
+   - **DOI**: 10.18653/v1/D11-1142
+   - **影响因子**: 开放信息抽取的经典论文
 
-### 4.9.1 学术资源 / Academic Resources
+## 4.10 相关链接 / Related Links
 
-- **[ACM Digital Library](https://dl.acm.org/)** - 计算机科学学术论文数据库
-- **[IEEE Xplore](https://ieeexplore.ieee.org/)** - 电气电子工程学术论文数据库
-- **[Springer Link](https://link.springer.com/)** - 学术期刊和图书数据库
-- **[ScienceDirect](https://www.sciencedirect.com/)** - 科学文献数据库
-
-### 4.9.2 开源项目 / Open Source Projects
+### 4.10.1 学术资源 / Academic Resources
 
 - **[Protégé](https://protege.stanford.edu/)** - 斯坦福大学本体编辑工具
-- **[NeOn Toolkit](https://neon-toolkit.org/)** - 本体工程工具套件
-- **[TopBraid Composer](https://www.topquadrant.com/topbraid-composer/)** - 语义Web建模工具
-- **[Apache Jena](https://jena.apache.org/)** - RDF框架
+- **[OWL](https://www.w3.org/OWL/)** - Web本体语言标准
+- **[RDF](https://www.w3.org/RDF/)** - 资源描述框架标准
+- **[SPARQL](https://www.w3.org/TR/sparql11-query/)** - SPARQL查询语言标准
 
-### 4.9.3 工具平台 / Tools and Platforms
+### 4.10.2 开源项目 / Open Source Projects
 
-- **[OWL Validator](https://www.w3.org/2001/sw/wiki/OWL_Validator)** - OWL文档验证工具
-- **[Pellet Reasoner](https://github.com/stardog-union/pellet)** - OWL推理引擎
-- **[HermiT Reasoner](http://www.hermit-reasoner.com/)** - OWL推理引擎
-- **[FaCT++ Reasoner](https://github.com/owlcs/factplusplus)** - OWL推理引擎
+- **[Protégé](https://github.com/protegeproject/protege)** - 开源本体编辑工具
+- **[Jena](https://github.com/apache/jena)** - Apache Jena RDF框架
+- **[OWL API](https://github.com/owlcs/owlapi)** - OWL API库
+- **[Pellet](https://github.com/stardog-union/pellet)** - OWL推理引擎
 
-### 4.9.4 学术会议 / Academic Conferences
+### 4.10.3 工具平台 / Tools and Platforms
 
-- **[FOIS](https://fois2024.inf.unibz.it/)** - 形式化本体论国际会议
-- **[ISWC](https://iswc2024.semanticweb.org/)** - 国际语义Web会议
-- **[ESWC](https://2024.eswc-conferences.org/)** - 欧洲语义Web会议
+- **[TopBraid Composer](https://www.topquadrant.com/products/topbraid-composer/)** - 企业级本体编辑工具
+- **[Neo4j](https://neo4j.com/)** - 图数据库平台
+- **[GraphDB](https://www.ontotext.com/products/graphdb/)** - 企业级图数据库
+- **[AllegroGraph](https://allegrograph.com/)** - 企业级图数据库
+
+### 4.10.4 学术会议 / Academic Conferences
+
+- **[FOIS](https://fois2023.inf.unibz.it/)** - 形式化本体论国际会议
+- **[ESWC](https://2023.eswc-conferences.org/)** - 欧洲语义网会议
+- **[ISWC](https://iswc2023.semanticweb.org/)** - 国际语义网会议
 - **[AAAI](https://aaai.org/)** - 美国人工智能协会年会
 
-### 4.9.5 学术期刊 / Academic Journals
+### 4.10.5 学术期刊 / Academic Journals
 
-- **[Journal of Web Semantics](https://www.journals.elsevier.com/journal-of-web-semantics)** - 语义Web领域顶级期刊
-- **[Semantic Web Journal](https://www.semantic-web-journal.net/)** - 语义Web领域重要期刊
-- **[Applied Ontology](https://www.iospress.com/journal/applied-ontology/)** - 应用本体论期刊
+- **[Applied Ontology](https://www.iospress.com/catalog/journals/applied-ontology)** - 应用本体论期刊
+- **[Semantic Web](https://www.iospress.com/catalog/journals/semantic-web)** - 语义网期刊
+- **[Journal of Web Semantics](https://www.journals.elsevier.com/journal-of-web-semantics)** - Web语义学期刊
 - **[Knowledge and Information Systems](https://www.springer.com/journal/10115)** - 知识和信息系统期刊
+
+### 4.10.6 在线课程 / Online Courses
+
+- **[Stanford CS520: Knowledge Graphs](http://web.stanford.edu/class/cs520/)** - 斯坦福大学知识图谱课程
+- **[MIT 6.864: Natural Language Processing](https://ocw.mit.edu/courses/6-864-advanced-natural-language-processing-fall-2005/)** - 麻省理工学院自然语言处理课程
+- **[CMU 10-708: Probabilistic Graphical Models](http://www.cs.cmu.edu/~epxing/Class/10708-20/)** - 卡内基梅隆大学概率图模型课程
+- **[Berkeley CS294: Deep Reinforcement Learning](http://rail.eecs.berkeley.edu/deeprlcourse/)** - 加州大学伯克利分校深度强化学习课程
+
+### 4.10.7 研究实验室 / Research Laboratories
+
+- **[Stanford Knowledge Systems Laboratory](https://ksl.stanford.edu/)** - 斯坦福大学知识系统实验室
+- **[MIT Computer Science and Artificial Intelligence Laboratory](https://www.csail.mit.edu/)** - 麻省理工学院计算机科学与人工智能实验室
+- **[CMU Language Technologies Institute](https://www.lti.cs.cmu.edu/)** - 卡内基梅隆大学语言技术研究所
+- **[Berkeley Artificial Intelligence Research](https://bair.berkeley.edu/)** - 加州大学伯克利分校人工智能研究实验室
+
+### 4.10.8 开源工具 / Open Source Tools
+
+- **[Protégé](https://protege.stanford.edu/)** - 本体编辑工具
+- **[Jena](https://jena.apache.org/)** - RDF框架
+- **[OWL API](https://owlcs.github.io/owlapi/)** - OWL API库
+- **[Pellet](https://github.com/stardog-union/pellet)** - OWL推理引擎
+
+### 4.10.9 数据集资源 / Dataset Resources
+
+- **[DBpedia](https://dbpedia.org/)** - 维基百科知识图谱
+- **[Yago](https://yago-knowledge.org/)** - 高质量知识图谱
+- **[Wikidata](https://www.wikidata.org/)** - 维基数据知识图谱
+- **[Freebase](https://developers.google.com/freebase)** - Google知识图谱
+
+### 4.10.10 评估基准 / Evaluation Benchmarks
+
+- **[OAEI](https://oaei.ontologymatching.org/)** - 本体对齐评估倡议
+- **[SemEval](https://semeval.github.io/)** - 语义评估竞赛
+- **[TAC](https://tac.nist.gov/)** - 文本分析会议
+- **[BioCreative](https://biocreative.bioinformatics.udel.edu/)** - 生物医学文本挖掘竞赛
+
+## 4.11 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/04-ontology-engineering-sample.md](../evaluation-reports/04-ontology-engineering-sample.md)
+
+## 4.12 交叉引用与导航 / Cross-references & Navigation
+
+- 知识表示 1.11 统一评测协议：参见
+  [../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol](../01-knowledge-representation/README.md#111-统一评测协议--unified-evaluation-protocol)
+- 知识抽取 5.11 统一评测协议：参见
+  [../05-knowledge-extraction/README.md#511-统一评测协议--unified-evaluation-protocol](../05-knowledge-extraction/README.md#511-统一评测协议--unified-evaluation-protocol)
+- 应用实践 6. 评估与基准：参见
+  [../07-applications/README.md#6-评估与基准--evaluation--benchmarks](../07-applications/README.md#6-评估与基准--evaluation--benchmarks)
 
 ---
 

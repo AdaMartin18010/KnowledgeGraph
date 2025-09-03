@@ -1172,19 +1172,82 @@ impl ExtractionPipeline {
 2. TAC KBP. <https://tac.nist.gov/2019/KBP/>. Accessed 2024.
 3. SemEval. <https://semeval.github.io/>. Accessed 2024.
 
-## 5.9 相关链接 / Related Links
+## 5.9 前沿发展 / Frontier Development
 
-### 5.9.1 内部链接 / Internal Links
+### 5.9.1 跨文档与长文抽取 / Cross-document & Long-context Extraction
+
+- 跨段落/跨文档实体与事件链聚合
+- 长上下文建模：分块-汇总、记忆机制、检索式路由
+
+### 5.9.2 跨模态抽取 / Multimodal Extraction
+
+- 文本-图像-音频联合事件与关系抽取
+- 对齐策略：共享嵌入、对比学习、跨模态注意力
+
+### 5.9.3 远程监督与弱监督 / Distant & Weak Supervision
+
+- KB自动标注、噪声鲁棒训练、去噪学习
+- 少样本/零样本实体与关系扩展
+
+### 5.9.4 RAG辅助抽取 / RAG-assisted Extraction
+
+- 检索增强识别稀有实体/关系/术语
+- 证据链与可追溯性，降低幻觉与偏差
+
+### 5.9.5 结构化与程序化抽取 / Structured & Programmatic Extraction
+
+- 从自然语言到DSL/AST，生成可验证抽取计划
+- 与规则/本体联合约束的结构化输出
+
+## 5.10 评估与基准 / Evaluation & Benchmarks
+
+### 5.10.1 指标 / Metrics
+
+- 实体/关系/事件：Precision、Recall、F1、Exact Match
+- 一致性：跨句/跨文档一致率、知识对齐一致性
+- 鲁棒性：噪声/错别字/跨域迁移保持度
+- 效率：吞吐、延迟、峰值内存、成本
+- 可解释性：证据可追溯率、规则命中率
+
+### 5.10.2 公共基准 / Public Benchmarks
+
+- 实体/关系：CoNLL、FewRel、TAC KBP、DocRED
+- 事件：ACE05、MUC、RAMS、GENIA（生物医学）
+- 跨模态：MMKG、视觉-语言关系/事件数据集
+- 语义网：LUBM、WatDiv（与对齐/推理联测）
+
+## 5.11 统一评测协议 / Unified Evaluation Protocol
+
+- 数据分割：时间留出、跨域/跨语言、零样本实体与关系
+- 检索/知识依赖：固定检索索引与随机种子；记录外部资源快照
+- 报告：正确性×效率×一致性×可解释性四维表；链接`DOCUMENTATION_STANDARDS.md`、`ACADEMIC_CITATION_STANDARDS.md`
+
+## 5.12 相关链接 / Related Links
+
+### 5.12.1 内部链接 / Internal Links
 
 - [知识表示](../01-knowledge-representation/README.md)
 - [语义分析](../03-semantic-analysis/README.md)
 - [本体工程](../04-ontology-engineering/README.md)
 
-### 5.9.2 外部链接 / External Links
+### 5.12.2 外部链接 / External Links
 
 - [spaCy](https://spacy.io/)
 - [Stanford NER](https://nlp.stanford.edu/software/CRF-NER.html)
 - [OpenNLP](https://opennlp.apache.org/)
+
+## 5.12 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/05-knowledge-extraction-sample.md](../evaluation-reports/05-knowledge-extraction-sample.md)
+
+## 5.13 交叉引用与导航 / Cross-references & Navigation
+
+- 本体工程 4.7 评估与基准：参见
+  [../04-ontology-engineering/README.md#47-评估与基准--evaluation--benchmarks](../04-ontology-engineering/README.md#47-评估与基准--evaluation--benchmarks)
+- 应用实践 6. 评估与基准：参见
+  [../07-applications/README.md#6-评估与基准--evaluation--benchmarks](../07-applications/README.md#6-评估与基准--evaluation--benchmarks)
+- 工程实践 7. 统一评测协议：参见
+  [../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol](../09-engineering-practice/README.md#7-统一评测协议--unified-evaluation-protocol)
 
 ---
 
@@ -1192,11 +1255,11 @@ impl ExtractionPipeline {
 **版本** / Version: 1.0.0 / 1.0.0
 **维护者** / Maintainer: Knowledge Graph Team / Knowledge Graph Team
 
-## 5.10 群论与范畴论视角下的知识图谱理论 / Group Theory and Category Theory Perspectives on Knowledge Graphs
+## 5.13 群论与范畴论视角下的知识图谱理论 / Group Theory and Category Theory Perspectives on Knowledge Graphs
 
-### 5.10.1 理论基础 / Theoretical Foundation
+### 5.13.1 理论基础 / Theoretical Foundation
 
-#### 5.10.1.1 群论视角下的知识结构 / Group Theory Perspective on Knowledge Structure
+#### 5.13.1.1 群论视角下的知识结构 / Group Theory Perspective on Knowledge Structure
 
 **群论基本概念** / Basic Group Theory Concepts:
 
@@ -1228,7 +1291,7 @@ impl ExtractionPipeline {
 **Formal Definition:**
 Knowledge group G satisfies group axioms, where the knowledge composition operation ⊕ represents the combination and fusion of knowledge, the identity knowledge element e represents empty knowledge or basic knowledge, and the knowledge inverse operation inv represents the negation or opposition of knowledge.
 
-#### 5.10.1.2 范畴论视角下的知识关系 / Category Theory Perspective on Knowledge Relations
+#### 5.13.1.2 范畴论视角下的知识关系 / Category Theory Perspective on Knowledge Relations
 
 **范畴基本概念** / Basic Category Theory Concepts:
 
@@ -1260,9 +1323,9 @@ Knowledge group G satisfies group axioms, where the knowledge composition operat
 **Formal Description:**
 Knowledge category C abstracts knowledge objects as objects in the category, knowledge relationships as morphisms, morphism composition represents the transmission and combination of knowledge relationships, and identity morphisms represent reflexive knowledge relationships.
 
-### 5.10.2 理论框架 / Theoretical Framework
+### 5.13.2 理论框架 / Theoretical Framework
 
-#### 5.10.2.1 知识群的结构分析 / Knowledge Group Structure Analysis
+#### 5.13.2.1 知识群的结构分析 / Knowledge Group Structure Analysis
 
 **子群理论** / Subgroup Theory:
 
@@ -1294,7 +1357,7 @@ For knowledge subgroup H ⊆ G, the left coset gH = {gh | h ∈ H} represents al
 **Homomorphism:**
 Knowledge group homomorphism φ: G₁ → G₂ satisfies φ(k₁ ⊕ k₂) = φ(k₁) ⊕ φ(k₂), representing mapping relationships between different knowledge domains, such as mapping from mathematical knowledge to physical knowledge.
 
-#### 5.10.2.2 知识范畴的函子理论 / Functor Theory in Knowledge Categories
+#### 5.13.2.2 知识范畴的函子理论 / Functor Theory in Knowledge Categories
 
 **函子定义** / Functor Definition:
 
@@ -1328,9 +1391,9 @@ Natural transformation η: F → G is a mapping between two knowledge functors. 
 **Adjoint Functors:**
 Knowledge functors F: C → D and G: D → C form an adjoint pair (F ⊣ G) if there exists a natural isomorphism Hom_D(F(A), B) ≅ Hom_C(A, G(B)). Adjoint functors represent dual relationships between knowledge domains.
 
-### 5.10.3 应用实例 / Application Examples
+### 5.13.3 应用实例 / Application Examples
 
-#### 5.10.3.1 数学知识群 / Mathematical Knowledge Group
+#### 5.13.3.1 数学知识群 / Mathematical Knowledge Group
 
 **群结构** / Group Structure:
 
@@ -1365,7 +1428,7 @@ Knowledge functors F: C → D and G: D → C form an adjoint pair (F ⊣ G) if t
    G = {欧几里得几何, 非欧几何, 微分几何, 代数几何, ...}
    ```
 
-#### 5.10.3.2 科学知识范畴 / Scientific Knowledge Category
+#### 5.13.3.2 科学知识范畴 / Scientific Knowledge Category
 
 **范畴结构** / Category Structure:
 
@@ -1400,9 +1463,9 @@ Knowledge functors F: C → D and G: D → C form an adjoint pair (F ⊣ G) if t
    h: 理论预测 → 实验验证
    ```
 
-### 5.10.4 理论优势 / Theoretical Advantages
+### 5.13.4 理论优势 / Theoretical Advantages
 
-#### 5.10.4.1 群论视角的优势 / Advantages of Group Theory Perspective
+#### 5.13.4.1 群论视角的优势 / Advantages of Group Theory Perspective
 
 **结构统一性** / Structural Unity:
 
@@ -1422,7 +1485,7 @@ Knowledge functors F: C → D and G: D → C form an adjoint pair (F ⊣ G) if t
 - 发现知识间的等价关系
 - 简化复杂知识结构
 
-#### 5.10.4.2 范畴论视角的优势 / Advantages of Category Theory Perspective
+#### 5.13.4.2 范畴论视角的优势 / Advantages of Category Theory Perspective
 
 **关系抽象性** / Relational Abstraction:
 
@@ -1442,9 +1505,9 @@ Knowledge functors F: C → D and G: D → C form an adjoint pair (F ⊣ G) if t
 - 提供知识转换的数学工具
 - 支持知识结构的比较
 
-### 5.10.5 前沿发展 / Frontier Development
+### 5.13.5 前沿发展 / Frontier Development
 
-#### 5.10.5.1 高阶范畴论应用 / Higher Category Theory Applications
+#### 5.13.5.1 高阶范畴论应用 / Higher Category Theory Applications
 
 **2-范畴** / 2-Categories:
 
@@ -1466,7 +1529,7 @@ Knowledge 2-categories incorporate knowledge objects, knowledge relationships, a
 **∞-Categories:**
 Knowledge ∞-categories handle infinite levels of knowledge relationships, suitable for modeling complex knowledge networks.
 
-#### 5.10.5.2 拓扑学视角 / Topological Perspective
+#### 5.13.5.2 拓扑学视角 / Topological Perspective
 
 **知识拓扑空间** / Knowledge Topological Space:
 
@@ -1488,9 +1551,9 @@ Endow knowledge sets with topological structures, analyze knowledge structures t
 **Homotopy Theory Applications:**
 Use homotopy theory to study continuous deformations of knowledge structures, discovering deep connections between knowledge.
 
-### 5.10.6 批判性分析 / Critical Analysis
+### 5.13.6 批判性分析 / Critical Analysis
 
-#### 5.10.6.1 理论优势 / Theoretical Advantages
+#### 5.13.6.1 理论优势 / Theoretical Advantages
 
 **数学严谨性** / Mathematical Rigor:
 
@@ -1510,7 +1573,7 @@ Use homotopy theory to study continuous deformations of knowledge structures, di
 - 支持跨域知识整合
 - 提供通用分析方法
 
-#### 5.10.6.2 理论局限性 / Theoretical Limitations
+#### 5.13.6.2 理论局限性 / Theoretical Limitations
 
 **抽象程度过高** / Over-abstraction:
 
@@ -1530,9 +1593,9 @@ Use homotopy theory to study continuous deformations of knowledge structures, di
 - 需要深厚的数学背景
 - 工程实现挑战大
 
-### 5.10.7 未来发展方向 / Future Development Directions
+### 5.13.7 未来发展方向 / Future Development Directions
 
-#### 5.10.7.1 理论深化 / Theoretical Deepening
+#### 5.13.7.1 理论深化 / Theoretical Deepening
 
 **代数几何视角** / Algebraic Geometry Perspective:
 
@@ -1546,7 +1609,7 @@ Use homotopy theory to study continuous deformations of knowledge structures, di
 - 利用微分几何研究知识演化
 - 建立知识动力学模型
 
-#### 5.10.7.2 工程实现 / Engineering Implementation
+#### 5.13.7.2 工程实现 / Engineering Implementation
 
 **高效算法设计** / Efficient Algorithm Design:
 
@@ -1560,9 +1623,9 @@ Use homotopy theory to study continuous deformations of knowledge structures, di
 - 构建范畴论知识分析平台
 - 提供可视化的知识结构展示
 
-### 5.10.8 总结与展望 / Summary and Prospects
+### 5.13.8 总结与展望 / Summary and Prospects
 
-#### 5.10.8.1 理论贡献 / Theoretical Contributions
+#### 5.13.8.1 理论贡献 / Theoretical Contributions
 
 **新视角提供** / New Perspective Provision:
 
@@ -1576,7 +1639,7 @@ Use homotopy theory to study continuous deformations of knowledge structures, di
 - 提供形式化的知识分析工具
 - 建立统一的知识建模框架
 
-#### 5.10.8.2 实践价值 / Practical Value
+#### 5.13.8.2 实践价值 / Practical Value
 
 **知识组织优化** / Knowledge Organization Optimization:
 
@@ -1590,7 +1653,7 @@ Use homotopy theory to study continuous deformations of knowledge structures, di
 - 支持跨域知识融合
 - 提供统一的知识表示
 
-#### 5.10.8.3 未来展望 / Future Prospects
+#### 5.13.8.3 未来展望 / Future Prospects
 
 **理论发展** / Theoretical Development:
 

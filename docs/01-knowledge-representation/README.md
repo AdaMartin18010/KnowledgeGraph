@@ -1110,3 +1110,47 @@ graph TD
 - **[KILT](https://github.com/facebookresearch/KILT)** - 知识密集型语言任务评估基准
 - **[LAMA](https://github.com/facebookresearch/LAMA)** - 语言模型分析评估基准
 - **[CommonsenseQA](https://www.tau-nlp.org/commonsenseqa)** - 常识推理评估基准
+
+## 1.10 评估与基准 / Evaluation & Benchmarks
+
+### 1.10.1 评价维度 / Evaluation Dimensions
+
+- 正确性 / Correctness：定义与公理无矛盾、推理结果与黄金标准一致
+- 一致性 / Consistency：模型内部逻辑一致、跨映射/跨本体一致
+- 完备性 / Completeness：覆盖关键概念/关系/属性与实例的比例
+- 语义保持性 / Semantic Preservation：跨表示/映射后的语义等价率
+- 可解释性 / Explainability：概念/关系定义可读性、推理路径可追溯性
+- 效率 / Efficiency：查询/推理时间、构建与更新成本
+
+### 1.10.2 公共基准 / Public Benchmarks
+
+- 语言与知识一致性：KILT、LAMA、CommonsenseQA
+- 知识图谱对齐与查询：LUBM、WatDiv、BSBM（与本体/推理联测）
+- 表征质量（间接）：OGB节点/链接任务作为辅助参考
+
+### 1.10.3 报告与度量 / Reporting & Metrics
+
+- 指标：Precision/Recall/F1、Consistency Violations、Coverage、等价率
+- 报告：严格编号双语表格；区分均值/方差/置信区间；记录失败案例
+
+## 1.11 统一评测协议 / Unified Evaluation Protocol
+
+- 数据：固定知识库/本体/映射快照并提供校验和与生成脚本
+- 环境：导出依赖清单与容器镜像；固定推理机/查询引擎版本
+- 过程：脚本化评测（Make/CI），固定随机种子与并发；采集硬件计量可选
+- 结果：链接`DOCUMENTATION_STANDARDS.md`与`ACADEMIC_CITATION_STANDARDS.md`；附复现实验入口
+
+## 1.12 示例评测报告 / Sample Evaluation Report
+
+- 参见 / See: [evaluation-reports/01-knowledge-representation-sample.md](../evaluation-reports/01-knowledge-representation-sample.md)
+
+## 1.13 交叉引用与导航 / Cross-references & Navigation
+
+- 图论 2.6 前沿发展：参见
+  [../02-graph-theory/README.md#26-前沿发展--frontier-development](../02-graph-theory/README.md#26-前沿发展--frontier-development)
+- 语义分析 3.7 评估与基准：参见
+  [../03-semantic-analysis/README.md#37-评估与基准--evaluation--benchmarks](../03-semantic-analysis/README.md#37-评估与基准--evaluation--benchmarks)
+- 本体工程 4.8 统一评测协议：参见
+  [../04-ontology-engineering/README.md#48-统一评测协议--unified-evaluation-protocol](../04-ontology-engineering/README.md#48-统一评测协议--unified-evaluation-protocol)
+- 推理系统 6. 评估与基准：参见
+  [../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks](../06-reasoning-systems/README.md#6-评估与基准--evaluation--benchmarks)
