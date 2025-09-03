@@ -88,3 +88,12 @@ print(f"Jaccard ≈ {jaccard(ref, cand):.3f}")
 | 示例 / Example | entity relation attribute instance mapping | entity mapping relation instance property | 0.667 |
 
 > 注 / Note：表 1-1 为示例，实际语义保持性以正式评测为准。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 1-1 / Fig 1-1：知识表示五元组关系示意 / Quintuple KR Sketch
+  （示意占位 / Placeholder）
+
+- 公式 (1-1)：集合并分配律 / Set Union Distributive Law
+  \[(A \\cup B) \\cap C = (A \\cap C) \\cup (B \\cap C)\]
+  （编号示例，实际证明见主文）

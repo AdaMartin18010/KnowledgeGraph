@@ -104,3 +104,9 @@ print(dijkstra(edges, "A"))
 | A | C | 3 |
 
 > 注 / Note：表 2-1 为示例；真实实验以框架结果为准。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 2-1 / Fig 2-1：最短路示意 / Shortest Path Sketch（占位）
+- 公式 (2-1)：三角不等式 / Triangle Inequality
+  \[d(A,C) \le d(A,B) + d(B,C)\]
