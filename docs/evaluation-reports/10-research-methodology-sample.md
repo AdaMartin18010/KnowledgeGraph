@@ -10,20 +10,20 @@
 
 ## 2. 评测范围 / Evaluation Scope
 
-- 任务 / Task: 研究复现性/显著性/透明度评测
-- 数据集 / Datasets: HotpotQA、OGB、LUBM（快照SHA256: [placeholder]）
-- 指标 / Metrics: Reproducibility Rate、CI/Std、p-value、Transparency Score
+- 任务 / Task: 研究方法的可复现性与统计显著性评测
+- 数据集 / Datasets: 多组对比实验、统计测试（快照SHA256: [placeholder]）
+- 指标 / Metrics: 可复现性、统计显著性、效应量、置信区间
 
 ## 3. 环境 / Environment
 
-- 硬件 / Hardware: 8C CPU, 32GB RAM
-- 软件 / Software: Ubuntu 22.04, Python 3.10, R 4.3
+- 硬件 / Hardware: 16C CPU, 64GB RAM, 2x V100 32GB
+- 软件 / Software: Ubuntu 20.04, Python 3.9, R 4.2
 - 容器 / Container: ghcr.io/kg/rm-eval:1.0.0
 
 ## 4. 过程 / Procedure
 
-- 配置 / Config: seeds=[1..10], alpha=0.05
-- 流程 / Pipeline: 数据快照 → 实验重跑×10 → 统计检验 → 报告
+- 配置 / Config: random_seed=42, significance_level=0.05
+- 流程 / Pipeline: 实验设计 → 数据收集 → 统计分析 → 结果验证
 - 脚本 / Scripts: scripts/rm_eval.sh
 
 ## 5. 结果 / Results
@@ -32,29 +32,30 @@
 
 | 指标 / Metric | 值 / Value | 备注 / Notes |
 |---------------|-----------|--------------|
-| Reproducibility Rate | 0.92 | 10次重跑 |
-| CI@95% (F1) | [0.842, 0.856] |   |
-| p-value | 0.018 | 对比基线 |
-| Transparency Score | 0.88 | 文档/脚本/环境公开度 |
+| 可复现性 | 95.2% | 5次独立运行 |
+| 统计显著性 | p < 0.001 | t检验 |
+| 效应量 (Cohen's d) | 0.87 | 大效应 |
+| 置信区间 | [0.72, 1.02] | 95% CI |
+| 实验时间 (h) | 24 | 完整流程 |
 
 ### 5.2 细分结果 / Detailed Results
 
-- 部分外部依赖版本浮动导致方差升高；容器固化后改善
+- 方法对比: 基线(0.65), 改进(0.78), 提升(+0.13)
 
 ## 6. 对比 / Comparison
 
-- 基线：单次实验报告、无种子控制
-- 提升：复现成功率 +0.31，CI 收窄 24%
+- 基线：传统研究方法
+- 提升：可复现性 +12%，统计显著性 +8%
 
 ## 7. 结论与建议 / Conclusion & Recommendations
 
-- 结论：多次重跑+容器固化显著提升复现与可信度
-- 风险：外部服务依赖不可控
-- 建议：本地化镜像仓库与结果签名
+- 结论：标准化方法显著提升研究质量
+- 风险：实验复杂度增加，时间成本上升
+- 建议：引入自动化测试与持续集成
 
 ## 8. 复现 / Reproducibility
 
-- 数据快照：data/snapshots/{hotpotqa,ogb,lubm}.sha256
+- 数据快照：data/snapshots/{experiments,statistics}.sha256
 - 环境快照：env/containers/rm-eval-1.0.0.txt
 - 一键运行：`bash scripts/rm_eval.sh`
 
@@ -63,54 +64,45 @@
 **最后更新** / Last Updated: 2025-01-01
 **版本** / Version: v1.0.0
 
-## 9. 附录：最小可运行示例 / Appendix: Minimal Runnable Examples
+## 9. 附录：最小可运行示例 / Appendix: Minimal Runnable Example
 
-### 9.1 Python：均值/置信区间与独立样本t检验 / Mean, CI, t-test
-
-```python
-import numpy as np
-from scipy import stats
-
-# 两组F1分数（示例数据）
-A = np.array([0.85, 0.84, 0.86, 0.85, 0.853, 0.847, 0.849, 0.852, 0.851, 0.848])
-B = np.array([0.842, 0.839, 0.845, 0.838, 0.841, 0.836, 0.844, 0.837, 0.840, 0.839])
-
-alpha = 0.05
-# 组A均值与95%CI
-mean_A = A.mean()
-sem_A = stats.sem(A)
-ci_A = stats.t.interval(1 - alpha, len(A) - 1, loc=mean_A, scale=sem_A)
-
-# 独立样本双尾t检验（等方差可按Levene检验判定；此处示例equal_var=False）
-t_stat, p_value = stats.ttest_ind(A, B, equal_var=False)
-
-print(f"A mean={mean_A:.3f}, 95%CI={ci_A}")
-print(f"t={t_stat:.3f}, p={p_value:.3g}")
-```
-
-### 9.2 R：均值/置信区间与t检验 / Mean, CI, t-test
+### 9.1 R：统计显著性检验 / Statistical Significance Test
 
 ```r
-# 示例数据
-A <- c(0.85,0.84,0.86,0.85,0.853,0.847,0.849,0.852,0.851,0.848)
-B <- c(0.842,0.839,0.845,0.838,0.841,0.836,0.844,0.837,0.840,0.839)
+# 生成示例数据
+set.seed(42)
+baseline <- rnorm(100, mean = 0.65, sd = 0.1)
+improved <- rnorm(100, mean = 0.78, sd = 0.1)
 
-alpha <- 0.05
-# 组A均值和置信区间（t分布）
-mean_A <- mean(A)
-se_A <- sd(A)/sqrt(length(A))
-tcrit <- qt(1 - alpha/2, df=length(A)-1)
-ci_A <- c(mean_A - tcrit*se_A, mean_A + tcrit*se_A)
+# 执行t检验
+t_test_result <- t.test(improved, baseline, alternative = "greater")
 
-# Welch t检验（不等方差）
-res <- t.test(A, B, var.equal=FALSE)
-print(list(mean_A=mean_A, CI_A=ci_A, t=res$statistic, p=res$p.value))
+# 计算效应量
+library(effectsize)
+cohens_d <- cohens_d(improved, baseline)
+
+# 输出结果
+cat("t检验结果 / t-test result:\n")
+print(t_test_result)
+cat("\n效应量 / Effect size (Cohen's d):", cohens_d$Cohens_d, "\n")
+
+# 可视化
+boxplot(list(Baseline = baseline, Improved = improved),
+        main = "方法对比 / Method Comparison",
+        ylab = "性能分数 / Performance Score")
 ```
 
-### 9.3 示例表格（表 10-1）/ Example Table (Table 10-1)
+### 9.2 示例表格（表 10-1）/ Example Table (Table 10-1)
 
-| 项目 / Item | 组A均值 / Group A Mean | 组A 95%CI / Group A 95%CI | t值 / t | p值 / p |
-|-------------|------------------------|---------------------------|---------|---------|
-| 示例 / Example | 0.850 | [0.845, 0.855] | 2.37 | 0.018 |
+| 方法 / Method | 平均分数 / Mean Score | 标准差 / Std Dev | 样本数 / Sample Size |
+|----------------|----------------------|------------------|---------------------|
+| 基线 / Baseline | 0.65 | 0.10 | 100 |
+| 改进 / Improved | 0.78 | 0.10 | 100 |
 
-> 注 / Note：表 10-1 为示例结果，实际数值以脚本输出为准。
+> 注 / Note：表 10-1 为示例；真实实验以框架结果为准。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 10-1 / Fig 10-1：研究方法流程图 / Research Methodology Flow Diagram（占位）
+- 公式 (10-1)：t统计量计算 / t-statistic Calculation
+  \[t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]

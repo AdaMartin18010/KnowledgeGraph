@@ -86,3 +86,9 @@ print(solver.model())
 | y | 5 |
 
 > 注 / Note：表 8-1 为示例；实际评测需记录反例与证明证据。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 8-1 / Fig 8-1：形式化验证流程图 / Formal Verification Flow Diagram（占位）
+- 公式 (8-1)：霍尔三元组 / Hoare Triple
+  \[\{P\} \text{ } C \text{ } \{Q\}\]

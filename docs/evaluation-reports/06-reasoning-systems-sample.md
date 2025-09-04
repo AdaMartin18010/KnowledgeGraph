@@ -125,3 +125,9 @@ print(sorted(facts))
 | grandparent | alice | carol |
 
 > 注 / Note：表 6-1 为示例；生产推理需采用高效索引与冲突集策略。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 6-1 / Fig 6-1：知识图谱推理路径图 / Knowledge Graph Reasoning Path Diagram（占位）
+- 公式 (6-1)：平均倒数排名 / Mean Reciprocal Rank
+  \[\text{MRR} = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{rank}_i}\]

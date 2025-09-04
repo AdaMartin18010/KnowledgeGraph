@@ -87,3 +87,9 @@ print({"PERSON": people, "DATE": dates})
 | DATE | 2024-09-12 |
 
 > 注 / Note：表 5-1 为示例；生产系统请使用序列标注/指代消解与一致性校验。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 5-1 / Fig 5-1：知识抽取流程示意图 / Knowledge Extraction Pipeline Diagram（占位）
+- 公式 (5-1)：F1分数计算 / F1 Score Calculation
+  \[F_1 = \frac{2 \times \text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}\]

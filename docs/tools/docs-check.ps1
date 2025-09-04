@@ -25,7 +25,7 @@ Get-ChildItem -Recurse "$Root" -Filter README.md | ForEach-Object {
       if ($m.Success) {
         $target = Join-Path (Split-Path $p) $m.Groups[1].Value
         if (-not (Test-Path $target)) {
-          Write-Host "[Broken Link] $p:$i -> $($m.Groups[1].Value)" -ForegroundColor Red
+          Write-Host "[Broken Link] $p line $i -> $($m.Groups[1].Value)" -ForegroundColor Red
         }
       }
     }

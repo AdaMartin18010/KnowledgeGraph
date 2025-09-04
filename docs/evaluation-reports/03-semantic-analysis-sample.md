@@ -95,3 +95,9 @@ print(rag_input)
 | 示例 / Example | 2 | 134 |
 
 > 注 / Note：表 3-1 为示例；实际RAG使用向量检索/重排等组件。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 3-1 / Fig 3-1：语义角色标注示例 / Semantic Role Labeling Example（占位）
+- 公式 (3-1)：余弦相似度 / Cosine Similarity
+  \[\text{sim}(v_1, v_2) = \frac{v_1 \cdot v_2}{\|v_1\| \|v_2\|}\]

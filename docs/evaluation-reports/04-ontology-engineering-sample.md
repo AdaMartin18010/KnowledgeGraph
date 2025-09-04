@@ -97,3 +97,9 @@ for s, t, v in pairs:
 | Publication | Paper | 0.778 |
 
 > 注 / Note：表 4-1 为示例；正式对齐需多特征融合与一致性过滤。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 4-1 / Fig 4-1：本体层次结构图 / Ontology Hierarchy Diagram（占位）
+- 公式 (4-1)：本体相似度 / Ontology Similarity
+  \[\text{sim}(O_1, O_2) = \frac{|C_1 \cap C_2|}{|C_1 \cup C_2|}\]

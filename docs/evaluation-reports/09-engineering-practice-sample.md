@@ -88,3 +88,9 @@ curl -s "http://prometheus:9090/api/v1/query?query=histogram_quantile(0.95,sum(r
 | Error Rate (%) | 0.12 |
 
 > 注 / Note：表 9-1 为示例；生产环境请采用系统化压测与SLO管理。
+
+## 10. 图与公式编号示例 / Figures & Equations Numbering Examples
+
+- 图 9-1 / Fig 9-1：分布式系统架构图 / Distributed System Architecture Diagram（占位）
+- 公式 (9-1)：阿姆达尔定律 / Amdahl's Law
+  \[S = \frac{1}{(1-p) + \frac{p}{n}}\]

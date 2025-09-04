@@ -1,0 +1,21 @@
+{
+  "statistics_time": "2025-09-04T10:47:08+08:00",
+  "overall_statistics": {
+    "total_files": 62,
+    "total_lines": 21200,
+    "total_size_bytes": 806630,
+    "total_size_formatted": " KB"
+  },
+  "file_type_distribution": {
+    "markdown_files": 41,
+    "python_files": 0,
+    "shell_files": 9,
+    "docker_files": 11,
+    "yaml_files": 1
+  },
+  "density_metrics": {
+    "avg_lines_per_file": 341,
+    "avg_size_per_file_bytes": 13010,
+    "avg_size_per_file_formatted": " KB"
+  }
+}
