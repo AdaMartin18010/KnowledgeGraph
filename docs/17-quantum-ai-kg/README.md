@@ -1,5 +1,12 @@
 # 17. 量子AI与知识图谱 / Quantum AI and Knowledge Graphs
 
+> 快速总览 / Quick Overview
+
+- **范围**: 量子编码/嵌入、量子推理与搜索、量子优化 × KG 任务。
+- **标准锚点**: 与 W3C 语义层接口对齐；量子侧遵循 Qiskit/Cirq/PennyLane 主流实践。
+- **堆栈**: 量子后端（本地/云）、量子ML/优化工具链、评测与可视化。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../implementation/quantum-ai-kg-guide.md`、`../benchmarks/` 互链。
+
 ## 17.1 概述 / Overview
 
 ### 17.1.1 定义与概念 / Definition and Concepts
