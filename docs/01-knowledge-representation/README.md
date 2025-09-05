@@ -1,5 +1,12 @@
 # 1. 知识表示 / Knowledge Representation
 
+> 快速总览 / Quick Overview
+
+- **理论**: 描述逻辑、RDF/RDFS/OWL 知识表示、规则/约束（SWRL/SHACL）、本体工程方法（NeOn/METHONTOLOGY）、图与概率表征、神经符号。
+- **标准**: RDF 1.1、OWL 2、RDFS、SPARQL 1.1、SHACL、JSON-LD 1.1、SKOS、PROV-O、DCAT；RDF-star（跟踪中）。
+- **工具**: Protégé、OWLAPI+ELK/HermiT、Apache Jena/RDF4J、GraphDB、Neptune、RDFox、Jena SHACL。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，与 `docs/standards/w3c-integration.md`、`docs/06-reasoning-systems/README.md` 交叉链接。
+
 ## 1.1 概述 / Overview
 
 ### 1.1.1 定义与概念 / Definition and Concepts

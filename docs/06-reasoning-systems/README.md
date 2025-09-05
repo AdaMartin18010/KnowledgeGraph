@@ -1,5 +1,16 @@
 # 推理系统 / Reasoning Systems
 
+> 快速总览 / Quick Overview
+
+- **理论**: OWL2 语义蕴涵、Datalog/规则系统、SHACL 约束、一阶/高阶逻辑、ASP、概率逻辑与PSL、可微证明与神经符号。
+- **标准**: OWL 2 Profiles（EL/QL/RL）、SHACL/SHACL-SPARQL、SPARQL 1.1 entailment regimes、RDF 1.1；参考 ISO Common Logic。
+- **工具**: HermiT/ELK/JFact、RDFox/VLog、Jena SHACL、clingo、PSL/ProbLog、Ontop（OBDA）。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，并与 `docs/standards/w3c-integration.md`、`docs/01-knowledge-representation/README.md` 互链。
+
+> 规范化区块（元数据）
+> 统一编号映射: 4 推理与一致性（OWL/SHACL/Datalog/ASP/概率）
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 4；对标: W3C OWL2/SHACL、ISO Common Logic；课程: Stanford KRR、TU Dresden DL；工具: HermiT/ELK/JFact/Jena SHACL/VLog/clingo/PSL。
+
 ## 1. 概述 / Overview
 
 ### 1.1 定义与概念 / Definition and Concepts
@@ -1021,6 +1032,47 @@ pub struct SystemStatistics {
 - 对齐校验: 与`DOCUMENTATION_STANDARDS.md`、`ACADEMIC_CITATION_STANDARDS.md`链接。
 
 ## 7. 批判性分析 / Critical Analysis
+
+---
+
+## 附录A：统一推理层矩阵与选型指南（V1）
+
+- OWL2 Profiles（EL / QL / RL）
+  - 复杂度：PTIME（EL）、AC0（QL 查询回答）、规则可物化（RL）
+  - 工具：ELK（EL）、HermiT/JFact/Pellet（DL 完整）、Jena 规则（RL 近似）
+  - 适用：术语本体、大规模层级、轻量规约与一致性
+- 规则与 Datalog
+  - 工具：VLog、RDFox、Soufflé；业务规则可用 Drools/SWRL
+  - 适用：可枚举闭包、可控物化、增量维护
+- 约束与验证（SHACL）
+  - 工具：TopBraid SHACL、Jena SHACL、RDF4J SHACL
+  - 适用：数据质量与一致性治理、CI 校验
+- ASP / 非单调逻辑
+  - 工具：clingo（Answer Set Programming）
+  - 适用：方案选择、优化与偏好、非单调场景
+- 概率逻辑 / PSL / ProbLog
+  - 工具：PSL、ProbLog、DeepProbLog
+  - 适用：不确定性与软约束、兼容打分的推理
+
+选型建议：
+
+1) 数据质量治理优先 SHACL；
+2) 结构本体优先 OWL EL/RL；
+3) 业务规则与闭包优先 Datalog；
+4) 选择/优化类问题用 ASP；
+5) 不确定性打分用 PSL/ProbLog；
+6) 组合时以“SHACL 校验 →（EL/RL 物化）→ Datalog 增量 → ASP/PSL 专用”流水线组织。
+
+---
+
+## 附录B：统一推理流水线（V1）
+
+1) 数据校验：SHACL → 输出违反项与修复建议
+2) 轻量物化：OWL 2 RL 规则器（Jena）对核心术语进行可控物化
+3) 规则闭包：Datalog（VLog）离线物化 + 变更集增量
+4) 专题求解：ASP（clingo）用于优化/选择类问题；PSL/ProbLog 处理不确定性
+5) 查询融合：SPARQL 端点 + Cypher 网关（参见 AGE 样板），按任务选择执行面
+6) 可观察性：记录推理路径、违反项、物化体积、延迟与命中率
 
 ### 7.1 理论优势 / Theoretical Advantages
 

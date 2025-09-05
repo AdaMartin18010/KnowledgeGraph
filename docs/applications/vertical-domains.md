@@ -1,5 +1,12 @@
 # 垂直领域知识图谱应用 / Vertical Domain Knowledge Graph Applications
 
+> 快速总览 / Quick Overview
+
+- **范围**: 医疗/金融/教育/制造等行业场景与数据模型、推理与评测实践。
+- **标准锚点**: W3C 语义栈与领域本体、评测对齐 `docs/benchmarks/`、工程对齐 `docs/implementation/`。
+- **堆栈**: 领域本体（OWL/SHACL）、推理/查询、行业数据接口、评测与A/B。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 与 `docs/standards/w3c-integration.md`、`docs/benchmarks/ai-kg-fusion-benchmarks.md`。
+
 ## 概述 / Overview
 
 本文档定义了知识图谱在垂直领域的应用方案，涵盖医疗健康、金融科技、教育科技、智能制造等多个领域，为不同行业提供专业化的知识图谱解决方案。

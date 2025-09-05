@@ -1,5 +1,12 @@
 # 跨学科整合 / Interdisciplinary Integration
 
+> 快速总览 / Quick Overview
+
+- **范围**: 认知科学/语言学/社会学/经济学与KG的模型与方法、融合框架与应用。
+- **标准锚点**: 与语义栈（RDF/OWL/SHACL）对齐的跨学科建模；评测链接 `docs/benchmarks/`。
+- **堆栈**: 跨学科本体、融合与对齐引擎、因果与社会网络分析、评测与复现脚本。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，并与 `docs/01-knowledge-representation/`、`docs/06-reasoning-systems/`、`docs/benchmarks/` 互链。
+
 ## 概述 / Overview
 
 本文档定义了知识图谱的跨学科整合方案，涵盖认知科学、语言学、社会学、经济学等多个学科领域，通过多学科交叉融合，为知识图谱提供更丰富的理论基础和应用视角。

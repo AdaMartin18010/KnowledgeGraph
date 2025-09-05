@@ -1,5 +1,16 @@
 # 4. 本体工程 / Ontology Engineering
 
+> 快速总览 / Quick Overview
+
+- **理论**: 本体工程方法（NeOn/METHONTOLOGY）、描述逻辑、对齐与演化、质量评估与治理。
+- **标准**: OWL 2（EL/QL/RL/Full）、RDFS、SHACL/SHACL-SPARQL、SKOS、PROV-O、JSON-LD。
+- **工具**: Protégé、OWLAPI+HermiT/ELK、GraphDB/Jena/RDF4J、TopBraid/EDG、ROBOT、Ontop（OBDA）。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，并与 `docs/standards/w3c-integration.md`、`docs/06-reasoning-systems/README.md` 互链。
+
+> 规范化区块（元数据）
+> 统一编号映射: 2 知识表示与表征（本体工程）/ 6 工程（流程与工具）
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 2/6；对标: W3C OWL2/SHACL、OBO BFO、Protégé；映射: `docs/06-reasoning-systems/`、`docs/benchmarks/ai-kg-fusion-benchmarks.md`。
+
 ## 4.1 概述 / Overview
 
 ### 4.1.1 定义与概念 / Definition and Concepts

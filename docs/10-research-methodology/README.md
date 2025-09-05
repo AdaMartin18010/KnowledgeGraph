@@ -1,5 +1,9 @@
 # 10. 研究方法论 / Research Methodology
 
+> 规范化区块（元数据）
+> 统一编号映射: 9 研究与前沿（方法论与复现）/ 8 治理（评测协议）
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 8/9；对标: 顶尖大学研究方法课程、Open Science；映射: `docs/benchmarks/ai-kg-fusion-benchmarks.md`、`docs/standards/documentation-standards.md`。
+
 ## 10.1 概述 / Overview
 
 ### 10.1.1 定义与概念 / Definition and Concepts

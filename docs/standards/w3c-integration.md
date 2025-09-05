@@ -1,5 +1,13 @@
 # W3C标准对接 / W3C Standards Integration
 
+> 快速总览 / Quick Overview
+
+- **核心标准**: RDF 1.1、RDFS、OWL 2（EL/QL/RL）、SPARQL 1.1（Query/Update/Federation）、SHACL、JSON-LD 1.1、SKOS、PROV-O、DCAT；关注 RDF-star 进展。
+- **映射互联**: R2RML、OBDA（Ontop）。
+- **合规模块**: 语法/语义校验、SHACL 形状校验、推理一致性检查、互操作性测试套件。
+- **参考实施**: Apache Jena/Fuseki、RDF4J、GraphDB、Neptune、AllegroGraph、OWLAPI+ELK/HermiT、Jena SHACL。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` → “理论/规范/标准/堆栈（快速总览）”，以及 `docs/01-knowledge-representation/README.md`、`docs/06-reasoning-systems/README.md`。
+
 ## 概述 / Overview
 
 本文档定义了知识图谱项目与W3C标准的对接方案，确保项目符合国际Web标准，支持语义Web技术栈，实现与其他系统的互操作性。

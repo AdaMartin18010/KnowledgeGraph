@@ -1,5 +1,130 @@
 # 工程实践 / Engineering Practice
 
+> 规范化区块（元数据）
+> 统一编号映射: 6 工程与应用（GraphRAG、LLM+KG、对齐与评测）/ 8 方法论与治理
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 6/8；对标: CNCF 云原生、LLM+KG 工程实践；映射: `docs/integration/UNIFIED-FUSION-FRAMEWORK.md`、`docs/benchmarks/ai-kg-fusion-benchmarks.md`。
+
+## 轻量 RAG（TF-IDF）最小示例
+
+```bash
+python tools/rag/simple_tfidf_index.py --corpus tools/rag/sample_corpus.txt --query "RAG 如何增强生成?" --top_k 3
+```
+
+### FAISS RAG 与一致性校验（可选依赖）
+
+```bash
+# 安装依赖（示例）
+pip install faiss-cpu sentence-transformers
+
+# 检索
+python tools/rag/faiss_rag.py --corpus tools/rag/sample_corpus.txt --query "什么是知识图谱?" --top_k 5
+
+# 一致性校验（示例：用三元组文件与回答文本）
+python tools/validate/consistency_checker.py --triples tools/rag/sample_corpus.txt --answer answer.txt
+```
+
+### 多模态最小样例（CLIP 对齐）
+
+```bash
+pip install transformers torch pillow
+python tools/mm/clip_align.py --text "一只猫" "一只狗" --image path/to/cat.jpg
+```
+
+### 链上存证工具链（离线签名占位）
+
+```bash
+python tools/chain/sign_and_verify.py --file tools/rag/sample_corpus.txt --kid KG_VER_001 --out sig.json
+```
+
+### SPARQL/OWL 校验（RDFLib）
+
+```bash
+pip install rdflib
+python tools/validate/sparql_owl_checker.py --rdf data/kg/triples.ttl
+# 或指定 ASK 查询：
+python tools/validate/sparql_owl_checker.py --rdf data/kg/triples.ttl --ask data/kg/check.ask
+```
+
+### BEIR 评测适配器（占位）
+
+```bash
+python tools/bench/run_beir_adapter.py --dataset nfcorpus --retriever tfidf --top_k 10
+```
+
+## 工程化资产与流水线（新增）
+
+- 配置：`configs/ai_kg_fusion_config.yaml`
+- 评测脚本：`tools/bench/run_rag.py`
+- 容器化：`Dockerfile`
+- 编排：`k8s/deployment.yaml`
+
+最小运行示例：
+
+```bash
+docker build -t ai-kg-fusion:latest .
+docker run --rm ai-kg-fusion:latest
+python tools/bench/run_rag.py --dataset kilt --model qwen2-instruct --index faiss --top_k 10
+```
+
+---
+
+## GraphRAG 与 LLM+KG 工程模板索引（V1）
+
+- 检索层
+  - 向量：FAISS/HNSW；文本：BM25/TF-IDF；图：SPARQL/Cypher
+  - 统一接口：`Retriever.retrieve(query) -> EvidenceSet`
+- 知识校验
+  - SHACL 校验：`tools/validate/sparql_owl_checker.py`
+  - 规则/闭包：VLog/Jena 规则器（离线/增量）
+- 生成与约束
+  - 提示模板：事实注入/证据引用/元信息
+  - 一致性修复：违反项到规则的修复策略
+- 事实归因与展示
+  - 三元组证据回链到 IRI；渲染为可点击链接
+- 评测与压测
+  - RAG：Recall@k/MRR/nDCG；生成：SER/HR/KFR；性能：P95/吞吐/成本
+- 最小骨架建议
+  - `src/rag/`、`src/llm/`、`src/kg/`、`src/validation/`、`tools/bench/`
+  - 配置驱动：`configs/*.yaml` 环境化覆盖
+
+### 模板落地步骤（GraphRAG/LLM+KG，V1）
+
+1) KG 接入：
+   - RDF 栈：Jena/RDF4J；或 Postgres+AGE（参见实施指南附录A）
+   - 命名空间与 IRI 策略：`ex:`, `wd:`, `schema:`，统一前缀文件 `data/prefixes.ttl`
+2) 检索子系统：
+   - `src/rag/index_build.py`：构建向量/文本/图索引（FAISS/BM25/SPARQL缓存）
+   - `src/rag/retriever.py`：统一接口 `retrieve(query) -> EvidenceSet`
+3) 校验与规则：
+   - `src/validation/shacl_check.py`：SHACL 批量校验；CI 失败即阻断
+   - `src/validation/rules_apply.py`：Jena 规则/VLog 物化；记录导出快照
+4) 生成与约束：
+   - `src/llm/prompt_builder.py`：事实注入模板、引用标注
+   - `src/llm/generator.py`：函数调用/SPARQL/Cypher 子计划执行
+5) 事实归因：
+   - `src/kg/attribution.py`：回答片段→三元组/节点证据映射，输出可点击 IRI
+6) 评测与压测：
+   - `tools/bench/run_rag.py`、`run_kg_reason.py`、`run_mmqa.py`
+   - 统一报告与签名：Benchmark Card + 结果签名
+
+### 参考命令
+
+```bash
+python tools/bench/run_rag.py --dataset kilt --model qwen2-instruct --index faiss --top_k 10
+python tools/bench/run_kg_reason.py --dataset lubm --rule owl_rl --sparql http://localhost:3030/ds
+python tools/bench/run_mmqa.py --dataset cocoqa --clip openai/clip-vit-base-patch32
+```
+
+---
+
+## 治理与质量规范（V1）
+
+- 命名与编号：章节-小节-条款三级编号，文档顶部设置“规范化区块”
+- 链接策略：同层互链、上下游链、外部权威链（W3C/Wikipedia/Wikidata）
+- 去重合并：以“术语/IRI”为主键；新增“规范化区块”进行对齐与指正，不删原文
+- 版本与快照：使用 `tools/snapshot-verify.ps1` 输出清单与断链报告
+- 校验管线：PR 必跑 SHACL/一致性/链接检查与 Lint
+
 ## 1. 概述 / Overview
 
 ### 1.1 定义与概念 / Definition and Concepts

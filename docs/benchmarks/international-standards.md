@@ -1,5 +1,16 @@
 # 国际标准基准集成 / International Standards Integration
 
+> 快速总览 / Quick Overview
+
+- **标准锚点**: W3C（RDF/RDFS/OWL2/SPARQL/SHACL/JSON-LD、RDF-star 跟踪）、ISO/IEC（GQL/SQL/CL）、OMG/OBO（DMN/BFO）。
+- **评测面**: 表征学习、GNN、KGQA、实体链接、实时系统与工业规模。
+- **堆栈参考**: Apache Jena/Fuseki、RDF4J、GraphDB、Neptune、AllegroGraph、OGB/Torch-Geometric、评测CI脚本。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，`docs/standards/w3c-integration.md` 与 `docs/12-llm-integration/`、`docs/06-reasoning-systems/` 互链。
+
+> 规范化区块（元数据）
+> 统一编号映射: 7 标准与生态（W3C/ISO/OMG/OBO）
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 7；对标：W3C RDF1.2/OWL2/SPARQL1.2/SHACL、ISO/IEC GQL/SQL/CL、OMG DMN、OBO BFO；映射：`docs/integration/UNIFIED-FUSION-FRAMEWORK.md`、`docs/standards/w3c-integration.md`。
+
 ## 概述 / Overview
 
 本文档定义了知识图谱项目的国际标准基准集成方案，确保项目与国际一流标准对接，提供可比较、可复现的评估结果。

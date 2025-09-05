@@ -1,5 +1,12 @@
 # 12. 大语言模型集成 / Large Language Model Integration
 
+> 快速总览 / Quick Overview
+
+- **范围**: RAG、工具调用、程序合成、KG 构建与对齐、检索/生成一致性。
+- **标准锚点**: W3C（RDF/OWL/SPARQL/SHACL/JSON-LD）、评测对齐 `benchmarks/`（KILT/OGB/LDBC/WaTDiv/BSBM）。
+- **堆栈**: SPARQL 端点（Jena/GraphDB）、向量检索（FAISS/PGVector）、LLM 推理（Transformers/服务化）、SHACL 校验。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，并与 `docs/standards/w3c-integration.md`、`docs/benchmarks/ai-kg-fusion-benchmarks.md` 互链。
+
 ## 12.1 概述 / Overview
 
 ### 12.1.1 定义与概念 / Definition and Concepts
@@ -87,6 +94,7 @@ LLM-KG = (L, K, R, T, P)
 RAG通过从知识图谱中检索相关信息来增强大语言模型的生成能力，使模型能够基于外部知识进行更准确的回答。
 
 **技术特点**:
+
 - 结合检索和生成
 - 支持实时知识更新
 - 提供可追溯的信息来源
@@ -94,6 +102,7 @@ RAG通过从知识图谱中检索相关信息来增强大语言模型的生成�
 #### 12.3.1.2 实现方法 / Implementation Methods
 
 **RAG系统架构**:
+
 ```python
 class RAGSystem:
     def __init__(self, llm, knowledge_graph, retriever, reranker):
@@ -126,6 +135,7 @@ class RAGSystem:
 工具调用允许大语言模型调用外部工具和API，如SPARQL查询、数据库操作、计算器等，扩展模型的能力边界。
 
 **技术特点**:
+
 - 支持外部工具调用
 - 动态工具选择
 - 结果反馈和迭代
@@ -133,6 +143,7 @@ class RAGSystem:
 #### 12.3.2.2 实现方法 / Implementation Methods
 
 **工具调用框架**:
+
 ```python
 class ToolCallingFramework:
     def __init__(self, llm, tool_registry):
@@ -163,6 +174,7 @@ class ToolCallingFramework:
 程序合成通过自然语言描述自动生成可执行的程序代码，如SPARQL查询、Python脚本等，实现从自然语言到代码的转换。
 
 **技术特点**:
+
 - 自然语言到代码的转换
 - 支持多种编程语言
 - 代码验证和执行
@@ -170,6 +182,7 @@ class ToolCallingFramework:
 #### 12.3.3.2 实现方法 / Implementation Methods
 
 **程序合成系统**:
+
 ```python
 class ProgramSynthesisSystem:
     def __init__(self, llm, code_executor, validator):
@@ -203,6 +216,7 @@ class ProgramSynthesisSystem:
 #### 12.4.1.2 解决方案 / Solution
 
 **智能问答系统**:
+
 ```python
 class IntelligentQASystem:
     def __init__(self, rag_system, tool_calling, program_synthesis):
@@ -236,6 +250,7 @@ class IntelligentQASystem:
 #### 12.4.2.2 解决方案 / Solution
 
 **知识图谱构建系统**:
+
 ```python
 class KGConstructionSystem:
     def __init__(self, llm, entity_extractor, relation_extractor, kg_builder):
@@ -269,6 +284,7 @@ class KGConstructionSystem:
 #### 12.4.3.2 解决方案 / Solution
 
 **智能推荐系统**:
+
 ```python
 class IntelligentRecommendationSystem:
     def __init__(self, llm, kg, user_model, item_model):
@@ -327,6 +343,7 @@ class IntelligentRecommendationSystem:
 #### 12.5.2.2 评估协议 / Evaluation Protocols
 
 **标准评估流程**:
+
 1. 数据预处理和分割
 2. 模型训练和验证
 3. 测试集评估

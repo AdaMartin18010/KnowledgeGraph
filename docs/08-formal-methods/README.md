@@ -1,5 +1,16 @@
 # 形式化方法 / Formal Methods
 
+> 快速总览 / Quick Overview
+
+- **理论**: 逻辑/证明论/模型检查、抽象解释、时序逻辑、可满足性与SMT、程序验证。
+- **标准与实践**: TLA+ 规格、Alloy 规格、ISO Common Logic（参考）、W3C 语义蕴涵规约对齐。
+- **工具**: Coq/Isabelle/Lean、Z3/CVC5、Spin/NuSMV、TLA+/Alloy；与 RDF/OWL/SHACL 的一致性校验对接。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，并与 `docs/06-reasoning-systems/README.md`、`docs/standards/w3c-integration.md` 互链。
+
+> 规范化区块（元数据）
+> 统一编号映射: 1 知识的形式化（逻辑/证明/计算）
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 1；对标: 逻辑/证明论/模型检查课程（Stanford/MIT），工具：Coq/Isabelle/Lean/Z3/NuSMV/TLA+；映射: `docs/06-reasoning-systems/`。
+
 ## 1. 概述 / Overview
 
 ### 1.1 定义与概念 / Definition and Concepts

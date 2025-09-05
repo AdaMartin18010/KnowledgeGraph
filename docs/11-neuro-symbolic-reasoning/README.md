@@ -86,6 +86,7 @@ NSR = (N, S, M, R, T)
 可微证明将传统的离散推理过程（如匹配、归结、约束求解）纳入可微优化框架，使推理过程能够通过梯度下降进行优化。
 
 **技术特点**:
+
 - 将逻辑推理转化为可微计算
 - 支持端到端的训练
 - 保持推理的逻辑正确性
@@ -93,6 +94,7 @@ NSR = (N, S, M, R, T)
 #### 11.3.1.2 实现方法 / Implementation Methods
 
 **神经定理证明器**:
+
 ```python
 class NeuralTheoremProver:
     def __init__(self, embedding_dim, hidden_dim):
@@ -119,6 +121,7 @@ class NeuralTheoremProver:
 规则蒸馏从神经网络中提取可解释的符号规则，将神经网络的表示能力转化为符号推理规则。
 
 **技术特点**:
+
 - 从神经网络中提取规则
 - 保持规则的逻辑一致性
 - 支持规则的组合和推理
@@ -126,6 +129,7 @@ class NeuralTheoremProver:
 #### 11.3.2.2 实现方法 / Implementation Methods
 
 **规则提取算法**:
+
 ```python
 class RuleDistillation:
     def __init__(self, neural_model, rule_template):
@@ -153,6 +157,7 @@ class RuleDistillation:
 混合推理结合符号推理和神经推理的优势，在保持逻辑严谨性的同时，利用神经网络的表示学习能力。
 
 **技术特点**:
+
 - 结合符号和神经推理
 - 动态选择推理策略
 - 保持推理的可解释性
@@ -160,6 +165,7 @@ class RuleDistillation:
 #### 11.3.3.2 实现方法 / Implementation Methods
 
 **混合推理引擎**:
+
 ```python
 class HybridReasoningEngine:
     def __init__(self, symbolic_reasoner, neural_reasoner, selector):
@@ -192,6 +198,7 @@ class HybridReasoningEngine:
 #### 11.4.1.2 解决方案 / Solution
 
 **神经符号知识图谱补全**:
+
 ```python
 class NeuroSymbolicKGCompletion:
     def __init__(self, kg, neural_model, symbolic_rules):
@@ -221,6 +228,7 @@ class NeuroSymbolicKGCompletion:
 #### 11.4.2.2 解决方案 / Solution
 
 **神经符号问答系统**:
+
 ```python
 class NeuroSymbolicQA:
     def __init__(self, kg, question_parser, reasoner):
@@ -265,6 +273,7 @@ class NeuroSymbolicQA:
 #### 11.5.2.2 评估协议 / Evaluation Protocols
 
 **标准评估流程**:
+
 1. 数据预处理和分割
 2. 模型训练和验证
 3. 测试集评估

@@ -1,5 +1,16 @@
 # 多维度评估体系 / Multi-dimensional Evaluation System
 
+> 快速总览 / Quick Overview
+
+- **标准锚点**: 评测对齐 W3C（数据/推理/约束）与 ISO/OMG 指标，报告与复现规范统一。
+- **维度**: 技术/业务/用户体验/社会影响；内置权重配置与综合评分。
+- **堆栈**: CI 脚本、OGB/KILT/LDBC/WaTDiv/BSBM、Prometheus/Grafana 监控钩子。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md` 快速总览，与 `docs/benchmarks/international-standards.md`、`docs/benchmarks/ai-kg-fusion-benchmarks.md` 互链。
+
+> 规范化区块（元数据）
+> 统一编号映射: 6 工程评测 / 7 标准与生态
+> 上游索引: `docs/PROJECT_SUMMARY.md` → 6/7；映射：`docs/integration/UNIFIED-FUSION-FRAMEWORK.md` 第7节、`docs/benchmarks/ai-kg-fusion-benchmarks.md`；外部：LDBC/WaTDiv/BSBM/KILT/OGB。
+
 ## 概述 / Overview
 
 本文档定义了知识图谱项目的多维度评估体系，从技术指标、业务指标、用户体验指标等多个维度全面评估知识图谱系统的性能和质量。
