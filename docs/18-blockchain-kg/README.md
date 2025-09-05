@@ -1,5 +1,12 @@
 # 18. 区块链与知识图谱 / Blockchain and Knowledge Graphs
 
+> 快速总览 / Quick Overview
+
+- **范围**: 知识上链/存证、智能合约治理、代币化激励、可验证审计与溯源。
+- **标准锚点**: 与 RDF/PROV-O/JSON-LD 对齐；评测联动 `docs/benchmarks/` 与审计报告规范。
+- **堆栈**: Solidity/Hardhat、Web3、IPFS/对象存储、事件监听与安全审计。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../implementation/blockchain-kg-guide.md`、`../benchmarks/` 互链。
+
 ## 18.1 概述 / Overview
 
 ### 18.1.1 定义与概念 / Definition and Concepts

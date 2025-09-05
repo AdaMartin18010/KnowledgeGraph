@@ -3,6 +3,13 @@ title: 统一融合框架（AI × 知识图谱）
 description: 面向研发与落地的一体化融合框架，覆盖 LLM/RAG、多模态、RL、FL、生成式、边缘/云、区块链、量子等模块的接口契约、数据流、部署形态与评测闭环。
 ---
 
+> 快速总览 / Quick Overview
+
+- **范围**: 统一建模/数据/控制/评测面，贯通 LLM×KG、RAG、多模态、RL/FL、生成式、边缘/云、链上可信、量子实验。
+- **标准锚点**: W3C 语义栈（RDF/OWL/SPARQL/SHACL/JSON-LD）、ISO/IEC GQL；评测对齐 `docs/benchmarks/`。
+- **堆栈**: Jena/RDF4J/GraphDB/Neptune、Ontop/OBDA、向量检索（FAISS/pgvector）、编排（Argo/Airflow）、观测（Prometheus/Grafana）。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `docs/standards/w3c-integration.md`、`docs/12-llm-integration/`、`docs/implementation/*-guide.md`、`docs/benchmarks/` 互链。
+
 ## 1. 目标与范围
 
 - 统一建模：将 LLM、RAG、多模态、RL、FL、生成式、边缘、区块链、量子等能力以模块化方式接入同一数据与协议平面。

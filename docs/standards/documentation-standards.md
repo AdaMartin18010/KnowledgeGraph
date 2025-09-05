@@ -1,5 +1,12 @@
 # 文档规范与治理 / Documentation Standards & Governance
 
+> 快速总览 / Quick Overview
+
+- **范围**: 文档编号/命名/链接/版本/校验/引用/治理的统一规范与CI门禁。
+- **标准锚点**: 与 `docs/PROJECT_SUMMARY.md` 与 `docs/benchmarks/` 报告规范对齐；外链优先 W3C/ISO/顶级课程/论文。
+- **堆栈**: Markdown Lint、链接校验、`tools/snapshot-verify.ps1`、SHACL 形状与术语对齐校验、CI Gate。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `docs/integration/UNIFIED-FUSION-FRAMEWORK.md`、`docs/standards/w3c-integration.md`、各主题 README 顶部“快速总览”互链。
+
 > 版本: v0.1 | 维护: KnowledgeGraph Team | 适用范围: docs/*
 
 ## 1. 统一编号与标题

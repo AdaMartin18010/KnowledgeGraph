@@ -1,5 +1,12 @@
 # 19. 元宇宙与知识图谱 / Metaverse and Knowledge Graphs
 
+> 快速总览 / Quick Overview
+
+- **范围**: 3D 知识表示、虚拟世界知识构建、沉浸式交互与学习、社交知识网络。
+- **标准锚点**: 与语义栈接口对齐；评测链接 `docs/benchmarks/`；与可视化/图形标准协同。
+- **堆栈**: 3D 引擎/VR/AR、空间知识引擎、知识可视化与交互、中台与观测。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../07-applications/`、`../13-frontier-technologies/`、`../benchmarks/` 互链。
+
 ## 19.1 概述 / Overview
 
 ### 19.1.1 定义与概念 / Definition and Concepts
