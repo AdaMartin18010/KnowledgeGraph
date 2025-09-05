@@ -1,5 +1,12 @@
 # 13. 前沿技术 / Frontier Technologies
 
+> 快速总览 / Quick Overview
+
+- **范围**: GNN/动态图/多模态/因果/实时系统等前沿方向与样例。
+- **标准锚点**: 与语义栈接口对齐；评测链接 `docs/benchmarks/`，实现链接 `docs/implementation/`。
+- **堆栈**: 研究型原型、评测脚本、监控与性能分析、应用桥接。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `docs/06-reasoning-systems/`、`docs/12-llm-integration/`、`docs/benchmarks/` 互链。
+
 ## 13.1 概述 / Overview
 
 ### 13.1.1 定义与概念 / Definition and Concepts

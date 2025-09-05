@@ -1,5 +1,12 @@
 # 15. 生成式AI与知识图谱 / Generative AI and Knowledge Graphs
 
+> 快速总览 / Quick Overview
+
+- **范围**: 知识约束生成、知识注入、事实一致性校验、多模态生成与对齐。
+- **标准锚点**: RDF/OWL/SHACL、评测对齐 `docs/benchmarks/ai-kg-fusion-benchmarks.md`。
+- **堆栈**: LLM/扩散模型 × SPARQL 端点 × 事实核查/一致性验证流水线。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../12-llm-integration/`、`../standards/w3c-integration.md`、`../benchmarks/` 互链。
+
 ## 15.1 概述 / Overview
 
 ### 15.1.1 定义与概念 / Definition and Concepts

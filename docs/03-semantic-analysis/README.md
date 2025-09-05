@@ -1,5 +1,12 @@
 # 3. 语义分析 / Semantic Analysis
 
+> 快速总览 / Quick Overview
+
+- **范围**: 语义解析/角色标注/关系抽取/语义消歧/一致性校验，衔接抽取与推理。
+- **标准锚点**: 与 RDF/OWL/SHACL、SPARQL entailment 保持对齐；评测链接 `docs/benchmarks/`。
+- **堆栈**: Transformers/AllenNLP/spaCy × SPARQL 端点（Jena/GraphDB）× SHACL 形状校验。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../01-knowledge-representation/`、`../05-knowledge-extraction/`、`../06-reasoning-systems/`、`../benchmarks/` 互链。
+
 > 规范化区块（元数据）
 > 统一编号映射: 2 知识表示与表征（语义方法支撑表示/推理）
 > 上游索引: `docs/PROJECT_SUMMARY.md` → 2；对标: Wikipedia/Wikidata 语义描述、Stanford NLP、W3C 语义网；映射: `docs/06-reasoning-systems/`、`docs/04-ontology-engineering/`。

@@ -1,5 +1,12 @@
 # 5. 知识抽取 / Knowledge Extraction
 
+> 快速总览 / Quick Overview
+
+- **范围**: 文本/多模态实体-关系-事件抽取，链接与融合，实时流水线。
+- **标准锚点**: 与本体/语义约束（OWL/SHACL）对齐；评测对齐 `docs/benchmarks/`。
+- **堆栈**: 预处理/NER/RE/EL/EE 管道、流式处理、增量学习、质量校验与报告。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `docs/04-ontology-engineering/`、`docs/07-applications/`、`docs/09-engineering-practice/` 互链。
+
 ## 5.1 概述 / Overview
 
 ### 5.1.1 定义与概念 / Definition and Concepts

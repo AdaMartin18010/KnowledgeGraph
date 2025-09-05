@@ -1,5 +1,12 @@
 # 11. 神经符号推理 / Neuro-Symbolic Reasoning
 
+> 快速总览 / Quick Overview
+
+- **范围**: 可微证明、规则蒸馏、混合推理、知识对齐与一致性验证。
+- **标准锚点**: 语义栈（RDF/OWL/SHACL/SPARQL）接口一致；评测链接 `docs/benchmarks/`。
+- **堆栈**: PyTorch/JAX × 神经定理证明/可微规则引擎 × SPARQL/SHACL 校验。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../06-reasoning-systems/`、`../12-llm-integration/`、`../13-frontier-technologies/`、`../benchmarks/` 互链。
+
 ## 11.1 概述 / Overview
 
 ### 11.1.1 定义与概念 / Definition and Concepts

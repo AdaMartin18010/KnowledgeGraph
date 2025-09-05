@@ -1,5 +1,12 @@
 # 10. 研究方法论 / Research Methodology
 
+> 快速总览 / Quick Overview
+
+- **范围**: 研究设计、统计验证与形式化验证、统一评测协议与复现实践、报告规范。
+- **标准锚点**: 文档与评测规范对齐：`docs/standards/`、`docs/benchmarks/`、开放科学实践。
+- **堆栈**: Jupyter/Conda/Docker/CI、统计与可视化、SMT/模型检查、复现脚本与清单。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../08-formal-methods/`、`../09-engineering-practice/`、`../benchmarks/`、`../standards/documentation-standards.md` 互链。
+
 > 规范化区块（元数据）
 > 统一编号映射: 9 研究与前沿（方法论与复现）/ 8 治理（评测协议）
 > 上游索引: `docs/PROJECT_SUMMARY.md` → 8/9；对标: 顶尖大学研究方法课程、Open Science；映射: `docs/benchmarks/ai-kg-fusion-benchmarks.md`、`docs/standards/documentation-standards.md`。

@@ -1,5 +1,12 @@
 # 2. 图论基础 / Graph Theory Fundamentals
 
+> 快速总览 / Quick Overview
+
+- **范围**: 静态/动态图、超图、谱与组合视角、经典图算法与GNN理论接口。
+- **标准锚点**: 关注 ISO/IEC GQL 与 LDBC 系统基准；与语义栈在接口层对齐。
+- **堆栈**: NetworkX/igraph/GraphBLAS、Neo4j/Apache AGE/Neptune、图算法与评测脚本。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../06-reasoning-systems/`、`../13-frontier-technologies/`、`../benchmarks/` 互链。
+
 ## 2.1 概述 / Overview
 
 ### 2.1.1 定义与概念 / Definition and Concepts

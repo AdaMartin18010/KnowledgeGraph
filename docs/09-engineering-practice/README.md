@@ -1,5 +1,12 @@
 # 工程实践 / Engineering Practice
 
+> 快速总览 / Quick Overview
+
+- **范围**: 架构/性能/部署运维/质量保障/观测评测的全链工程实践。
+- **标准锚点**: 语义栈与评测规范对齐：`docs/standards/`、`docs/benchmarks/`、统一评测协议。
+- **堆栈**: 容器与编排（Docker/K8s）、观测（Prometheus/Grafana）、CI/CD、RAG/LLM+KG流水线。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `docs/implementation/*-guide.md`、`docs/07-applications/`、`docs/benchmarks/` 互链。
+
 > 规范化区块（元数据）
 > 统一编号映射: 6 工程与应用（GraphRAG、LLM+KG、对齐与评测）/ 8 方法论与治理
 > 上游索引: `docs/PROJECT_SUMMARY.md` → 6/8；对标: CNCF 云原生、LLM+KG 工程实践；映射: `docs/integration/UNIFIED-FUSION-FRAMEWORK.md`、`docs/benchmarks/ai-kg-fusion-benchmarks.md`。

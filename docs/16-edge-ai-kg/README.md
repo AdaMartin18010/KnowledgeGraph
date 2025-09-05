@@ -1,5 +1,12 @@
 # 16. 边缘AI与知识图谱 / Edge AI and Knowledge Graphs
 
+> 快速总览 / Quick Overview
+
+- **范围**: 轻量知识图谱、边缘推理/学习、云边协同、断连降级与缓存。
+- **标准锚点**: 语义栈最小集（RDF/JSON-LD/SHACL），系统侧对齐 LDBC/WaTDiv 子集。
+- **堆栈**: 轻量 RDF/向量存储、K3s/Helm、TensorRT/ONNX、观测与CI。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../implementation/edge-ai-kg-guide.md`、`../benchmarks/` 互链。
+
 ## 16.1 概述 / Overview
 
 ### 16.1.1 定义与概念 / Definition and Concepts

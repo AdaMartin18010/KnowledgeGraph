@@ -1,5 +1,12 @@
 # 应用实践 / Applications
 
+> 快速总览 / Quick Overview
+
+- **范围**: 问答/推荐/搜索/决策的行业落地与工程体系，联动评测与治理。
+- **标准锚点**: 语义栈（RDF/OWL/SPARQL/SHACL）、报告与复现（`docs/benchmarks/`）。
+- **堆栈**: SPARQL 端点、向量检索、应用微服务、A/B 与观测、统一评测协议。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `docs/standards/w3c-integration.md`、`docs/benchmarks/`、`docs/implementation/` 互链。
+
 ## 1. 概述 / Overview
 
 ### 1.1 定义与概念 / Definition and Concepts

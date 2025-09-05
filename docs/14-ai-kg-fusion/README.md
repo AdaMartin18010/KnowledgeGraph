@@ -1,5 +1,12 @@
 # 14. AI-知识图谱融合应用 / AI-Knowledge Graph Fusion Applications
 
+> 快速总览 / Quick Overview
+
+- **范围**: LLM×KG（RAG/知识注入/一致性校验）、多模态、RL、联邦、端到端应用。
+- **标准锚点**: 语义栈（RDF/OWL/SPARQL/SHACL/JSON-LD）、评测对齐 `docs/benchmarks/`。
+- **堆栈**: SPARQL 端点、向量检索、LLM 服务化、联邦/实时系统与观测。
+- **导航**: 参见 `docs/PROJECT_SUMMARY.md`，与 `../12-llm-integration/`、`../07-applications/`、`../benchmarks/` 互链。
+
 ## 14.1 概述 / Overview
 
 ### 14.1.1 定义与概念 / Definition and Concepts
